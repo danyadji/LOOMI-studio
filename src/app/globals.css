@@ -4,6 +4,20 @@
 
 @layer base {
   :root {
+    --background: 40 33% 98%;
+    --foreground: 0 0% 4%;
+    --muted: 40 14% 93%;
+    --muted-foreground: 0 0% 40%;
+    --primary: 0 0% 4%;
+    --primary-foreground: 40 33% 98%;
+    --secondary: 40 14% 93%;
+    --secondary-foreground: 0 0% 4%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 14% 89%;
+    --ring: 0 0% 4%;
+    --radius: 1rem;
+
     --color-bg: #FAF9F5;
     --color-surface: #FFFFFF;
     --color-text: #0A0A0A;

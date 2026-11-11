@@ -30,3 +30,4 @@ npm run build
 ```
 
 Hasil build statis akan tersimpan di direktori `out/`.
+

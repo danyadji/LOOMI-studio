@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { packages } from "@/content/packages";
-import { portfolioItems } from "@/content/portfolio";
 import { processSteps } from "@/content/process";
 import { faqItems } from "@/content/faq";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getOrganizationJsonLd } from "@/lib/seo";
 import PackageCard from "@/components/PackageCard";
+import CarouselStacked from "@/components/ui/carousel-07";
 
 export default function HomePage() {
   const waHeroUrl = buildGeneralWhatsAppUrl("Hero Beranda");
@@ -51,39 +51,16 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
 
-          {/* Strip Kartu Showcase (Marquee Strip ala Epidemic Sound) */}
-          <div className="mt-16 sm:mt-20 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {portfolioItems.map((item, idx) => (
-              <div
-                key={item.slug}
-                className="rounded-3xl border border-[#E8E6DF] bg-white overflow-hidden p-4 sm:p-5 flex flex-col justify-between hover:border-stone-400 transition-colors"
-              >
-                <div className="relative aspect-[16/10] w-full rounded-2xl overflow-hidden bg-stone-100 mb-4 border border-[#E8E6DF]">
-                  <Image
-                    src={item.image}
-                    alt={`Pratinjau antarmuka ${item.title}`}
-                    width={800}
-                    height={500}
-                    className="w-full h-full object-cover"
-                  />
-                  {item.isSample && (
-                    <span className="absolute top-3 left-3 px-2.5 py-1 text-[11px] font-semibold bg-[#0A0A0A]/90 text-white rounded-full backdrop-blur-sm">
-                      {item.sampleNote || "Proyek Konsep"}
-                    </span>
-                  )}
-                </div>
-                <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-stone-500">
-                    Sektor 0{idx + 1} &bull; {item.businessType}
-                  </span>
-                  <h3 className="text-xl font-heading font-medium text-[#0A0A0A] mt-1">
-                    {item.title}.
-                  </h3>
-                </div>
-              </div>
-            ))}
+        {/* Showcase Interaktif Stacked Carousel: Lebar Penuh (Edge-to-Edge Tanpa Margin Samping) */}
+        <div className="mt-12 sm:mt-16 w-full overflow-hidden">
+          <div className="text-center mb-2 px-4">
+            <span className="text-xs uppercase tracking-widest text-stone-500 font-sans font-medium">
+              Geser ke kanan atau kiri untuk melihat contoh karya
+            </span>
           </div>
+          <CarouselStacked />
         </div>
       </section>
 
