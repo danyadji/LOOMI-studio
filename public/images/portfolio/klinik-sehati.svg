@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#F5F5F4" />
+  <rect x="40" y="40" width="720" height="420" rx="16" fill="#FFFFFF" stroke="#E7E5E4" stroke-width="2" />
+  
+  <!-- Browser Header Mockup -->
+  <rect x="40" y="40" width="720" height="48" rx="16" fill="#FAFAF9" />
+  <circle cx="70" cy="64" r="6" fill="#EF4444" />
+  <circle cx="90" cy="64" r="6" fill="#F59E0B" />
+  <circle cx="110" cy="64" r="6" fill="#10B981" />
+  <rect x="140" y="52" width="300" height="24" rx="6" fill="#E7E5E4" />
+  <text x="155" y="68" fill="#57534E" font-family="sans-serif" font-size="12">klinikpratamasehati.com</text>
+
+  <!-- Clinic Mockup Content -->
+  <rect x="80" y="120" width="280" height="28" rx="4" fill="#0F766E" />
+  <rect x="80" y="165" width="240" height="16" rx="4" fill="#78716C" />
+  <rect x="80" y="195" width="200" height="12" rx="4" fill="#A8A29E" />
+  
+  <!-- Cards -->
+  <rect x="80" y="240" width="180" height="180" rx="12" fill="#F0FDFA" stroke="#CCFBF1" />
+  <circle cx="120" cy="280" r="20" fill="#0F766E" />
+  <rect x="100" y="320" width="120" height="14" rx="4" fill="#134E4A" />
+  <rect x="100" y="345" width="140" height="40" rx="4" fill="#5EEAD4" fill-opacity="0.4" />
+
+  <rect x="280" y="240" width="180" height="180" rx="12" fill="#F0FDFA" stroke="#CCFBF1" />
+  <circle cx="320" cy="280" r="20" fill="#0F766E" />
+  <rect x="300" y="320" width="120" height="14" rx="4" fill="#134E4A" />
+  <rect x="300" y="345" width="140" height="40" rx="4" fill="#5EEAD4" fill-opacity="0.4" />
+
+  <!-- Doctor schedule card -->
+  <rect x="480" y="120" width="240" height="300" rx="16" fill="#FAFAF9" stroke="#E7E5E4" />
+  <rect x="505" y="145" width="190" height="24" rx="4" fill="#0F766E" />
+  <rect x="505" y="185" width="190" height="50" rx="8" fill="#FFFFFF" stroke="#E7E5E4" />
+  <rect x="505" y="245" width="190" height="50" rx="8" fill="#FFFFFF" stroke="#E7E5E4" />
+  <rect x="505" y="305" width="190" height="50" rx="8" fill="#FFFFFF" stroke="#E7E5E4" />
+  <rect x="505" y="370" width="190" height="36" rx="8" fill="#22C55E" />
+  <text x="535" y="393" fill="#FFFFFF" font-family="sans-serif" font-weight="bold" font-size="13">Janji Temu WhatsApp</text>
+</svg>
+
