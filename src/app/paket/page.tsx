@@ -82,7 +82,7 @@ export default function PaketPage() {
       {/* 3 Kartu Paket */}
       <div className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch max-w-lg mx-auto lg:max-w-none">
             {packages.map((pkg) => (
               <PackageCard
                 key={pkg.slug}

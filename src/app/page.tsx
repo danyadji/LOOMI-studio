@@ -309,19 +309,20 @@ export default function HomePage() {
       {/* 4. Paket & Harga (Mengarah ke Halaman Paket) */}
       <section className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="text-center max-w-2xl mx-auto mb-14 lg:mb-16">
-            <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
-              Investasi Jelas
+          <div className="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+            <span className="inline-flex items-center gap-2 bg-[#f5f4f0] border border-[#c0c0b9] px-2.5 py-1 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-4 font-sans">
+              <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+              <span>Investasi Jelas</span>
             </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.02em] text-[#1f2410] leading-[1.15]">
               Paket pembuatan website kami.
             </h2>
-            <p className="mt-4 text-base text-[#5b5e4e]">
+            <p className="mt-4 text-base text-[#5b5e4e] font-light">
               Biaya transparan sejak awal. Anda dapat memilih paket dan tambahan add-on pada halaman paket kami.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch max-w-lg mx-auto lg:max-w-none">
             {packages.map((pkg) => (
               <PackageCard key={pkg.slug} pkg={pkg} href="/paket" />
             ))}
@@ -330,7 +331,7 @@ export default function HomePage() {
           <div className="mt-12 text-center">
             <Link
               href="/paket"
-              className="inline-flex items-center text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-2"
+              className="inline-flex items-center text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px]"
             >
               <span>Lihat tabel perbandingan fitur lengkap dan daftar add-on</span>
               <span className="ml-1.5" aria-hidden="true">&rarr;</span>
