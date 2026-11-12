@@ -45,7 +45,7 @@ export default function Navbar() {
             className="flex items-center gap-3 group shrink-0 py-1 rounded-sm"
           >
             <span
-              className="w-8 h-8 rounded-[2px] bg-[#545c2c] group-hover:bg-[#3f4620] transition-colors flex items-center justify-center shrink-0"
+              className="w-8 h-8 rounded-[2px] bg-[#3f5b1e] group-hover:bg-[#2f4516] transition-colors flex items-center justify-center shrink-0"
               aria-hidden="true"
             >
               {/* Simbol monogram geometris placeholder sebelum aset logo final */}
@@ -83,14 +83,14 @@ export default function Navbar() {
                   href={link.href}
                   className={`text-[14px] transition-colors py-2 relative min-h-[44px] inline-flex items-center whitespace-nowrap ${
                     isActive
-                      ? "text-[#545c2c] font-semibold"
-                      : "text-[#1f2410] font-normal hover:text-[#545c2c]"
+                      ? "text-[#3f5b1e] font-semibold"
+                      : "text-[#1f2410] font-normal hover:text-[#3f5b1e]"
                   }`}
                 >
                   {link.name}
                   {isActive && (
                     <span
-                      className="absolute bottom-1.5 left-0 right-0 h-[2px] bg-[#545c2c]"
+                      className="absolute bottom-1.5 left-0 right-0 h-[2px] bg-[#3f5b1e]"
                       aria-hidden="true"
                     />
                   )}
@@ -106,7 +106,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackFloatingWhatsAppClick()}
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[44px] whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-[#3f5b1e] hover:bg-[#d4ec8c] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[44px] whitespace-nowrap"
             >
               <span>Konsultasi WhatsApp</span>
               <svg
@@ -191,7 +191,7 @@ export default function Navbar() {
                     trackFloatingWhatsAppClick();
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[48px]"
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium text-white bg-[#3f5b1e] hover:bg-[#d4ec8c] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[48px]"
                 >
                   <span>Konsultasi WhatsApp</span>
                   <svg
