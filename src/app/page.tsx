@@ -63,7 +63,7 @@ export default function HomePage() {
       </section>
 
       {/* 1B. Showcase Proyek Konsep (3 Kartu NotchedProjectCard di bawah Hero) */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#f5f4f0] border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div className="max-w-2xl">
@@ -93,7 +93,7 @@ export default function HomePage() {
                 imageAlt={`Contoh desain website ${item.title} (${item.businessType})`}
                 badge={item.isSample ? "Proyek Konsep" : item.businessType}
                 tags={item.scope}
-                surface="#ffffff"
+                surface="#f5f4f0"
                 accent="#3f5b1e"
                 accentForeground="#ffffff"
               />
