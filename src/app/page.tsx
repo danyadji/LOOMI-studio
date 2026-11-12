@@ -103,7 +103,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. Pendekatan Kami (Referensi Desain Kartu Pertama Forest Manifesto) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7]">
+      <section className="py-16 lg:py-24 bg-[#f5f4f0]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="max-w-2xl mb-12">
             <div className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-5">
@@ -123,7 +123,7 @@ export default function HomePage() {
             {/* Kartu 1 (Mengikuti struktur penuh kartu referensi pertama) */}
             <div className="p-6 sm:p-8 bg-white rounded-[2px] flex flex-col justify-between">
               <div>
-                <span className="inline-block self-start bg-[#fafaf7] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                <span className="inline-block self-start bg-[#f5f4f0] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
                   Poin 01
                 </span>
                 <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
@@ -146,7 +146,7 @@ export default function HomePage() {
             {/* Kartu 2 (Struktur identik kartu referensi pertama) */}
             <div className="p-6 sm:p-8 bg-white rounded-[2px] flex flex-col justify-between">
               <div>
-                <span className="inline-block self-start bg-[#fafaf7] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                <span className="inline-block self-start bg-[#f5f4f0] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
                   Poin 02
                 </span>
                 <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
@@ -169,7 +169,7 @@ export default function HomePage() {
             {/* Kartu 3 (Struktur identik kartu referensi pertama) */}
             <div className="p-6 sm:p-8 bg-white rounded-[2px] flex flex-col justify-between">
               <div>
-                <span className="inline-block self-start bg-[#fafaf7] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                <span className="inline-block self-start bg-[#f5f4f0] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
                   Poin 03
                 </span>
                 <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
