@@ -43,41 +43,52 @@ export default function PaketPage() {
         }}
       />
 
-      {/* Header Halaman */}
-      <div className="bg-[#fafaf7] border-b border-[#c0c0b9] py-16 lg:py-24">
-        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 text-center">
+      {/* Header Halaman (Hero Foto MacBook Pro) */}
+      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] overflow-hidden bg-[#1f2410] text-[#fafaf7] pt-32 pb-20 lg:pt-40 lg:pb-28">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1602576666092-bf6447a729fc?auto=format&fit=crop&w=1600&q=80"
+          alt="MacBook Pro menampilkan komponen perancangan antarmuka website"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[#1f2410]/75 bg-gradient-to-b from-[#1f2410]/85 via-[#1f2410]/75 to-[#1f2410]/90"
+        />
+
+        <div className="relative z-10 max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 text-center">
           <nav aria-label="Breadcrumb" className="mb-6 inline-block">
-            <ol className="flex items-center space-x-2 text-xs text-[#5b5e4e]">
+            <ol className="flex items-center space-x-2 text-xs text-[#e4e9d6]">
               <li>
-                <Link href="/" className="hover:text-[#1f2410]">
+                <Link href="/" className="hover:text-[#d4ec8c] transition-colors py-1 inline-block">
                   Beranda
                 </Link>
               </li>
               <li>/</li>
-              <li className="font-semibold text-[#545c2c]" aria-current="page">
+              <li className="font-semibold text-[#d4ec8c]" aria-current="page">
                 Paket &amp; Harga
               </li>
             </ol>
           </nav>
 
-          <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15] max-w-3xl mx-auto">
+          <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.02em] text-[#ffffff] leading-[1.15] max-w-3xl mx-auto">
             Paket pembuatan website kami.
           </h1>
-          <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-6 text-base sm:text-lg text-[#e4e9d6] font-light max-w-2xl mx-auto leading-relaxed">
             Semua harga merupakan biaya mulai dari yang jelas dan transparan. Tanpa biaya sewa server bulanan.
           </p>
 
           <div className="mt-6">
             <a
               href="#comparePlansSection"
-              className="inline-flex items-center text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-1"
+              className="inline-flex items-center text-sm font-semibold text-[#d4ec8c] hover:text-[#ffffff] underline underline-offset-4 py-2 min-h-[44px]"
             >
               <span>Bandingkan tabel fitur paket</span>
               <span className="ml-1.5" aria-hidden="true">&darr;</span>
             </a>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* 3 Kartu Paket */}
       <div className="py-16 lg:py-24 bg-[#fafaf7]">
