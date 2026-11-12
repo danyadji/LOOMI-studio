@@ -15,7 +15,8 @@ import { cn } from "@/lib/utils";
  */
 
 export interface NotchedProjectCardProps {
-  href: string;
+  href?: string;
+  onClick?: () => void;
   title: string;
   description?: string;
   /** Foto sampul utama */
@@ -45,7 +46,8 @@ const BLOCK = 80;
 const FILLET = 28;
 
 export function NotchedProjectCard({
-  href,
+  href = "#",
+  onClick,
   title,
   description,
   image,
@@ -196,6 +198,18 @@ export function NotchedProjectCard({
     "group flex flex-col rounded-[28px] outline-none focus-visible:ring-2 focus-visible:ring-[#3f5b1e] focus-visible:ring-offset-4",
     className,
   );
+
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        onClick={onClick}
+        className={cn(linkClasses, "w-full text-left cursor-pointer")}
+      >
+        {innerContent}
+      </button>
+    );
+  }
 
   if (isExternal) {
     return (

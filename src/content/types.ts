@@ -23,12 +23,21 @@ export type Package = {
   addOnIds: string[];
 };
 
+export type PortfolioGalleryImage = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 export type PortfolioItem = {
   slug: string;
   title: string;
   businessType: string;
+  packageType?: string;
+  summary?: string;
   scope: string[];
   image: string;
+  gallery?: PortfolioGalleryImage[];
   url?: string;
   isSample: boolean; // True jika proyek konsep/latihan (R-23, R-38)
   sampleNote?: string;

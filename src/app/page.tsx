@@ -7,7 +7,7 @@ import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getOrganizationJsonLd } from "@/lib/seo";
 import PackageCard from "@/components/PackageCard";
 import FaqAccordion from "@/components/FaqAccordion";
-import { NotchedProjectCard } from "@/components/ui/notched-project-card";
+import PortfolioShowcaseGrid from "@/components/PortfolioShowcaseGrid";
 
 const mainServices = [
   {
@@ -116,23 +116,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
-            {portfolioItems.map((item) => (
-              <NotchedProjectCard
-                key={item.slug}
-                href={`/portofolio#${item.slug}`}
-                title={`${item.title}.`}
-                description={item.highlights[0]}
-                image={item.image}
-                imageAlt={`Contoh desain website ${item.title} (${item.businessType})`}
-                badge={item.isSample ? "Proyek Konsep" : item.businessType}
-                tags={item.scope}
-                surface="#f5f4f0"
-                accent="#3f5b1e"
-                accentForeground="#ffffff"
-              />
-            ))}
-          </div>
+          <PortfolioShowcaseGrid items={portfolioItems} surface="#f5f4f0" />
         </div>
       </section>
 
