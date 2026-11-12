@@ -8,6 +8,42 @@ import { getOrganizationJsonLd } from "@/lib/seo";
 import PackageCard from "@/components/PackageCard";
 import { NotchedProjectCard } from "@/components/ui/notched-project-card";
 
+const mainServices = [
+  {
+    code: "01",
+    audience: "Iklan & Promo",
+    title: "Landing page promosi.",
+    summary:
+      "Satu halaman fokus untuk mengubah klik iklan Instagram, TikTok, atau Google menjadi obrolan WhatsApp tanpa menu bercabang.",
+    specs: ["1 halaman fokus", "Meta Pixel & GA4", "3-5 hari kerja"],
+    price: "Rp750.000",
+    href: "/layanan#landing-page",
+    featured: false,
+  },
+  {
+    code: "02",
+    audience: "Pilihan Utama UMKM",
+    title: "Company profile bisnis.",
+    summary:
+      "Website resmi hingga 5 halaman berisi profil usaha, daftar layanan, galeri proyek, SEO Google, dan pin lokasi usaha.",
+    specs: ["Hingga 5 halaman", "SEO & Google Maps", "5-10 hari kerja"],
+    price: "Rp1.500.000",
+    href: "/layanan#company-profile",
+    featured: true,
+  },
+  {
+    code: "03",
+    audience: "Etalase Produk",
+    title: "Katalog toko WhatsApp.",
+    summary:
+      "Katalog belanja ringan di layar HP agar pembeli bisa pilih varian barang lalu kirim rincian pesanan otomatis ke WhatsApp.",
+    specs: ["Hingga 20 produk awal", "Format pesan order", "7-14 hari kerja"],
+    price: "Rp2.250.000",
+    href: "/layanan#toko-whatsapp",
+    featured: false,
+  },
+];
+
 export default function HomePage() {
   const waHeroUrl = buildGeneralWhatsAppUrl("CTA Penutup Beranda");
 
@@ -192,210 +228,89 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Feature Stack Zig-Zag (Tiga Solusi Layanan dengan Pratinjau Struktur Asli) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7]">
-        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 space-y-20 lg:space-y-28">
-          <div className="max-w-2xl">
-            <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
-              Layanan Utama
-            </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
-              Tiga solusi website yang disesuaikan dengan tahap bisnis Anda.
-            </h2>
+      {/* 3. Layanan Utama (Ringkas, Terstruktur, dan Mudah Dipindai di Mobile) */}
+      <section className="py-14 lg:py-24 bg-[#fafaf7]">
+        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 lg:mb-12">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 bg-[#f5f4f0] px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-4">
+                <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                <span>Layanan Utama</span>
+              </div>
+              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.02em] text-[#1f2410] leading-[1.2]">
+                Tiga jenis website sesuai tahap bisnis Anda.
+              </h2>
+              <p className="mt-3 text-sm sm:text-base text-[#5b5e4e] font-light leading-relaxed">
+                Pilih format yang paling sesuai dengan target penjualan usaha Anda saat ini.
+              </p>
+            </div>
+            <Link
+              href="/layanan"
+              className="text-sm font-semibold text-[#3f5b1e] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px] inline-flex items-center self-start md:self-auto shrink-0"
+            >
+              Lihat semua detail layanan &rarr;
+            </Link>
           </div>
 
-          {/* Blok 1: Landing Page Promosi */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 space-y-5">
-              <span className="text-xs font-medium text-[#5b5e4e] block">
-                01. Fokus Konversi Iklan
-              </span>
-              <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-                Landing page promosi.
-              </h3>
-              <p className="text-base text-[#5b5e4e] leading-relaxed">
-                Satu halaman khusus yang didesain untuk mengubah pengunjung dari iklan Instagram, TikTok, atau Google Ads menjadi obrolan WhatsApp tanpa distraksi navigasi lain.
-              </p>
-              <ul className="space-y-2.5 text-sm text-[#1f2410] pt-1">
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>Struktur penawaran langsung ke tombol WhatsApp terformat</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>Terintegrasi pelacakan Meta Pixel dan Google Analytics</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>Selesai dalam 3 sampai 5 hari kerja</span>
-                </li>
-              </ul>
-              <div className="pt-3 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/paket"
-                  className="px-6 py-3 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[48px] inline-flex items-center justify-center"
-                >
-                  Pesan Landing Page
-                </Link>
-                <span className="text-sm font-medium text-[#5b5e4e]">Mulai Rp750.000</span>
-              </div>
-            </div>
+          <div className="space-y-4">
+            {mainServices.map((service) => (
+              <div
+                key={service.code}
+                className={`bg-white rounded-[4px] p-5 sm:p-7 border transition-colors ${
+                  service.featured ? "border-[#545c2c]" : "border-[#c0c0b9]/80"
+                }`}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6 items-start md:items-center">
+                  <div className="md:col-span-8 lg:col-span-9 grid grid-cols-1 lg:grid-cols-9 gap-3 lg:gap-8 items-start lg:items-center">
+                    <div className="lg:col-span-3 flex flex-wrap lg:flex-col items-center lg:items-start gap-2.5 lg:gap-2">
+                      <span className="text-xs font-medium tracking-[0.06em] uppercase text-[#545c2c]">
+                        Layanan {service.code}
+                      </span>
+                      <span
+                        className={`inline-block px-2.5 py-1 text-[11px] font-medium tracking-[0.04em] uppercase rounded-[2px] ${
+                          service.featured
+                            ? "bg-[#d4ec8c] text-[#1f2410]"
+                            : "bg-[#f5f4f0] text-[#5b5e4e]"
+                        }`}
+                      >
+                        {service.audience}
+                      </span>
+                    </div>
 
-            {/* Pratinjau Struktur Landing Page (Pengganti Skeleton SVG) */}
-            <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
-                <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
-                  <span className="text-xs font-medium text-[#5b5e4e]">
-                    [Contoh Struktur Landing Page]
-                  </span>
-                  <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#d4ec8c] text-[#1f2410]">
-                    1 Halaman Fokus
-                  </span>
-                </div>
-                <div className="p-5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] space-y-3">
-                  <div className="text-xs font-semibold text-[#545c2c]">Blok Penawaran Utama</div>
-                  <div className="font-heading text-xl text-[#1f2410]">Paket Hampers Kopi Roastery</div>
-                  <p className="text-xs text-[#5b5e4e] leading-relaxed">
-                    Berisi foto produk, rincian isi paket, harga transparan, dan tombol langsung pilih varian ke WhatsApp.
-                  </p>
-                  <div className="pt-2 flex items-center gap-2">
-                    <span className="px-3.5 py-1.5 rounded-full bg-[#545c2c] text-white text-xs font-medium">
-                      Pesan via WhatsApp
-                    </span>
-                    <span className="text-xs text-[#5b5e4e]">Meta Pixel Terpasang</span>
+                    <div className="lg:col-span-6 space-y-2">
+                      <h3 className="text-xl sm:text-2xl font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-[#5b5e4e] font-light leading-relaxed">
+                        {service.summary}
+                      </p>
+                      <p className="pt-0.5 text-xs font-medium text-[#545c2c]">
+                        {service.specs.join(" \u2022 ")}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="md:col-span-4 lg:col-span-3 pt-4 md:pt-0 border-t md:border-t-0 border-[#e6e4dc] flex items-center justify-between md:flex-col md:items-end gap-3">
+                    <div className="md:text-right">
+                      <span className="text-xs text-[#5b5e4e] block">Mulai dari</span>
+                      <span className="text-xl font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
+                        {service.price}
+                      </span>
+                    </div>
+                    <Link
+                      href={service.href}
+                      className={`px-5 py-2.5 text-sm font-medium rounded-[2px] transition-colors min-h-[44px] inline-flex items-center justify-center shrink-0 ${
+                        service.featured
+                          ? "bg-[#3f5b1e] text-white hover:bg-[#2f4516]"
+                          : "bg-transparent text-[#3f5b1e] border border-[#545c2c] hover:bg-[#3f5b1e] hover:text-white"
+                      }`}
+                    >
+                      Lihat detail
+                    </Link>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Blok 2: Company Profile Bisnis */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Pratinjau Struktur Company Profile */}
-            <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
-                <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
-                  <span className="text-xs font-medium text-[#5b5e4e]">
-                    [Contoh Struktur 5 Halaman]
-                  </span>
-                  <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#d4ec8c] text-[#1f2410]">
-                    SEO &amp; Maps Siap
-                  </span>
-                </div>
-                <div className="grid grid-cols-2 gap-3 text-xs">
-                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
-                    <div className="font-semibold text-[#545c2c]">01. Beranda &amp; Profil</div>
-                    <p className="text-[#5b5e4e] mt-1">Identitas usaha dan legalitas jelas</p>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
-                    <div className="font-semibold text-[#545c2c]">02. Daftar Layanan</div>
-                    <p className="text-[#5b5e4e] mt-1">Penjabaran jasa dan jadwal praktik</p>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
-                    <div className="font-semibold text-[#545c2c]">03. Galeri Proyek</div>
-                    <p className="text-[#5b5e4e] mt-1">Dokumentasi hasil kerja nyata</p>
-                  </div>
-                  <div className="p-3.5 rounded-xl bg-[#d4ec8c]/60 border border-[#545c2c]/30">
-                    <div className="font-semibold text-[#1f2410]">04. Kontak &amp; Peta</div>
-                    <p className="text-[#1f2410] mt-1">Pin Google Maps dan WhatsApp resmi</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="lg:col-span-6 order-1 lg:order-2 space-y-5">
-              <span className="text-xs font-medium text-[#5b5e4e] block">
-                02. Kredibilitas Usaha Lengkap
-              </span>
-              <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-                Company profile bisnis.
-              </h3>
-              <p className="text-base text-[#5b5e4e] leading-relaxed">
-                Website lengkap hingga 5 halaman untuk membangun kredibilitas klinik, bengkel, biro jasa, kontraktor, dan UMKM di mata calon mitra maupun pencarian Google.
-              </p>
-              <ul className="space-y-2.5 text-sm text-[#1f2410] pt-1">
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>5 halaman terstruktur: Beranda, Profil, Layanan, Portofolio, Kontak</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>SEO teknis lengkap (sitemap, robots, JSON-LD) dan Google Maps</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>3 kali sesi revisi hingga tuntas</span>
-                </li>
-              </ul>
-              <div className="pt-3 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/paket"
-                  className="px-6 py-3 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[48px] inline-flex items-center justify-center"
-                >
-                  Pesan Company Profile
-                </Link>
-                <span className="text-sm font-medium text-[#5b5e4e]">Mulai Rp1.500.000</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Blok 3: Katalog Toko WhatsApp */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-6 space-y-5">
-              <span className="text-xs font-medium text-[#5b5e4e] block">
-                03. Etalase Produk Praktis
-              </span>
-              <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-                Katalog toko WhatsApp.
-              </h3>
-              <p className="text-base text-[#5b5e4e] leading-relaxed">
-                Etalase produk online yang ringan dan cepat diakses dari ponsel. Pelanggan dapat memilih barang beserta varian, lalu rincian pesanan otomatis terkirim rapi ke WhatsApp penjual.
-              </p>
-              <ul className="space-y-2.5 text-sm text-[#1f2410] pt-1">
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>Katalog hingga 20 produk awal dimasukkan oleh tim kami</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>Format pesan rapi langsung ke WhatsApp tanpa biaya gateway</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-[#545c2c]" aria-hidden="true">&#10003;</span>
-                  <span>Panduan praktis memperbarui foto dan harga produk sendiri</span>
-                </li>
-              </ul>
-              <div className="pt-3 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/paket"
-                  className="px-6 py-3 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[48px] inline-flex items-center justify-center"
-                >
-                  Pesan Toko WhatsApp
-                </Link>
-                <span className="text-sm font-medium text-[#5b5e4e]">Mulai Rp2.250.000</span>
-              </div>
-            </div>
-
-            {/* Pratinjau Format Pesan WhatsApp */}
-            <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-4">
-                <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
-                  <span className="text-xs font-medium text-[#5b5e4e]">
-                    [Contoh Output Pesan WhatsApp]
-                  </span>
-                  <span className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-[#d4ec8c] text-[#1f2410]">
-                    Siap Dikirim Pembeli
-                  </span>
-                </div>
-                <div className="p-4 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] font-sans text-xs text-[#1f2410] space-y-1.5 leading-relaxed">
-                  <p>Halo Admin, saya ingin memesan dari website:</p>
-                  <p>* Produk: Kursi Teras Jati Natural</p>
-                  <p>* Varian: Finishing Doff (2 Unit)</p>
-                  <p>* Estimasi Awal: Rp2.400.000</p>
-                  <p>Mohon info ketersediaan stok dan ongkos kirim.</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
