@@ -35,9 +35,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-40 w-full pt-3 sm:pt-4 px-4 sm:px-6 lg:px-8 pointer-events-none">
-      <div className="max-w-[1224px] mx-auto pointer-events-auto">
+      <div className="max-w-[1224px] mx-auto relative pointer-events-auto">
         {/* Floating White Rectangular Bar ala referensi Forest Admin */}
-        <div className="bg-white border border-[#c0c0b9] rounded-[3px] shadow-[0_2px_10px_rgba(31,36,16,0.05)] px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
+        <div className="relative z-50 bg-white border border-[#c0c0b9] rounded-[3px] shadow-[0_2px_10px_rgba(31,36,16,0.05)] px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
           {/* Logo Kiri: Kotak Zaitun Geometris Placeholder (R-23) + Wordmark LOOMI */}
           <Link
             href="/"
@@ -151,59 +151,66 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Floating Drawer */}
+        {/* Mobile Floating Overlay Drawer (position absolute agar tidak mendorong konten ke bawah) */}
         {mobileMenuOpen && (
-          <div
-            id="mobile-menu"
-            className="md:hidden mt-2 bg-white border border-[#c0c0b9] rounded-[3px] shadow-[0_8px_24px_rgba(31,36,16,0.08)] p-4"
-          >
-            <nav className="flex flex-col space-y-1" aria-label="Menu Mobile">
-              {navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-[2px] text-sm min-h-[44px] flex items-center transition-colors ${
-                      isActive
-                        ? "bg-[#d4ec8c] text-[#1f2410] font-semibold"
-                        : "text-[#1f2410] font-normal hover:bg-[#fafaf7]"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                );
-              })}
-            </nav>
-            <div className="mt-4 pt-4 border-t border-[#c0c0b9]">
-              <a
-                href={waUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => {
-                  trackFloatingWhatsAppClick();
-                  setMobileMenuOpen(false);
-                }}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[48px]"
-              >
-                <span>Konsultasi WhatsApp</span>
-                <svg
-                  className="w-3.5 h-3.5 shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
+          <>
+            <div
+              className="md:hidden fixed inset-0 z-40 bg-[#1f2410]/25"
+              aria-hidden="true"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <div
+              id="mobile-menu"
+              className="md:hidden absolute left-0 right-0 top-full mt-2 z-50 bg-white border border-[#c0c0b9] rounded-[3px] shadow-[0_12px_32px_rgba(31,36,16,0.16)] p-4"
+            >
+              <nav className="flex flex-col space-y-1" aria-label="Menu Mobile">
+                {navLinks.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`px-4 py-3 rounded-[2px] text-sm min-h-[44px] flex items-center transition-colors ${
+                        isActive
+                          ? "bg-[#d4ec8c] text-[#1f2410] font-semibold"
+                          : "text-[#1f2410] font-normal hover:bg-[#fafaf7]"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                })}
+              </nav>
+              <div className="mt-4 pt-4 border-t border-[#c0c0b9]">
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    trackFloatingWhatsAppClick();
+                    setMobileMenuOpen(false);
+                  }}
+                  className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[48px]"
                 >
-                  <path d="M7 17L17 7" />
-                  <path d="M8 7h9v9" />
-                </svg>
-              </a>
+                  <span>Konsultasi WhatsApp</span>
+                  <svg
+                    className="w-3.5 h-3.5 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17L17 7" />
+                    <path d="M8 7h9v9" />
+                  </svg>
+                </a>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </div>
     </header>
