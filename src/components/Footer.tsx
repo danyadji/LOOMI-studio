@@ -19,16 +19,6 @@ export default function Footer() {
             <p className="text-sm text-[#c7ccb8] leading-relaxed max-w-sm">
               Studio pembuatan website praktis untuk UMKM dan bisnis jasa. Mengedepankan desain editorial ringan, waktu muat cepat di ponsel, dan pemesanan langsung ke obrolan WhatsApp.
             </p>
-            <div className="text-xs text-[#c7ccb8] space-y-1.5 pt-2">
-              <p>
-                <span className="text-[#d4ec8c] font-medium">Area Layanan:</span>{" "}
-                {siteConfig.serviceArea}
-              </p>
-              <p>
-                <span className="text-[#d4ec8c] font-medium">Jam Respon:</span>{" "}
-                {siteConfig.replyHours}
-              </p>
-            </div>
           </div>
 
           {/* Navigasi Halaman */}
