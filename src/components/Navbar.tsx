@@ -38,35 +38,17 @@ export default function Navbar() {
       <div className="max-w-[1224px] mx-auto relative pointer-events-auto">
         {/* Floating White Rectangular Bar ala referensi Forest Admin */}
         <div className="relative z-50 bg-white border border-[#c0c0b9] rounded-[3px] shadow-[0_2px_10px_rgba(31,36,16,0.05)] px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
-          {/* Logo Kiri: Kotak Zaitun Geometris Placeholder (R-23) + Wordmark LOOMI */}
+          {/* Wordmark Kiri: LOOMI studio */}
           <Link
             href="/"
-            aria-label="LOOMI Studio Beranda"
-            className="flex items-center gap-3 group shrink-0 py-1 rounded-sm"
+            aria-label="LOOMI studio Beranda"
+            className="flex items-baseline gap-1.5 group shrink-0 py-1 rounded-sm"
           >
-            <span
-              className="w-8 h-8 rounded-[2px] bg-[#3f5b1e] group-hover:bg-[#2f4516] transition-colors flex items-center justify-center shrink-0"
-              aria-hidden="true"
-            >
-              {/* Simbol monogram geometris placeholder sebelum aset logo final */}
-              <svg
-                className="w-4 h-4 text-white"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2.2"
-                strokeLinecap="square"
-                strokeLinejoin="miter"
-              >
-                <path d="M12 4L5 11" />
-                <path d="M12 4L19 11" />
-                <path d="M12 10L6 16" />
-                <path d="M12 10L18 16" />
-                <path d="M12 5V20" />
-              </svg>
+            <span className="font-sans font-semibold tracking-[0.06em] text-[18px] sm:text-[20px] text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
+              LOOMI
             </span>
-            <span className="font-sans font-semibold tracking-[0.14em] text-[16px] sm:text-[17px] text-[#1f2410] uppercase">
-              Loomi
+            <span className="font-sans font-light text-[15px] sm:text-[16px] text-[#3f5b1e]">
+              studio
             </span>
           </Link>
 
