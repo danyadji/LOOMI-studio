@@ -41,6 +41,13 @@ const mainServices = [
   },
 ];
 
+const stepOutputs: Record<number, string> = {
+  1: "Penetapan cakupan kerja dan jadwal awal.",
+  2: "Penyelarasan brand, teks, dan daftar menu.",
+  3: "Tautan pratinjau langsung dan sesi revisi.",
+  4: "Domain aktif, terindeks, dan kode milik Anda.",
+};
+
 export default function HomePage() {
   const waHeroUrl = buildGeneralWhatsAppUrl("CTA Penutup Beranda");
 
@@ -340,47 +347,51 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Alur Kerja 4 Langkah */}
+      {/* 5. Alur Kerja 4 Langkah (Desain kartu seragam dengan section Pendekatan Kami) */}
       <section className="py-16 lg:py-24 bg-[#f5f4f0]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 lg:mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div className="max-w-xl">
-              <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
-                Alur Kerja
-              </span>
-              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+              <div className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-5">
+                <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                <span>Alur Kerja</span>
+              </div>
+              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.02em] text-[#1f2410] leading-[1.2]">
                 Cara kami bekerja bersama Anda.
               </h2>
             </div>
             <Link
               href="/proses"
-              className="text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-2 self-start md:self-auto"
+              className="text-sm font-semibold text-[#3f5b1e] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px] inline-flex items-center self-start md:self-auto"
             >
               Lihat rincian tahapan dan output &rarr;
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {processSteps.map((step) => (
               <div
                 key={step.step}
-                className="p-6 sm:p-7 rounded-2xl bg-white border border-[#c0c0b9] flex flex-col justify-between"
+                className="p-6 sm:p-7 bg-white rounded-[2px] flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-3xl font-heading font-medium text-[#545c2c] tracking-[-0.015em]">
-                      0{step.step}.
-                    </span>
-                    <span className="text-xs font-medium px-3 py-1 bg-[#d4ec8c] text-[#1f2410] rounded-full">
-                      {step.duration}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-                    {step.title}
+                  <span className="inline-block self-start bg-[#f5f4f0] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                    Tahap 0{step.step}
+                  </span>
+                  <h3 className="mt-5 text-[20px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
+                    {step.title}.
                   </h3>
-                  <p className="text-sm text-[#5b5e4e] mt-3 leading-relaxed">
+                  <p className="mt-4 text-sm text-[#5b5e4e] font-light leading-relaxed">
                     {step.description}
                   </p>
+                </div>
+                <div className="mt-8 pt-5 border-t border-[#e6e4dc] flex flex-row lg:flex-col xl:flex-row items-center lg:items-start xl:items-center gap-3 lg:gap-1.5 xl:gap-3">
+                  <span className="text-[20px] xl:text-[22px] font-heading font-medium text-[#1f2410] tracking-[-0.02em] leading-none whitespace-nowrap shrink-0">
+                    {step.duration.replace(/ - /g, "-")}
+                  </span>
+                  <span className="text-xs text-[#5b5e4e] font-light leading-snug">
+                    {stepOutputs[step.step]}
+                  </span>
                 </div>
               </div>
             ))}
