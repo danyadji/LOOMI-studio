@@ -16,7 +16,6 @@ const mainServices = [
     summary:
       "Satu halaman fokus untuk mengubah klik iklan Instagram, TikTok, atau Google menjadi obrolan WhatsApp tanpa menu bercabang.",
     specs: ["1 halaman fokus", "Meta Pixel & GA4", "3-5 hari kerja"],
-    price: "Rp750.000",
     href: "/layanan#landing-page",
     featured: false,
   },
@@ -27,7 +26,6 @@ const mainServices = [
     summary:
       "Website resmi hingga 5 halaman berisi profil usaha, daftar layanan, galeri proyek, SEO Google, dan pin lokasi usaha.",
     specs: ["Hingga 5 halaman", "SEO & Google Maps", "5-10 hari kerja"],
-    price: "Rp1.500.000",
     href: "/layanan#company-profile",
     featured: true,
   },
@@ -38,7 +36,6 @@ const mainServices = [
     summary:
       "Katalog belanja ringan di layar HP agar pembeli bisa pilih varian barang lalu kirim rincian pesanan otomatis ke WhatsApp.",
     specs: ["Hingga 20 produk awal", "Format pesan order", "7-14 hari kerja"],
-    price: "Rp2.250.000",
     href: "/layanan#toko-whatsapp",
     featured: false,
   },
@@ -261,7 +258,7 @@ export default function HomePage() {
                 }`}
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6 items-start md:items-center">
-                  <div className="md:col-span-8 lg:col-span-9 grid grid-cols-1 lg:grid-cols-9 gap-3 lg:gap-8 items-start lg:items-center">
+                  <div className="md:col-span-9 lg:col-span-10 grid grid-cols-1 lg:grid-cols-10 gap-3 lg:gap-8 items-start lg:items-center">
                     <div className="lg:col-span-3 flex flex-wrap lg:flex-col items-center lg:items-start gap-2.5 lg:gap-2">
                       <span className="text-xs font-medium tracking-[0.06em] uppercase text-[#545c2c]">
                         Layanan {service.code}
@@ -277,7 +274,7 @@ export default function HomePage() {
                       </span>
                     </div>
 
-                    <div className="lg:col-span-6 space-y-2">
+                    <div className="lg:col-span-7 space-y-2">
                       <h3 className="text-xl sm:text-2xl font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                         {service.title}
                       </h3>
@@ -290,16 +287,10 @@ export default function HomePage() {
                     </div>
                   </div>
 
-                  <div className="md:col-span-4 lg:col-span-3 pt-4 md:pt-0 border-t md:border-t-0 border-[#e6e4dc] flex items-center justify-between md:flex-col md:items-end gap-3">
-                    <div className="md:text-right">
-                      <span className="text-xs text-[#5b5e4e] block">Mulai dari</span>
-                      <span className="text-xl font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
-                        {service.price}
-                      </span>
-                    </div>
+                  <div className="md:col-span-3 lg:col-span-2 flex md:justify-end">
                     <Link
                       href={service.href}
-                      className={`px-5 py-2.5 text-sm font-medium rounded-[2px] transition-colors min-h-[44px] inline-flex items-center justify-center shrink-0 ${
+                      className={`w-full sm:w-auto px-5 py-2.5 text-sm font-medium rounded-[2px] transition-colors min-h-[44px] inline-flex items-center justify-center shrink-0 ${
                         service.featured
                           ? "bg-[#3f5b1e] text-white hover:bg-[#2f4516]"
                           : "bg-transparent text-[#3f5b1e] border border-[#545c2c] hover:bg-[#3f5b1e] hover:text-white"
