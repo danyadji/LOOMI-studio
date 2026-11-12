@@ -41,13 +41,6 @@ const mainServices = [
   },
 ];
 
-const stepOutputs: Record<number, string> = {
-  1: "Penetapan cakupan kerja dan jadwal awal.",
-  2: "Penyelarasan brand, teks, dan daftar menu.",
-  3: "Tautan pratinjau langsung dan sesi revisi.",
-  4: "Domain aktif, terindeks, dan kode milik Anda.",
-};
-
 export default function HomePage() {
   const waHeroUrl = buildGeneralWhatsAppUrl("CTA Penutup Beranda");
 
@@ -372,27 +365,17 @@ export default function HomePage() {
             {processSteps.map((step) => (
               <div
                 key={step.step}
-                className="p-6 sm:p-7 bg-white rounded-[2px] flex flex-col justify-between"
+                className="p-6 sm:p-7 bg-white rounded-[2px]"
               >
-                <div>
-                  <span className="inline-block self-start bg-[#f5f4f0] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
-                    Tahap 0{step.step}
-                  </span>
-                  <h3 className="mt-5 text-[20px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
-                    {step.title}.
-                  </h3>
-                  <p className="mt-4 text-sm text-[#5b5e4e] font-light leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-                <div className="mt-8 pt-5 border-t border-[#e6e4dc] flex flex-row lg:flex-col xl:flex-row items-center lg:items-start xl:items-center gap-3 lg:gap-1.5 xl:gap-3">
-                  <span className="text-[20px] xl:text-[22px] font-heading font-medium text-[#1f2410] tracking-[-0.02em] leading-none whitespace-nowrap shrink-0">
-                    {step.duration.replace(/ - /g, "-")}
-                  </span>
-                  <span className="text-xs text-[#5b5e4e] font-light leading-snug">
-                    {stepOutputs[step.step]}
-                  </span>
-                </div>
+                <span className="inline-block self-start bg-[#f5f4f0] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                  Tahap 0{step.step}
+                </span>
+                <h3 className="mt-5 text-[20px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
+                  {step.title}.
+                </h3>
+                <p className="mt-4 text-sm text-[#5b5e4e] font-light leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
