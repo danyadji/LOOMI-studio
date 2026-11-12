@@ -19,8 +19,8 @@ export default function HomePage() {
         }}
       />
 
-      {/* 1. Hero Section ala Referensi Forest Admin (Zaitun Gelap di belakang Floating Navbar) */}
-      <section className="relative z-0 -mt-[78px] sm:-mt-[82px] pt-28 sm:pt-36 lg:pt-40 pb-16 lg:pb-24 bg-[#434e1d] text-[#fafaf7] border-b border-[#353f16] overflow-hidden">
+      {/* 1. Hero Section ala Referensi Forest Admin (Hijau #3f5b1e di belakang Floating Navbar) */}
+      <section className="relative z-0 -mt-[78px] sm:-mt-[82px] pt-28 sm:pt-36 lg:pt-40 pb-16 lg:pb-24 bg-[#3f5b1e] text-[#fafaf7] border-b border-[#2f4516] overflow-hidden">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Kolom Kiri: Kicker, Headline Highlighter, Deskripsi & 2 Tombol Persegi */}
@@ -58,7 +58,7 @@ export default function HomePage() {
 
                 <Link
                   href="/portofolio"
-                  className="px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-transparent hover:bg-[#545c2c] border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
+                  className="px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-transparent hover:bg-[#2f4516] border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
                 >
                   Lihat Portofolio
                 </Link>
@@ -68,23 +68,23 @@ export default function HomePage() {
             {/* Kolom Kanan: Slot Aset Visual (R-23 Placeholder sampai gambar final diupload) */}
             {/* TODO (R-23): Ganti blok placeholder ini dengan komponen <Image /> dari aset yang diupload user */}
             <div className="lg:col-span-6 w-full max-w-md mx-auto lg:max-w-none">
-              <div className="relative aspect-[5/4] w-full rounded-[4px] bg-[#353f16] border border-[#545c2c] p-3 sm:p-4 overflow-hidden">
+              <div className="relative aspect-[5/4] w-full rounded-[4px] bg-[#334a18] border border-[#545c2c] p-3 sm:p-4 overflow-hidden">
                 {/* Komposisi Mosaik Geometris Limau & Zaitun mengikuti siluet referensi */}
                 <div className="grid grid-cols-4 grid-rows-4 w-full h-full gap-1.5" aria-hidden="true">
                   <div className="col-span-3 row-span-1 bg-[#d4ec8c]" />
                   <div className="col-span-1 row-span-1 bg-[#9cbc64]" />
 
                   <div className="col-span-1 row-span-1 bg-[#d4ec8c]" />
-                  <div className="col-span-1 row-span-1 bg-[#434e1d]" />
+                  <div className="col-span-1 row-span-1 bg-[#3f5b1e]" />
                   <div className="col-span-2 row-span-1 bg-[#d4ec8c]" />
 
                   <div className="col-span-1 row-span-1 bg-[#8fa65b]" />
                   <div className="col-span-1 row-span-1 bg-[#d4ec8c]" />
-                  <div className="col-span-1 row-span-1 bg-[#434e1d]" />
+                  <div className="col-span-1 row-span-1 bg-[#3f5b1e]" />
                   <div className="col-span-1 row-span-1 bg-[#d4ec8c]" />
 
                   <div className="col-span-2 row-span-1 bg-[#d4ec8c]" />
-                  <div className="col-span-1 row-span-1 bg-[#434e1d]" />
+                  <div className="col-span-1 row-span-1 bg-[#3f5b1e]" />
                   <div className="col-span-1 row-span-1 bg-[#9cbc64]" />
                 </div>
 
