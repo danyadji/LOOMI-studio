@@ -63,7 +63,7 @@ export default function HomePage() {
       </section>
 
       {/* 1B. Showcase Proyek Konsep (3 Kartu NotchedProjectCard di bawah Hero) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div className="max-w-2xl">
@@ -93,7 +93,7 @@ export default function HomePage() {
                 imageAlt={`Contoh desain website ${item.title} (${item.businessType})`}
                 badge={item.isSample ? "Proyek Konsep" : item.businessType}
                 tags={item.scope}
-                surface="#fafaf7"
+                surface="#ffffff"
                 accent="#3f5b1e"
                 accentForeground="#ffffff"
               />
@@ -102,76 +102,90 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Feature Trio (3 Kolom dengan Penekanan Visual Hierarki #d4ec8c sesuai R-14 & R-37) */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
+      {/* 2. Pendekatan Kami (Referensi Desain Kartu Pertama Forest Manifesto) */}
+      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
-              Pendekatan Kami
-            </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
-              Dibangun untuk cara UMKM Indonesia berjualan.
+            <div className="inline-flex items-center gap-2 bg-white border border-[#c0c0b9]/70 px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-5">
+              <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+              <span>Pendekatan Kami</span>
+            </div>
+            <h2 className="text-[28px] sm:text-4xl lg:text-[40px] font-heading font-medium tracking-[-0.02em] text-[#1f2410] leading-[1.2]">
+              Dibangun untuk cara{" "}
+              <span className="bg-[#ddf327] text-[#1f2410] px-2 py-0.5 inline-block">
+                UMKM Indonesia
+              </span>{" "}
+              berjualan.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Kartu Utama (Surface Raised #d4ec8c sebagai focal point keunggulan konversi) */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-[#d4ec8c] border border-[#545c2c]/30 flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/* Kartu 1 (Mengikuti struktur penuh kartu referensi pertama) */}
+            <div className="p-6 sm:p-8 bg-white border border-[#c0c0b9]/70 rounded-[2px] flex flex-col justify-between">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-[#545c2c] text-white flex items-center justify-center mb-6">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-                  </svg>
-                </div>
-                <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <span className="inline-block self-start bg-[#fafaf7] border border-[#e6e4dc] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                  Poin 01
+                </span>
+                <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
                   Pemesanan langsung ke WhatsApp.
                 </h3>
-                <p className="mt-3 text-sm sm:text-base text-[#1f2410] leading-relaxed">
+                <p className="mt-4 text-sm text-[#5b5e4e] font-light leading-relaxed">
                   Calon pembeli tidak dipaksa membuat akun atau mengisi keranjang rumit. Pilihan produk atau layanan mereka langsung tersusun menjadi pesan chat ke nomor admin Anda.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#545c2c]/25 text-xs font-semibold text-[#3d431e]">
-                Fokus Utama: Konversi Chat
+              <div className="mt-8 pt-5 border-t border-[#e6e4dc] flex items-center gap-4">
+                <span className="text-[26px] sm:text-[30px] font-heading font-medium text-[#1f2410] tracking-[-0.02em] leading-none shrink-0">
+                  1 Klik
+                </span>
+                <span className="text-xs text-[#5b5e4e] font-light leading-snug">
+                  Format pesan otomatis langsung masuk ke WhatsApp admin.
+                </span>
               </div>
             </div>
 
-            {/* Kartu Pendukung 2 */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[#c0c0b9] flex flex-col justify-between">
+            {/* Kartu 2 (Struktur identik kartu referensi pertama) */}
+            <div className="p-6 sm:p-8 bg-white border border-[#c0c0b9]/70 rounded-[2px] flex flex-col justify-between">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] text-[#545c2c] flex items-center justify-center mb-6">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <span className="inline-block self-start bg-[#fafaf7] border border-[#e6e4dc] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                  Poin 02
+                </span>
+                <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
                   Cepat dibuka, rapi di semua layar.
                 </h3>
-                <p className="mt-3 text-sm sm:text-base text-[#5b5e4e] leading-relaxed">
+                <p className="mt-4 text-sm text-[#5b5e4e] font-light leading-relaxed">
                   Website dirancang ringan dan nyaman dilihat dari HP, tablet, maupun laptop, sehingga calon pelanggan tidak pergi sebelum melihat produk Anda.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#c0c0b9] text-xs font-medium text-[#5b5e4e]">
-                Fokus Utama: Tampilan Mobile
+              <div className="mt-8 pt-5 border-t border-[#e6e4dc] flex items-center gap-4">
+                <span className="text-[26px] sm:text-[30px] font-heading font-medium text-[#1f2410] tracking-[-0.02em] leading-none shrink-0">
+                  3 Layar
+                </span>
+                <span className="text-xs text-[#5b5e4e] font-light leading-snug">
+                  Fokus tampilan mobile, tablet, hingga layar desktop.
+                </span>
               </div>
             </div>
 
-            {/* Kartu Pendukung 3 */}
-            <div className="p-6 sm:p-8 rounded-2xl bg-white border border-[#c0c0b9] flex flex-col justify-between">
+            {/* Kartu 3 (Struktur identik kartu referensi pertama) */}
+            <div className="p-6 sm:p-8 bg-white border border-[#c0c0b9]/70 rounded-[2px] flex flex-col justify-between">
               <div>
-                <div className="w-10 h-10 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] text-[#545c2c] flex items-center justify-center mb-6">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <span className="inline-block self-start bg-[#fafaf7] border border-[#e6e4dc] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                  Poin 03
+                </span>
+                <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
                   Harga jelas, tanpa biaya tersembunyi.
                 </h3>
-                <p className="mt-3 text-sm sm:text-base text-[#5b5e4e] leading-relaxed">
+                <p className="mt-4 text-sm text-[#5b5e4e] font-light leading-relaxed">
                   Semua cakupan dan biaya disepakati di awal. Setelah website live, kami tetap mendampingi sampai Anda nyaman mengelolanya sendiri.
                 </p>
               </div>
-              <div className="mt-6 pt-4 border-t border-[#c0c0b9] text-xs font-medium text-[#5b5e4e]">
-                Paket Transparan &amp; Bergaransi Revisi
+              <div className="mt-8 pt-5 border-t border-[#e6e4dc] flex items-center gap-4">
+                <span className="text-[26px] sm:text-[30px] font-heading font-medium text-[#1f2410] tracking-[-0.02em] leading-none shrink-0">
+                  2-3x
+                </span>
+                <span className="text-xs text-[#5b5e4e] font-light leading-snug">
+                  Paket transparan bergaransi revisi dan pendampingan.
+                </span>
               </div>
             </div>
           </div>
@@ -179,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. Feature Stack Zig-Zag (Tiga Solusi Layanan dengan Pratinjau Struktur Asli) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 space-y-20 lg:space-y-28">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
@@ -229,7 +243,7 @@ export default function HomePage() {
 
             {/* Pratinjau Struktur Landing Page (Pengganti Skeleton SVG) */}
             <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
+              <div className="rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
                 <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
                   <span className="text-xs font-medium text-[#5b5e4e]">
                     [Contoh Struktur Landing Page]
@@ -238,7 +252,7 @@ export default function HomePage() {
                     1 Halaman Fokus
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] space-y-3">
+                <div className="p-5 rounded-xl bg-white border border-[#c0c0b9] space-y-3">
                   <div className="text-xs font-semibold text-[#545c2c]">Blok Penawaran Utama</div>
                   <div className="font-heading text-xl text-[#1f2410]">Paket Hampers Kopi Roastery</div>
                   <p className="text-xs text-[#5b5e4e] leading-relaxed">
@@ -259,7 +273,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Pratinjau Struktur Company Profile */}
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
+              <div className="rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
                 <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
                   <span className="text-xs font-medium text-[#5b5e4e]">
                     [Contoh Struktur 5 Halaman]
@@ -269,15 +283,15 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-xs">
-                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#c0c0b9]">
                     <div className="font-semibold text-[#545c2c]">01. Beranda &amp; Profil</div>
                     <p className="text-[#5b5e4e] mt-1">Identitas usaha dan legalitas jelas</p>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#c0c0b9]">
                     <div className="font-semibold text-[#545c2c]">02. Daftar Layanan</div>
                     <p className="text-[#5b5e4e] mt-1">Penjabaran jasa dan jadwal praktik</p>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
+                  <div className="p-3.5 rounded-xl bg-white border border-[#c0c0b9]">
                     <div className="font-semibold text-[#545c2c]">03. Galeri Proyek</div>
                     <p className="text-[#5b5e4e] mt-1">Dokumentasi hasil kerja nyata</p>
                   </div>
@@ -364,7 +378,7 @@ export default function HomePage() {
 
             {/* Pratinjau Format Pesan WhatsApp */}
             <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-4">
+              <div className="rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] p-6 sm:p-8 space-y-4">
                 <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
                   <span className="text-xs font-medium text-[#5b5e4e]">
                     [Contoh Output Pesan WhatsApp]
@@ -373,7 +387,7 @@ export default function HomePage() {
                     Siap Dikirim Pembeli
                   </span>
                 </div>
-                <div className="p-4 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] font-sans text-xs text-[#1f2410] space-y-1.5 leading-relaxed">
+                <div className="p-4 rounded-xl bg-white border border-[#c0c0b9] font-sans text-xs text-[#1f2410] space-y-1.5 leading-relaxed">
                   <p>Halo Admin, saya ingin memesan dari website:</p>
                   <p>* Produk: Kursi Teras Jati Natural</p>
                   <p>* Varian: Finishing Doff (2 Unit)</p>
@@ -387,7 +401,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. Paket & Harga (Mengarah ke Halaman Paket) */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="text-center max-w-2xl mx-auto mb-14 lg:mb-16">
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
@@ -420,7 +434,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. Alur Kerja 4 Langkah */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 lg:mb-16">
             <div className="max-w-xl">
@@ -443,7 +457,7 @@ export default function HomePage() {
             {processSteps.map((step) => (
               <div
                 key={step.step}
-                className="p-6 sm:p-7 rounded-2xl bg-white border border-[#c0c0b9] flex flex-col justify-between"
+                className="p-6 sm:p-7 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
@@ -468,7 +482,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. FAQ Ringkas (Editorial List Terbagi Garis Tipis untuk Variasi RHYTHM 2) */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4 space-y-4">
@@ -508,7 +522,7 @@ export default function HomePage() {
       </section>
 
       {/* 7. CTA Penutup (Deep Forest Olive #1f2410) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7]">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="p-8 sm:p-16 rounded-2xl bg-[#1f2410] text-[#fafaf7] text-center">
             <span className="text-xs font-semibold text-[#d4ec8c] block mb-3 font-sans">
