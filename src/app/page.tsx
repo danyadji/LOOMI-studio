@@ -434,7 +434,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. Alur Kerja 4 Langkah */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#f5f4f0] border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 lg:mb-16">
             <div className="max-w-xl">
@@ -457,7 +457,7 @@ export default function HomePage() {
             {processSteps.map((step) => (
               <div
                 key={step.step}
-                className="p-6 sm:p-7 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] flex flex-col justify-between"
+                className="p-6 sm:p-7 rounded-2xl bg-white border border-[#c0c0b9] flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
