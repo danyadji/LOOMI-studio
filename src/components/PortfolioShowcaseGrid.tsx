@@ -11,7 +11,6 @@ interface PortfolioShowcaseGridProps {
   descriptionMode?: "highlight" | "businessType";
   sampleBadge?: string;
   priorityFirst?: boolean;
-  onSelectItem?: (item: PortfolioItem) => void;
 }
 
 /**
@@ -24,17 +23,8 @@ export default function PortfolioShowcaseGrid({
   descriptionMode = "highlight",
   sampleBadge = "Proyek Konsep",
   priorityFirst = false,
-  onSelectItem,
 }: PortfolioShowcaseGridProps) {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
-
-  const handleOpen = (item: PortfolioItem) => {
-    if (onSelectItem) {
-      onSelectItem(item);
-      return;
-    }
-    setSelectedItem(item);
-  };
 
   return (
     <>
@@ -42,7 +32,7 @@ export default function PortfolioShowcaseGrid({
         {items.map((item, idx) => (
           <NotchedProjectCard
             key={item.slug}
-            onClick={() => handleOpen(item)}
+            onClick={() => setSelectedItem(item)}
             title={`${item.title}.`}
             description={
               descriptionMode === "businessType"
@@ -61,13 +51,10 @@ export default function PortfolioShowcaseGrid({
         ))}
       </div>
 
-      {!onSelectItem && (
-        <PortfolioDetailModal
-          item={selectedItem}
-          onClose={() => setSelectedItem(null)}
-        />
-      )}
+      <PortfolioDetailModal
+        item={selectedItem}
+        onClose={() => setSelectedItem(null)}
+      />
     </>
   );
 }
-

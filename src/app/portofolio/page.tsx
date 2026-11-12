@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { portfolioItems } from "@/content/portfolio";
+import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getBreadcrumbJsonLd } from "@/lib/seo";
-import PortfolioPageClient from "@/components/PortfolioPageClient";
+import PortfolioShowcaseGrid from "@/components/PortfolioShowcaseGrid";
 
 export default function PortofolioPage() {
   const breadcrumbs = [
@@ -56,7 +57,49 @@ export default function PortofolioPage() {
         </div>
       </section>
 
-      <PortfolioPageClient items={portfolioItems} />
+      {/* Kartu Pilihan Konsep (Klik untuk Membuka Showcase Detail Multi-Foto) */}
+      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
+        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="max-w-2xl mb-12">
+            <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
+              Ringkasan Sektor
+            </span>
+            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+              Pilih contoh konsep untuk melihat galeri detailnya.
+            </h2>
+          </div>
+
+          <PortfolioShowcaseGrid
+            items={portfolioItems}
+            surface="#ffffff"
+            descriptionMode="businessType"
+            sampleBadge="Proyek Konsep Desain LOOMI"
+            priorityFirst
+          />
+        </div>
+      </section>
+
+      {/* Ajakan Konsultasi Referensi */}
+      <section className="py-16 lg:py-20 bg-[#fafaf7]">
+        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="text-center max-w-xl mx-auto p-8 sm:p-10 rounded-2xl bg-white border border-[#c0c0b9]">
+            <h3 className="text-[22px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
+              Punya contoh tampilan yang Anda sukai?
+            </h3>
+            <p className="mt-2 text-sm text-[#5b5e4e]">
+              Kirimkan tautan referensi atau tangkapan layar tampilan yang Anda inginkan ke WhatsApp kami untuk kami pelajari.
+            </p>
+            <a
+              href={buildGeneralWhatsAppUrl("Kirim Referensi Desain")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[48px]"
+            >
+              Kirim Referensi ke WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
