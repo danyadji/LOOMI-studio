@@ -19,9 +19,9 @@ export default function HomePage() {
         }}
       />
 
-      {/* 1. Hero Section Terpusat (Hijau #3f5b1e di belakang Floating Navbar) */}
-      <section className="relative z-0 -mt-[78px] sm:-mt-[82px] pt-28 sm:pt-36 lg:pt-40 pb-16 lg:pb-24 bg-[#3f5b1e] text-[#fafaf7] border-b border-[#2f4516] overflow-hidden">
-        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+      {/* 1. Hero Section Full 1 Layar (Hijau #3f5b1e di belakang Floating Navbar) */}
+      <section className="relative z-0 -mt-[78px] sm:-mt-[82px] min-h-[100dvh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#3f5b1e] text-[#fafaf7] border-b border-[#2f4516] overflow-hidden">
+        <div className="max-w-[1224px] w-full mx-auto px-6 sm:px-8 lg:px-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="flex items-center justify-center gap-2.5 text-xs font-medium tracking-[0.06em] uppercase text-[#d4ec8c]">
               <span className="w-2 h-2 bg-[#d4ec8c] inline-block shrink-0" aria-hidden="true" />
