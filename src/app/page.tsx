@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { packages } from "@/content/packages";
+import { portfolioItems } from "@/content/portfolio";
 import { processSteps } from "@/content/process";
 import { faqItems } from "@/content/faq";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getOrganizationJsonLd } from "@/lib/seo";
 import PackageCard from "@/components/PackageCard";
-import CarouselStacked from "@/components/ui/carousel-07";
+import { NotchedProjectCard } from "@/components/ui/notched-project-card";
 
 export default function HomePage() {
   const waHeroUrl = buildGeneralWhatsAppUrl("CTA Penutup Beranda");
@@ -61,15 +62,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 1B. Showcase Interaktif Stacked Carousel (Edge-to-Edge di bawah Hero) */}
-      <section className="py-14 lg:py-20 bg-[#fafaf7] border-b border-[#c0c0b9] overflow-hidden">
-        <div className="w-full overflow-hidden">
-          <div className="text-center mb-2 px-6">
-            <span className="text-xs text-[#5b5e4e] font-sans font-medium">
-              Contoh konsep desain per sektor UMKM (geser ke kiri atau kanan)
-            </span>
+      {/* 1B. Showcase Proyek Konsep (3 Kartu NotchedProjectCard di bawah Hero) */}
+      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div className="max-w-2xl">
+              <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
+                Konsep Desain UMKM
+              </span>
+              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+                Contoh rancangan per sektor usaha.
+              </h2>
+            </div>
+            <Link
+              href="/portofolio"
+              className="text-sm font-semibold text-[#3f5b1e] hover:text-[#1f2410] underline underline-offset-4 py-1 self-start md:self-auto"
+            >
+              Lihat detail seluruh studi kasus &rarr;
+            </Link>
           </div>
-          <CarouselStacked />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-12">
+            {portfolioItems.map((item) => (
+              <NotchedProjectCard
+                key={item.slug}
+                href={`/portofolio#${item.slug}`}
+                title={`${item.title}.`}
+                description={item.highlights[0]}
+                image={item.image}
+                imageAlt={`Contoh desain website ${item.title} (${item.businessType})`}
+                badge={item.isSample ? "Proyek Konsep" : item.businessType}
+                tags={item.scope}
+                surface="#fafaf7"
+                accent="#3f5b1e"
+                accentForeground="#ffffff"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
