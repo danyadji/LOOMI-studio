@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand & Informasi Operasional */}
           <div className="md:col-span-5 space-y-5">
             <Link href="/" className="inline-block group rounded-sm">
-              <span className="font-heading font-normal text-3xl sm:text-4xl tracking-[-0.015em] text-[#fafaf7] group-hover:text-[#d4ec8c] transition-colors">
+              <span className="font-heading font-medium text-3xl sm:text-4xl tracking-[-0.015em] text-[#fafaf7] group-hover:text-[#d4ec8c] transition-colors">
                 Loomi Studio.
               </span>
             </Link>

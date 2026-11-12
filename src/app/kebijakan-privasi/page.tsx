@@ -33,7 +33,7 @@ export default function KebijakanPrivasiPage() {
             </ol>
           </nav>
 
-          <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
+          <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
             Kebijakan privasi Loomi Studio.
           </h1>
           <p className="mt-4 text-sm text-[#5b5e4e]">
@@ -45,7 +45,7 @@ export default function KebijakanPrivasiPage() {
       <div className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-[#1f2410] space-y-10">
           <section className="space-y-3">
-            <h2 className="text-[24px] lg:text-[28px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
+            <h2 className="text-[24px] lg:text-[28px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
               1. Prinsip privasi dan arsitektur tanpa database.
             </h2>
             <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -54,7 +54,7 @@ export default function KebijakanPrivasiPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-[24px] lg:text-[28px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
+            <h2 className="text-[24px] lg:text-[28px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
               2. Data pada panel pemilihan paket.
             </h2>
             <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -63,7 +63,7 @@ export default function KebijakanPrivasiPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-[24px] lg:text-[28px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
+            <h2 className="text-[24px] lg:text-[28px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
               3. Alat pelacakan analitik web.
             </h2>
             <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -83,7 +83,7 @@ export default function KebijakanPrivasiPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-[24px] lg:text-[28px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
+            <h2 className="text-[24px] lg:text-[28px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
               4. Komunikasi di WhatsApp.
             </h2>
             <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -92,7 +92,7 @@ export default function KebijakanPrivasiPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-[24px] lg:text-[28px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
+            <h2 className="text-[24px] lg:text-[28px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
               5. Kontak terkait privasi.
             </h2>
             <p className="text-base text-[#5b5e4e] leading-relaxed">

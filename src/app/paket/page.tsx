@@ -60,7 +60,7 @@ export default function PaketPage() {
             </ol>
           </nav>
 
-          <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15] max-w-3xl mx-auto">
+          <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15] max-w-3xl mx-auto">
             Paket pembuatan website kami.
           </h1>
           <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] max-w-2xl mx-auto leading-relaxed">
@@ -101,7 +101,7 @@ export default function PaketPage() {
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
               Perbandingan Detail
             </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
               Tabel perbandingan fitur paket.
             </h2>
           </div>
@@ -110,16 +110,16 @@ export default function PaketPage() {
             <table className="w-full text-left border-collapse text-sm">
               <thead>
                 <tr className="border-b border-[#c0c0b9] bg-[#fafaf7]">
-                  <th className="p-5 sm:p-6 font-heading font-normal text-base text-[#1f2410] w-2/5">
+                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] w-2/5">
                     Fitur &amp; Kemampuan
                   </th>
-                  <th className="p-5 sm:p-6 font-heading font-normal text-base text-[#1f2410] text-center w-1/5">
+                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] text-center w-1/5">
                     Landing Page
                   </th>
-                  <th className="p-5 sm:p-6 font-heading font-normal text-base text-[#1f2410] text-center w-1/5 bg-[#d4ec8c]/45">
+                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] text-center w-1/5 bg-[#d4ec8c]/45">
                     Company Profile
                   </th>
-                  <th className="p-5 sm:p-6 font-heading font-normal text-base text-[#1f2410] text-center w-1/5">
+                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] text-center w-1/5">
                     Toko WhatsApp
                   </th>
                 </tr>
@@ -222,7 +222,7 @@ export default function PaketPage() {
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
               Tambahan Fleksibel
             </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
               Daftar add-on tambahan.
             </h2>
             <p className="mt-3 text-base text-[#5b5e4e]">
@@ -238,7 +238,7 @@ export default function PaketPage() {
               >
                 <div>
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-lg font-heading font-normal text-[#1f2410]">
+                    <h3 className="text-lg font-heading font-medium text-[#1f2410]">
                       {addon.name}
                     </h3>
                     <span className="text-base font-semibold text-[#545c2c] whitespace-nowrap">
@@ -261,7 +261,7 @@ export default function PaketPage() {
           {/* Banner Bantuan WhatsApp */}
           <div className="mt-16 p-8 sm:p-12 rounded-2xl bg-[#1f2410] text-[#fafaf7] flex flex-col sm:flex-row items-center justify-between gap-8">
             <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-2xl font-heading font-normal text-[#fafaf7]">
+              <h3 className="text-2xl font-heading font-medium text-[#fafaf7]">
                 Masih ragu memilih paket yang paling cocok?
               </h3>
               <p className="text-sm text-[#c7ccb8]">

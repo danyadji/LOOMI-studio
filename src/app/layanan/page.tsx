@@ -35,7 +35,7 @@ export default function LayananPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
               Layanan pembuatan website kami.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
@@ -54,7 +54,7 @@ export default function LayananPage() {
                 <span className="text-xs font-medium text-[#5b5e4e]">
                   Layanan 01 &bull; Iklan &amp; Promo
                 </span>
-                <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+                <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
                   Landing page promosi.
                 </h2>
                 <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -96,7 +96,7 @@ export default function LayananPage() {
               <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-white border border-[#c0c0b9] flex flex-col justify-between h-full">
                 <div>
                   <span className="text-xs text-[#5b5e4e] font-medium">Investasi mulai dari</span>
-                  <div className="text-3xl sm:text-4xl font-heading font-normal text-[#545c2c] mt-2 tracking-[-0.015em]">
+                  <div className="text-3xl sm:text-4xl font-heading font-medium text-[#545c2c] mt-2 tracking-[-0.015em]">
                     {formatRupiah(750000)}
                   </div>
                   <p className="text-xs text-[#5b5e4e] mt-2">
@@ -128,7 +128,7 @@ export default function LayananPage() {
                 <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-[#d4ec8c] text-[#1f2410]">
                   Layanan 02 &bull; Pilihan Utama
                 </span>
-                <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+                <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
                   Company profile bisnis.
                 </h2>
                 <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -170,7 +170,7 @@ export default function LayananPage() {
               <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#d4ec8c]/35 border border-[#545c2c]/30 flex flex-col justify-between h-full">
                 <div>
                   <span className="text-xs text-[#3d431e] font-medium">Investasi mulai dari</span>
-                  <div className="text-3xl sm:text-4xl font-heading font-normal text-[#1f2410] mt-2 tracking-[-0.015em]">
+                  <div className="text-3xl sm:text-4xl font-heading font-medium text-[#1f2410] mt-2 tracking-[-0.015em]">
                     {formatRupiah(1500000)}
                   </div>
                   <p className="text-xs text-[#3d431e] mt-2">
@@ -202,7 +202,7 @@ export default function LayananPage() {
                 <span className="text-xs font-medium text-[#5b5e4e]">
                   Layanan 03 &bull; Etalase Produk
                 </span>
-                <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+                <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
                   Katalog toko WhatsApp.
                 </h2>
                 <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -244,7 +244,7 @@ export default function LayananPage() {
               <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-white border border-[#c0c0b9] flex flex-col justify-between h-full">
                 <div>
                   <span className="text-xs text-[#5b5e4e] font-medium">Investasi mulai dari</span>
-                  <div className="text-3xl sm:text-4xl font-heading font-normal text-[#545c2c] mt-2 tracking-[-0.015em]">
+                  <div className="text-3xl sm:text-4xl font-heading font-medium text-[#545c2c] mt-2 tracking-[-0.015em]">
                     {formatRupiah(2250000)}
                   </div>
                   <p className="text-xs text-[#5b5e4e] mt-2">

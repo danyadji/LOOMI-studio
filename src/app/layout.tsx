@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Fraunces } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { siteConfig } from "@/content/site";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,17 +7,10 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import AnalyticsScripts from "@/components/AnalyticsScripts";
 import "./globals.css";
 
-const inter = Inter({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-heading",
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -82,8 +75,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`scroll-smooth ${inter.variable} ${fraunces.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#fafaf7] text-[#1f2410] antialiased selection:bg-[#d4ec8c] selection:text-[#1f2410]">
+    <html lang="id" className={`scroll-smooth ${plusJakartaSans.variable}`}>
+      <body className="min-h-screen flex flex-col bg-[#fafaf7] text-[#1f2410] font-sans font-light antialiased selection:bg-[#d4ec8c] selection:text-[#1f2410]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

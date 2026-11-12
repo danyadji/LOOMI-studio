@@ -35,7 +35,7 @@ export default function ProsesPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
               Alur kerja pembuatan website kami.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
@@ -51,13 +51,13 @@ export default function ProsesPage() {
             {processSteps.map((step) => (
               <div key={step.step} className="relative">
                 {/* Marker Lingkaran Angka */}
-                <div className="absolute -left-[49px] sm:-left-[67px] top-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#545c2c] text-white font-normal text-xs sm:text-sm flex items-center justify-center ring-4 ring-white font-heading">
+                <div className="absolute -left-[49px] sm:-left-[67px] top-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#545c2c] text-white font-medium text-xs sm:text-sm flex items-center justify-center ring-4 ring-white font-heading">
                   0{step.step}
                 </div>
 
                 <div className="p-6 sm:p-9 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9]">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                    <h2 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                    <h2 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                       {step.title}.
                     </h2>
                     <span className="text-xs font-medium px-3 py-1 bg-[#d4ec8c] text-[#1f2410] rounded-full self-start sm:self-auto">
@@ -88,7 +88,7 @@ export default function ProsesPage() {
           </div>
 
           <div className="mt-16 p-8 sm:p-14 rounded-2xl bg-[#1f2410] text-[#fafaf7] text-center">
-            <h3 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#fafaf7]">
+            <h3 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#fafaf7]">
               Siap memulai langkah pertama?
             </h3>
             <p className="mt-3 text-sm text-[#c7ccb8] max-w-md mx-auto">

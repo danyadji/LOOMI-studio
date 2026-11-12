@@ -39,7 +39,8 @@
   }
 
   body {
-    font-family: var(--font-body), "Inter", system-ui, -apple-system, sans-serif;
+    font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    font-weight: 300;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
@@ -48,9 +49,9 @@
   }
 
   h1, h2, h3, h4 {
-    font-family: "Recoleta", var(--font-heading), Georgia, serif;
-    font-weight: 400;
-    letter-spacing: -0.015em;
+    font-family: var(--font-jakarta), "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
   }
 
   /* R-39: Accessible Semantics & Interaction Affordances */

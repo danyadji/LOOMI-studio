@@ -185,7 +185,7 @@ export default function OrderPanel({
             </span>
             <h2
               id="order-panel-title"
-              className="text-xl sm:text-2xl font-heading font-normal tracking-[-0.015em] text-[#1f2410] mt-0.5"
+              className="text-xl sm:text-2xl font-heading font-medium tracking-[-0.015em] text-[#1f2410] mt-0.5"
             >
               Rincian paket pilihan Anda.
             </h2>
@@ -224,7 +224,7 @@ export default function OrderPanel({
                         : "border-[#838775] bg-white hover:bg-[#fafaf7]"
                     }`}
                   >
-                    <div className="font-normal text-sm text-[#1f2410] font-heading">
+                    <div className="font-medium text-sm text-[#1f2410] font-heading">
                       {pkg.name}
                     </div>
                     <div className="text-xs font-semibold text-[#545c2c] mt-1">
@@ -358,7 +358,7 @@ export default function OrderPanel({
               <span className="text-xs font-semibold text-[#5b5e4e]">
                 Total Estimasi Awal
               </span>
-              <span className="text-xl sm:text-2xl font-heading font-normal text-[#545c2c]">
+              <span className="text-xl sm:text-2xl font-heading font-medium text-[#545c2c]">
                 Mulai {formatRupiah(totalEstimate)}
               </span>
             </div>

@@ -70,7 +70,7 @@ export default function FaqPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
               Pertanyaan yang sering diajukan.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
@@ -115,7 +115,7 @@ export default function FaqPage() {
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${faq.id}`}
                   >
-                    <span className="font-heading font-normal text-lg sm:text-[22px] text-[#1f2410] leading-[1.25] tracking-[-0.015em]">
+                    <span className="font-heading font-medium text-lg sm:text-[22px] text-[#1f2410] leading-[1.25] tracking-[-0.015em]">
                       {faq.question}
                     </span>
                     <span
@@ -143,7 +143,7 @@ export default function FaqPage() {
 
           {/* Bantuan Langsung */}
           <div className="mt-16 p-8 sm:p-12 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] text-center">
-            <h3 className="text-[22px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
+            <h3 className="text-[22px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
               Punya pertanyaan lain yang belum terjawab?
             </h3>
             <p className="mt-2 text-sm text-[#5b5e4e]">

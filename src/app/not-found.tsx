@@ -5,12 +5,12 @@ export default function NotFound() {
   return (
     <div className="min-h-[75vh] flex items-center justify-center bg-[#fafaf7] px-6 py-20">
       <div className="max-w-lg w-full text-center space-y-8">
-        <span className="font-heading font-normal text-7xl sm:text-8xl text-[#545c2c] block tracking-[-0.02em]">
+        <span className="font-heading font-medium text-7xl sm:text-8xl text-[#545c2c] block tracking-[-0.02em]">
           404.
         </span>
 
         <div className="space-y-3">
-          <h1 className="text-[28px] sm:text-[36px] font-heading font-normal text-[#1f2410] tracking-[-0.015em] leading-[1.2]">
+          <h1 className="text-[28px] sm:text-[36px] font-heading font-medium text-[#1f2410] tracking-[-0.015em] leading-[1.2]">
             Halaman tidak ditemukan.
           </h1>
           <p className="text-base text-[#5b5e4e] leading-relaxed max-w-sm mx-auto">

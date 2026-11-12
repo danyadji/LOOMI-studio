@@ -37,7 +37,7 @@ export default function KontakPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
               Hubungi Loomi Studio.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
@@ -56,14 +56,14 @@ export default function KontakPage() {
                 <span className="text-xs font-semibold text-[#3d431e] block mb-4">
                   Kanal Utama &bull; Respon Cepat
                 </span>
-                <h2 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <h2 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                   WhatsApp resmi.
                 </h2>
                 <p className="text-sm text-[#1f2410] mt-2 leading-relaxed">
                   Kanal utama untuk konsultasi cepat, pengiriman materi brief, dan konfirmasi pemesanan paket.
                 </p>
                 <div className="mt-6 pt-6 border-t border-[#545c2c]/25">
-                  <div className="text-xl font-heading font-normal text-[#1f2410]">
+                  <div className="text-xl font-heading font-medium text-[#1f2410]">
                     +{siteConfig.whatsappNumber}
                   </div>
                   <div className="text-xs text-[#3d431e] mt-1">
@@ -89,7 +89,7 @@ export default function KontakPage() {
                 <span className="text-xs font-semibold text-[#545c2c] block mb-4">
                   Lokasi Operasional
                 </span>
-                <h2 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <h2 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                   Area layanan kami.
                 </h2>
                 <p className="text-sm text-[#5b5e4e] mt-2 leading-relaxed">
@@ -111,7 +111,7 @@ export default function KontakPage() {
                 <span className="text-xs font-semibold text-[#545c2c] block mb-4">
                   Surel &amp; Portofolio
                 </span>
-                <h2 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <h2 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                   Email &amp; Instagram.
                 </h2>
                 <p className="text-sm text-[#5b5e4e] mt-2 leading-relaxed">

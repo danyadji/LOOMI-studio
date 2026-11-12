@@ -405,7 +405,7 @@ const Card = ({ slide, index, total, progress, config }: CardProps) => {
       </Badge>
 
       <div className="absolute bottom-5 left-4 right-4 sm:bottom-6 sm:left-5 sm:right-5 text-[#fafaf7]">
-        <p className="text-base sm:text-xl font-heading font-normal tracking-[-0.015em] leading-snug mb-1 text-[#fafaf7]">
+        <p className="text-base sm:text-xl font-heading font-medium tracking-[-0.015em] leading-snug mb-1 text-[#fafaf7]">
           {slide.title}
         </p>
         <p className="text-xs text-[#e2e6d8] line-clamp-2 leading-relaxed">

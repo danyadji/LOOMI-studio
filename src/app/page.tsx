@@ -30,7 +30,7 @@ export default function HomePage() {
                 <span>Website Praktis UMKM Indonesia</span>
               </div>
 
-              <h1 className="text-[36px] sm:text-5xl lg:text-[56px] font-heading font-normal tracking-[-0.015em] text-[#ffffff] leading-[1.15]">
+              <h1 className="text-[36px] sm:text-5xl lg:text-[56px] font-heading font-medium tracking-[-0.015em] text-[#ffffff] leading-[1.15]">
                 Anda bawa{" "}
                 <span className="bg-[#d4ec8c] text-[#1f2410] px-2.5 py-0.5 inline-block">
                   ide usaha
@@ -122,7 +122,7 @@ export default function HomePage() {
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
               Pendekatan Kami
             </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
               Dibangun untuk cara UMKM Indonesia berjualan.
             </h2>
           </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                   </svg>
                 </div>
-                <h3 className="text-[22px] lg:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                   Pemesanan langsung ke WhatsApp.
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-[#1f2410] leading-relaxed">
@@ -156,7 +156,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-[22px] lg:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                   Ringan dibuka lewat HP 4G.
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-[#5b5e4e] leading-relaxed">
@@ -176,7 +176,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-[22px] lg:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                   Kode sumber utuh milik Anda.
                 </h3>
                 <p className="mt-3 text-sm sm:text-base text-[#5b5e4e] leading-relaxed">
@@ -198,7 +198,7 @@ export default function HomePage() {
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
               Layanan Utama
             </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
               Tiga solusi website yang disesuaikan dengan tahap bisnis Anda.
             </h2>
           </div>
@@ -209,7 +209,7 @@ export default function HomePage() {
               <span className="text-xs font-medium text-[#5b5e4e] block">
                 01. Fokus Konversi Iklan
               </span>
-              <h3 className="text-[22px] lg:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+              <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                 Landing page promosi.
               </h3>
               <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -306,7 +306,7 @@ export default function HomePage() {
               <span className="text-xs font-medium text-[#5b5e4e] block">
                 02. Kredibilitas Usaha Lengkap
               </span>
-              <h3 className="text-[22px] lg:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+              <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                 Company profile bisnis.
               </h3>
               <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -344,7 +344,7 @@ export default function HomePage() {
               <span className="text-xs font-medium text-[#5b5e4e] block">
                 03. Etalase Produk Praktis
               </span>
-              <h3 className="text-[22px] lg:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+              <h3 className="text-[22px] lg:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                 Katalog toko WhatsApp.
               </h3>
               <p className="text-base text-[#5b5e4e] leading-relaxed">
@@ -406,7 +406,7 @@ export default function HomePage() {
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
               Investasi Jelas
             </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
               Paket pembuatan website kami.
             </h2>
             <p className="mt-4 text-base text-[#5b5e4e]">
@@ -440,7 +440,7 @@ export default function HomePage() {
               <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
                 Alur Kerja
               </span>
-              <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
                 Cara kami bekerja bersama Anda.
               </h2>
             </div>
@@ -460,14 +460,14 @@ export default function HomePage() {
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <span className="text-3xl font-heading font-normal text-[#545c2c] tracking-[-0.015em]">
+                    <span className="text-3xl font-heading font-medium text-[#545c2c] tracking-[-0.015em]">
                       0{step.step}.
                     </span>
                     <span className="text-xs font-medium px-3 py-1 bg-[#d4ec8c] text-[#1f2410] rounded-full">
                       {step.duration}
                     </span>
                   </div>
-                  <h3 className="text-xl font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+                  <h3 className="text-xl font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                     {step.title}
                   </h3>
                   <p className="text-sm text-[#5b5e4e] mt-3 leading-relaxed">
@@ -488,7 +488,7 @@ export default function HomePage() {
               <span className="text-xs font-semibold text-[#545c2c] block font-sans">
                 Pertanyaan Umum
               </span>
-              <h2 className="text-[28px] lg:text-[36px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
                 Jawaban lugas untuk keraguan Anda.
               </h2>
               <p className="text-sm text-[#5b5e4e] leading-relaxed">
@@ -507,7 +507,7 @@ export default function HomePage() {
             <div className="lg:col-span-8 divide-y divide-[#c0c0b9] border-t border-b border-[#c0c0b9]">
               {faqItems.slice(0, 4).map((faq) => (
                 <div key={faq.id} className="py-6 sm:py-7">
-                  <h3 className="text-lg sm:text-[22px] font-heading font-normal text-[#1f2410] leading-[1.25] tracking-[-0.015em]">
+                  <h3 className="text-lg sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.25] tracking-[-0.015em]">
                     {faq.question}
                   </h3>
                   <p className="text-sm sm:text-base text-[#5b5e4e] mt-2.5 leading-relaxed">
@@ -527,7 +527,7 @@ export default function HomePage() {
             <span className="text-xs font-semibold text-[#d4ec8c] block mb-3 font-sans">
               Mulai Hari Ini
             </span>
-            <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-heading font-normal tracking-[-0.015em] text-[#fafaf7] leading-[1.18] max-w-3xl mx-auto">
+            <h2 className="text-[28px] sm:text-4xl lg:text-[44px] font-heading font-medium tracking-[-0.015em] text-[#fafaf7] leading-[1.18] max-w-3xl mx-auto">
               Siap memiliki website profesional untuk usaha Anda?
             </h2>
             <p className="mt-5 text-base text-[#c7ccb8] max-w-xl mx-auto leading-relaxed">

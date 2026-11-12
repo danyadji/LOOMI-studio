@@ -33,7 +33,7 @@ export default function PackageCard({ pkg, onSelect, href }: PackageCardProps) {
         </div>
 
         {/* Nama Paket (Heading weight 400 sesuai DESIGN.md) */}
-        <h3 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
+        <h3 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
           {pkg.name}.
         </h3>
         <p className="text-sm text-[#5b5e4e] mt-3 min-h-[44px] leading-relaxed">
@@ -46,7 +46,7 @@ export default function PackageCard({ pkg, onSelect, href }: PackageCardProps) {
             Investasi mulai dari
           </div>
           <div className="flex items-baseline gap-1 mt-1.5">
-            <span className="text-3xl sm:text-4xl font-heading font-normal text-[#545c2c] tracking-[-0.015em]">
+            <span className="text-3xl sm:text-4xl font-heading font-medium text-[#545c2c] tracking-[-0.015em]">
               {formatRupiah(pkg.priceFrom)}
             </span>
             <span className="text-xs text-[#5b5e4e] ml-1">/ proyek</span>

@@ -35,7 +35,7 @@ export default function PortofolioPage() {
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
               Portofolio dan konsep desain kami.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
@@ -78,7 +78,7 @@ export default function PortofolioPage() {
                     <span className="text-xs font-medium text-[#5b5e4e] block font-sans">
                       Konsep 0{index + 1} &bull; {item.businessType}
                     </span>
-                    <h2 className="text-[28px] lg:text-[36px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em] mt-1.5">
+                    <h2 className="text-[28px] lg:text-[36px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em] mt-1.5">
                       {item.title}.
                     </h2>
                   </div>
@@ -124,7 +124,7 @@ export default function PortofolioPage() {
           </div>
 
           <div className="mt-16 text-center max-w-xl mx-auto p-8 sm:p-10 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9]">
-            <h3 className="text-[22px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
+            <h3 className="text-[22px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
               Punya contoh tampilan yang Anda sukai?
             </h3>
             <p className="mt-2 text-sm text-[#5b5e4e]">
