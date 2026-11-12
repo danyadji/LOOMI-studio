@@ -106,7 +106,7 @@ export default function HomePage() {
       <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="max-w-2xl mb-12">
-            <div className="inline-flex items-center gap-2 bg-white border border-[#c0c0b9]/70 px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-5">
+            <div className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-5">
               <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
               <span>Pendekatan Kami</span>
             </div>
@@ -121,9 +121,9 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Kartu 1 (Mengikuti struktur penuh kartu referensi pertama) */}
-            <div className="p-6 sm:p-8 bg-white border border-[#c0c0b9]/70 rounded-[2px] flex flex-col justify-between">
+            <div className="p-6 sm:p-8 bg-white rounded-[2px] flex flex-col justify-between">
               <div>
-                <span className="inline-block self-start bg-[#fafaf7] border border-[#e6e4dc] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                <span className="inline-block self-start bg-[#fafaf7] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
                   Poin 01
                 </span>
                 <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
@@ -144,9 +144,9 @@ export default function HomePage() {
             </div>
 
             {/* Kartu 2 (Struktur identik kartu referensi pertama) */}
-            <div className="p-6 sm:p-8 bg-white border border-[#c0c0b9]/70 rounded-[2px] flex flex-col justify-between">
+            <div className="p-6 sm:p-8 bg-white rounded-[2px] flex flex-col justify-between">
               <div>
-                <span className="inline-block self-start bg-[#fafaf7] border border-[#e6e4dc] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                <span className="inline-block self-start bg-[#fafaf7] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
                   Poin 02
                 </span>
                 <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
@@ -167,9 +167,9 @@ export default function HomePage() {
             </div>
 
             {/* Kartu 3 (Struktur identik kartu referensi pertama) */}
-            <div className="p-6 sm:p-8 bg-white border border-[#c0c0b9]/70 rounded-[2px] flex flex-col justify-between">
+            <div className="p-6 sm:p-8 bg-white rounded-[2px] flex flex-col justify-between">
               <div>
-                <span className="inline-block self-start bg-[#fafaf7] border border-[#e6e4dc] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
+                <span className="inline-block self-start bg-[#fafaf7] px-2.5 py-1 text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] rounded-[2px]">
                   Poin 03
                 </span>
                 <h3 className="mt-5 text-[20px] sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.28] tracking-[-0.015em]">
@@ -193,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. Feature Stack Zig-Zag (Tiga Solusi Layanan dengan Pratinjau Struktur Asli) */}
-      <section className="py-16 lg:py-24 bg-white border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 space-y-20 lg:space-y-28">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
@@ -243,7 +243,7 @@ export default function HomePage() {
 
             {/* Pratinjau Struktur Landing Page (Pengganti Skeleton SVG) */}
             <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
+              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
                 <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
                   <span className="text-xs font-medium text-[#5b5e4e]">
                     [Contoh Struktur Landing Page]
@@ -252,7 +252,7 @@ export default function HomePage() {
                     1 Halaman Fokus
                   </span>
                 </div>
-                <div className="p-5 rounded-xl bg-white border border-[#c0c0b9] space-y-3">
+                <div className="p-5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] space-y-3">
                   <div className="text-xs font-semibold text-[#545c2c]">Blok Penawaran Utama</div>
                   <div className="font-heading text-xl text-[#1f2410]">Paket Hampers Kopi Roastery</div>
                   <p className="text-xs text-[#5b5e4e] leading-relaxed">
@@ -273,7 +273,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             {/* Pratinjau Struktur Company Profile */}
             <div className="lg:col-span-6 order-2 lg:order-1">
-              <div className="rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
+              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-5">
                 <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
                   <span className="text-xs font-medium text-[#5b5e4e]">
                     [Contoh Struktur 5 Halaman]
@@ -283,15 +283,15 @@ export default function HomePage() {
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-3 text-xs">
-                  <div className="p-3.5 rounded-xl bg-white border border-[#c0c0b9]">
+                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
                     <div className="font-semibold text-[#545c2c]">01. Beranda &amp; Profil</div>
                     <p className="text-[#5b5e4e] mt-1">Identitas usaha dan legalitas jelas</p>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-white border border-[#c0c0b9]">
+                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
                     <div className="font-semibold text-[#545c2c]">02. Daftar Layanan</div>
                     <p className="text-[#5b5e4e] mt-1">Penjabaran jasa dan jadwal praktik</p>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-white border border-[#c0c0b9]">
+                  <div className="p-3.5 rounded-xl bg-[#fafaf7] border border-[#c0c0b9]">
                     <div className="font-semibold text-[#545c2c]">03. Galeri Proyek</div>
                     <p className="text-[#5b5e4e] mt-1">Dokumentasi hasil kerja nyata</p>
                   </div>
@@ -378,7 +378,7 @@ export default function HomePage() {
 
             {/* Pratinjau Format Pesan WhatsApp */}
             <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] p-6 sm:p-8 space-y-4">
+              <div className="rounded-2xl bg-white border border-[#c0c0b9] p-6 sm:p-8 space-y-4">
                 <div className="flex items-center justify-between border-b border-[#c0c0b9] pb-3">
                   <span className="text-xs font-medium text-[#5b5e4e]">
                     [Contoh Output Pesan WhatsApp]
@@ -387,7 +387,7 @@ export default function HomePage() {
                     Siap Dikirim Pembeli
                   </span>
                 </div>
-                <div className="p-4 rounded-xl bg-white border border-[#c0c0b9] font-sans text-xs text-[#1f2410] space-y-1.5 leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] font-sans text-xs text-[#1f2410] space-y-1.5 leading-relaxed">
                   <p>Halo Admin, saya ingin memesan dari website:</p>
                   <p>* Produk: Kursi Teras Jati Natural</p>
                   <p>* Varian: Finishing Doff (2 Unit)</p>
