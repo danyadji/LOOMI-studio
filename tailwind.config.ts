@@ -29,19 +29,18 @@ const config: Config = {
         },
         border: "hsl(var(--border))",
         ring: "hsl(var(--ring))",
-        brand: {
-          bg: "#FAF9F5",
-          surface: "#FFFFFF",
-          surfaceMuted: "#F2F0E8",
-          border: "#E8E6DF",
-          borderDark: "#D4D1C7",
-          text: "#0A0A0A",
-          textMuted: "#666666",
-          textLight: "#8A8A8A",
-          accent: "#0D547D",
-          accentLight: "#E8F4FA",
-          accentVibrant: "#20AFFF",
-          dark: "#0F0F0F",
+        forest: {
+          bg: "#fafaf7",
+          surface: "#ffffff",
+          ink: "#1f2410",
+          olive: "#545c2c",
+          oliveDark: "#3f4620",
+          leaf: "#9cbc64",
+          leafMuted: "#8fa65b",
+          lime: "#d4ec8c",
+          mutedText: "#5b5e4e",
+          border: "#c0c0b9",
+          controlBorder: "#838775",
         },
       },
       height: {
@@ -51,6 +50,7 @@ const config: Config = {
       fontFamily: {
         sans: [
           "var(--font-body)",
+          "Inter",
           "system-ui",
           "-apple-system",
           "BlinkMacSystemFont",
@@ -59,6 +59,7 @@ const config: Config = {
           "sans-serif",
         ],
         heading: [
+          "Recoleta",
           "var(--font-heading)",
           "Georgia",
           "serif",

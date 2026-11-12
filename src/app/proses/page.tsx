@@ -18,65 +18,65 @@ export default function ProsesPage() {
         }}
       />
 
-      <div className="bg-[#FAF9F5] border-b border-[#E8E6DF] py-16 sm:py-24">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="bg-[#fafaf7] border-b border-[#c0c0b9] py-16 lg:py-24">
+        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center space-x-2 text-xs uppercase tracking-wider text-stone-500">
+            <ol className="flex items-center space-x-2 text-xs text-[#5b5e4e]">
               <li>
-                <Link href="/" className="hover:text-black">
+                <Link href="/" className="hover:text-[#1f2410]">
                   Beranda
                 </Link>
               </li>
               <li>/</li>
-              <li className="font-semibold text-[#0A0A0A]" aria-current="page">
+              <li className="font-semibold text-[#545c2c]" aria-current="page">
                 Proses Kerja
               </li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-6xl font-heading font-medium tracking-tight text-[#0A0A0A] leading-tight">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
               Alur kerja pembuatan website kami.
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-stone-600 leading-relaxed">
-              Kami menyederhanakan alur pembuatan website agar Anda tidak dipusingkan oleh urusan teknis server atau koding. Berikut adalah tahapan pengerjaan dari konsultasi hingga peluncuran.
+            <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
+              Kami menyederhanakan alur pengerjaan website agar Anda tidak terbebani istilah teknis atau pengaturan server. Berikut tahapan lengkap dari konsultasi hingga peluncuran.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="py-20 sm:py-32 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-12">
-          <div className="relative border-l-2 border-[#E8E6DF] ml-4 sm:ml-8 pl-8 sm:pl-12 space-y-16">
+      <div className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="relative border-l-2 border-[#c0c0b9] ml-4 sm:ml-6 pl-8 sm:pl-12 space-y-12">
             {processSteps.map((step) => (
               <div key={step.step} className="relative">
                 {/* Marker Lingkaran Angka */}
-                <div className="absolute -left-[49px] sm:-left-[65px] top-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#0A0A0A] text-white font-medium text-xs sm:text-sm flex items-center justify-center ring-4 ring-white shadow-sm font-heading">
+                <div className="absolute -left-[49px] sm:-left-[67px] top-0 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#545c2c] text-white font-normal text-xs sm:text-sm flex items-center justify-center ring-4 ring-white font-heading">
                   0{step.step}
                 </div>
 
-                <div className="p-8 sm:p-10 rounded-3xl bg-[#FAF9F5] border border-[#E8E6DF]">
+                <div className="p-6 sm:p-9 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9]">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-                    <h2 className="text-2xl sm:text-3xl font-heading font-medium text-[#0A0A0A]">
+                    <h2 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
                       {step.title}.
                     </h2>
-                    <span className="text-xs font-semibold px-3 py-1 bg-white border border-[#E8E6DF] text-stone-700 rounded-full self-start sm:self-auto">
+                    <span className="text-xs font-medium px-3 py-1 bg-[#d4ec8c] text-[#1f2410] rounded-full self-start sm:self-auto">
                       Estimasi: {step.duration}
                     </span>
                   </div>
 
-                  <p className="text-base text-stone-600 leading-relaxed">
+                  <p className="text-base text-[#5b5e4e] leading-relaxed">
                     {step.description}
                   </p>
 
-                  <div className="mt-6 pt-5 border-t border-[#E8E6DF]">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 block mb-3 font-sans">
+                  <div className="mt-6 pt-5 border-t border-[#c0c0b9]">
+                    <span className="text-xs font-semibold text-[#545c2c] block mb-3 font-sans">
                       Hasil &amp; Output Tahap Ini:
                     </span>
-                    <ul className="space-y-2 text-sm text-stone-700">
+                    <ul className="space-y-2 text-sm text-[#1f2410]">
                       {step.deliverables.map((d, i) => (
                         <li key={i} className="flex items-start gap-2.5">
-                          <span className="font-bold text-[#0A0A0A]">&bull;</span>
+                          <span className="font-bold text-[#545c2c]" aria-hidden="true">&bull;</span>
                           <span>{d}</span>
                         </li>
                       ))}
@@ -87,17 +87,17 @@ export default function ProsesPage() {
             ))}
           </div>
 
-          <div className="mt-20 p-10 sm:p-14 rounded-3xl bg-[#0C0C0C] text-white text-center">
-            <h3 className="text-2xl sm:text-3xl font-heading font-medium">
+          <div className="mt-16 p-8 sm:p-14 rounded-2xl bg-[#1f2410] text-[#fafaf7] text-center">
+            <h3 className="text-[22px] sm:text-[28px] font-heading font-normal text-[#fafaf7]">
               Siap memulai langkah pertama?
             </h3>
-            <p className="mt-3 text-sm text-stone-300 max-w-md mx-auto">
-              Pilih paket Anda atau hubungi kami di WhatsApp untuk obrolan awal tanpa komitmen.
+            <p className="mt-3 text-sm text-[#c7ccb8] max-w-md mx-auto">
+              Pilih paket Anda atau hubungi kami via WhatsApp untuk obrolan awal tanpa komitmen.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/paket"
-                className="w-full sm:w-auto px-8 py-3.5 text-sm font-semibold bg-white text-[#0A0A0A] rounded-full hover:bg-stone-100 transition-colors min-h-[48px] flex items-center justify-center"
+                className="w-full sm:w-auto px-7 py-3.5 text-sm font-medium bg-[#d4ec8c] text-[#1f2410] rounded-full hover:bg-[#9cbc64] transition-colors min-h-[48px] flex items-center justify-center"
               >
                 Lihat Paket &amp; Harga
               </Link>
@@ -105,7 +105,7 @@ export default function ProsesPage() {
                 href={buildGeneralWhatsAppUrl("Halaman Proses")}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-8 py-3.5 text-sm font-semibold bg-stone-800 hover:bg-stone-700 border border-stone-700 text-white rounded-full transition-colors min-h-[48px] flex items-center justify-center"
+                className="w-full sm:w-auto px-7 py-3.5 text-sm font-medium bg-transparent hover:bg-[#545c2c] border border-[#fafaf7] text-[#fafaf7] rounded-full transition-colors min-h-[48px] flex items-center justify-center"
               >
                 Mulai Konsultasi WhatsApp
               </a>

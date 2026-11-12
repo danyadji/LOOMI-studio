@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { siteConfig } from "@/content/site";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { trackFloatingWhatsAppClick } from "@/lib/analytics";
 
@@ -35,23 +34,23 @@ export default function Navbar() {
   const waUrl = buildGeneralWhatsAppUrl("Navigasi Header");
 
   return (
-    <header className="sticky top-0 z-40 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-[#E8E6DF] transition-colors">
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo LOOMI */}
+    <header className="sticky top-0 z-40 bg-[#fafaf7]/90 backdrop-blur-md border-b border-[#c0c0b9] transition-colors">
+      <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="flex items-center justify-between h-[68px]">
+          {/* Wordmark LOOMI Studio */}
           <Link
             href="/"
-            className="flex items-baseline gap-1.5 group focus-visible:ring-2 focus-visible:ring-[#0A0A0A] rounded-sm"
+            className="flex items-baseline gap-2 group rounded-sm py-1"
           >
-            <span className="font-heading font-medium text-2xl sm:text-3xl tracking-tight text-[#0A0A0A] group-hover:opacity-80 transition-opacity">
+            <span className="font-heading font-normal text-2xl sm:text-[28px] tracking-[-0.015em] text-[#1f2410] group-hover:text-[#545c2c] transition-colors">
               Loomi
             </span>
-            <span className="text-xs font-sans font-semibold tracking-wider uppercase text-stone-500">
+            <span className="text-xs font-sans font-medium tracking-wide text-[#545c2c]">
               Studio
             </span>
           </Link>
 
-          {/* Desktop Navigation (4 Menu Saja) */}
+          {/* Navigasi Desktop (4 Menu Utama) */}
           <nav className="hidden md:flex items-center gap-8" aria-label="Navigasi Utama">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
@@ -59,50 +58,56 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[15px] font-medium transition-colors py-1 relative ${
+                  className={`text-[15px] transition-colors py-1.5 relative ${
                     isActive
-                      ? "text-[#0A0A0A] font-semibold"
-                      : "text-stone-600 hover:text-[#0A0A0A]"
+                      ? "text-[#545c2c] font-semibold"
+                      : "text-[#5b5e4e] font-medium hover:text-[#1f2410]"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#0A0A0A] rounded-full" />
+                    <span
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#545c2c] rounded-full"
+                      aria-hidden="true"
+                    />
                   )}
                 </Link>
               );
             })}
           </nav>
 
-          {/* CTA Header (Pill Button ala Epidemic Sound) */}
-          <div className="hidden md:flex items-center gap-4">
+          {/* CTA Header (Primary Olive -> Hover Leaf Soft + Dark Ink) */}
+          <div className="hidden md:flex items-center">
             <a
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackFloatingWhatsAppClick()}
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[#0A0A0A] hover:bg-stone-800 rounded-full shadow-sm transition-all focus-visible:ring-2 focus-visible:ring-[#0A0A0A] min-h-[46px]"
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[44px]"
             >
               Konsultasi WhatsApp
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button (Berlabel eksplisit sesuai antislop-layoutmobile) */}
           <div className="flex md:hidden items-center">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-full text-stone-800 hover:text-black hover:bg-stone-200/50 transition-colors focus-visible:ring-2 focus-visible:ring-[#0A0A0A] min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="px-3 py-2 rounded-full border border-[#838775] text-[#1f2410] hover:bg-[#d4ec8c] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center gap-2"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
-              aria-label={mobileMenuOpen ? "Tutup menu utama" : "Buka menu utama"}
+              aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
             >
+              <span className="text-xs font-medium">
+                {mobileMenuOpen ? "Tutup" : "Menu"}
+              </span>
               {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M4 7h16M4 17h16" />
                 </svg>
               )}
@@ -113,8 +118,8 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden border-b border-[#E8E6DF] bg-[#FAF9F5] px-6 pt-4 pb-8 shadow-xl animate-in fade-in duration-150">
-          <nav className="flex flex-col space-y-2">
+        <div id="mobile-menu" className="md:hidden border-b border-[#c0c0b9] bg-[#fafaf7] px-6 pt-4 pb-8">
+          <nav className="flex flex-col space-y-2" aria-label="Menu Mobile">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -122,10 +127,10 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-xl text-base font-medium min-h-[44px] flex items-center ${
+                  className={`px-4 py-3 rounded-xl text-base min-h-[44px] flex items-center transition-colors ${
                     isActive
-                      ? "bg-stone-200/70 text-[#0A0A0A] font-semibold"
-                      : "text-stone-700 hover:bg-stone-200/40"
+                      ? "bg-[#d4ec8c] text-[#1f2410] font-semibold"
+                      : "text-[#1f2410] font-medium hover:bg-[#ffffff]"
                   }`}
                 >
                   {link.name}
@@ -133,7 +138,7 @@ export default function Navbar() {
               );
             })}
           </nav>
-          <div className="mt-6 pt-4 border-t border-[#E8E6DF]">
+          <div className="mt-6 pt-4 border-t border-[#c0c0b9]">
             <a
               href={waUrl}
               target="_blank"
@@ -142,7 +147,7 @@ export default function Navbar() {
                 trackFloatingWhatsAppClick();
                 setMobileMenuOpen(false);
               }}
-              className="w-full inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-white bg-[#0A0A0A] hover:bg-stone-800 rounded-full shadow-sm transition-all min-h-[48px]"
+              className="w-full inline-flex items-center justify-center px-6 py-3.5 text-base font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[48px]"
             >
               Konsultasi WhatsApp
             </a>

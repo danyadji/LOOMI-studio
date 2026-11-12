@@ -53,35 +53,35 @@ export default function FaqPage() {
         }}
       />
 
-      <div className="bg-[#FAF9F5] border-b border-[#E8E6DF] py-16 sm:py-24">
-        <div className="max-w-[1360px] mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="bg-[#fafaf7] border-b border-[#c0c0b9] py-16 lg:py-24">
+        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center space-x-2 text-xs uppercase tracking-wider text-stone-500">
+            <ol className="flex items-center space-x-2 text-xs text-[#5b5e4e]">
               <li>
-                <Link href="/" className="hover:text-black">
+                <Link href="/" className="hover:text-[#1f2410]">
                   Beranda
                 </Link>
               </li>
               <li>/</li>
-              <li className="font-semibold text-[#0A0A0A]" aria-current="page">
+              <li className="font-semibold text-[#545c2c]" aria-current="page">
                 FAQ
               </li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-6xl font-heading font-medium tracking-tight text-[#0A0A0A] leading-tight">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
               Pertanyaan yang sering diajukan.
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-stone-600 leading-relaxed">
-              Kami menyusun jawaban transparan untuk pertanyaan penting seputar kepemilikan kode sumber, domain, hosting, sistem revisi, dan skema pembayaran.
+            <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
+              Kami menyusun jawaban transparan untuk pertanyaan penting seputar kepemilikan kode sumber, domain, hosting, mekanisme revisi, dan sistem pembayaran.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="py-20 sm:py-32 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-8 lg:px-12">
+      <div className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10">
           {/* Category Tabs Pill Buttons */}
           <div className="flex flex-wrap gap-2.5 mb-12" role="tablist" aria-label="Kategori Pertanyaan">
             {categories.map((cat) => (
@@ -89,10 +89,10 @@ export default function FaqPage() {
                 key={cat.id}
                 type="button"
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-colors min-h-[44px] ${
+                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-colors min-h-[44px] ${
                   selectedCategory === cat.id
-                    ? "bg-[#0A0A0A] text-white shadow-sm"
-                    : "bg-[#FAF9F5] border border-[#E8E6DF] text-stone-700 hover:border-stone-400"
+                    ? "bg-[#545c2c] text-white"
+                    : "bg-[#fafaf7] border border-[#838775] text-[#1f2410] hover:bg-[#d4ec8c]"
                 }`}
                 role="tab"
                 aria-selected={selectedCategory === cat.id}
@@ -102,24 +102,24 @@ export default function FaqPage() {
             ))}
           </div>
 
-          {/* FAQ Accordion List ala Epidemic Sound */}
-          <div className="divide-y divide-[#E8E6DF] border-t border-b border-[#E8E6DF]">
+          {/* FAQ Accordion List */}
+          <div className="divide-y divide-[#c0c0b9] border-t border-b border-[#c0c0b9]">
             {filteredFaqs.map((faq) => {
               const isOpen = !!openIds[faq.id];
               return (
-                <div key={faq.id} className="py-6 sm:py-8 transition-colors">
+                <div key={faq.id} className="py-6 sm:py-7">
                   <button
                     type="button"
                     onClick={() => toggleFaq(faq.id)}
-                    className="w-full text-left flex items-start justify-between gap-6 focus-visible:ring-2 focus-visible:ring-[#0A0A0A] rounded-lg min-h-[48px]"
+                    className="w-full text-left flex items-start justify-between gap-6 rounded-lg min-h-[48px] py-1"
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${faq.id}`}
                   >
-                    <span className="font-heading font-medium text-xl sm:text-2xl text-[#0A0A0A] leading-snug">
+                    <span className="font-heading font-normal text-lg sm:text-[22px] text-[#1f2410] leading-[1.25] tracking-[-0.015em]">
                       {faq.question}
                     </span>
                     <span
-                      className={`text-[#0A0A0A] transform transition-transform duration-200 text-2xl font-light shrink-0 leading-none mt-1 ${
+                      className={`text-[#545c2c] transform transition-transform duration-200 text-2xl font-light shrink-0 leading-none mt-1 ${
                         isOpen ? "rotate-45" : ""
                       }`}
                       aria-hidden="true"
@@ -131,7 +131,7 @@ export default function FaqPage() {
                   {isOpen && (
                     <div
                       id={`faq-answer-${faq.id}`}
-                      className="pt-4 text-base text-stone-600 leading-relaxed pr-8"
+                      className="pt-3 text-base text-[#5b5e4e] leading-relaxed pr-8"
                     >
                       <p>{faq.answer}</p>
                     </div>
@@ -142,18 +142,18 @@ export default function FaqPage() {
           </div>
 
           {/* Bantuan Langsung */}
-          <div className="mt-16 p-8 sm:p-12 rounded-3xl bg-[#FAF9F5] border border-[#E8E6DF] text-center">
-            <h3 className="text-xl sm:text-2xl font-heading font-medium text-[#0A0A0A]">
+          <div className="mt-16 p-8 sm:p-12 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] text-center">
+            <h3 className="text-[22px] font-heading font-normal text-[#1f2410] tracking-[-0.015em]">
               Punya pertanyaan lain yang belum terjawab?
             </h3>
-            <p className="mt-2 text-sm text-stone-600">
+            <p className="mt-2 text-sm text-[#5b5e4e]">
               Jangan ragu untuk bertanya langsung kepada kami via WhatsApp. Kami siap menjelaskan dengan ramah.
             </p>
             <a
               href={buildGeneralWhatsAppUrl("Pertanyaan Khusus di FAQ")}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center justify-center px-8 py-3.5 rounded-full text-sm font-semibold bg-[#0A0A0A] hover:bg-stone-800 text-white transition-colors min-h-[48px]"
+              className="mt-6 inline-flex items-center justify-center px-7 py-3.5 rounded-full text-sm font-medium bg-[#545c2c] hover:bg-[#8fa65b] text-white hover:text-[#1f2410] transition-colors min-h-[48px]"
             >
               Tanyakan via WhatsApp
             </a>

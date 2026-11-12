@@ -9,18 +9,20 @@ import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   variable: "--font-body",
   display: "swap",
 });
 
 const fraunces = Fraunces({
   subsets: ["latin"],
+  weight: ["400", "500"],
   variable: "--font-heading",
   display: "swap",
 });
 
 export const viewport: Viewport = {
-  themeColor: "#FAF9F5",
+  themeColor: "#fafaf7",
   width: "device-width",
   initialScale: 1,
 };
@@ -81,7 +83,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id" className={`scroll-smooth ${inter.variable} ${fraunces.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#FAF9F5] text-[#0A0A0A] antialiased selection:bg-[#0A0A0A] selection:text-white">
+      <body className="min-h-screen flex flex-col bg-[#fafaf7] text-[#1f2410] antialiased selection:bg-[#d4ec8c] selection:text-[#1f2410]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

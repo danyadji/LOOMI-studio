@@ -3,6 +3,7 @@
 import * as React from "react";
 import {
   motion,
+  MotionConfig,
   useMotionValue,
   useTransform,
   animate,
@@ -220,84 +221,91 @@ const CarouselStacked = ({ slides = defaultSlides, className }: CarouselStackedP
   };
 
   return (
-    <div
-      className={cn(
-        "flex flex-col items-center justify-center w-full py-4 sm:py-8 bg-transparent overflow-hidden select-none px-0 mx-0",
-        className,
-      )}
-    >
-      <div className="relative w-full h-80 sm:h-112 lg:h-128 flex items-center justify-center overflow-visible">
-        {/* Permukaan Drag Sentuh Ringan dengan touchAction pan-y agar scroll halaman tetap lancar */}
-        <motion.div
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0}
-          dragMomentum={false}
-          onDragStart={handleDragStart}
-          onDrag={(_, info) => {
-            const delta = -info.delta.x / config.sensitivity;
-            scrollProgress.set(scrollProgress.get() + delta);
-          }}
-          onDragEnd={handleDragEnd}
-          style={{ touchAction: "pan-y" }}
-          className="absolute inset-0 z-50 cursor-grab active:cursor-grabbing"
-          aria-label="Geser ke samping untuk melihat contoh proyek website"
-        />
-
-        {slides.map((slide, i) => (
-          <Card
-            key={i}
-            slide={slide}
-            index={i}
-            total={total}
-            progress={scrollProgress}
-            config={config}
+    <MotionConfig reducedMotion="user">
+      <div
+        className={cn(
+          "flex flex-col items-center justify-center w-full py-4 sm:py-8 bg-transparent overflow-hidden select-none px-0 mx-0",
+          className,
+        )}
+      >
+        <div className="relative w-full h-80 sm:h-112 lg:h-128 flex items-center justify-center overflow-visible">
+          {/* Permukaan Drag Sentuh Ringan dengan touchAction pan-y agar scroll halaman tetap lancar */}
+          <motion.div
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0}
+            dragMomentum={false}
+            onDragStart={handleDragStart}
+            onDrag={(_, info) => {
+              const delta = -info.delta.x / config.sensitivity;
+              scrollProgress.set(scrollProgress.get() + delta);
+            }}
+            onDragEnd={handleDragEnd}
+            style={{ touchAction: "pan-y" }}
+            className="absolute inset-0 z-50 cursor-grab active:cursor-grabbing"
+            aria-label="Geser ke samping untuk melihat contoh proyek website"
           />
-        ))}
-      </div>
 
-      {/* Kontrol Navigasi & Indikator Titik */}
-      <div className="flex items-center justify-center gap-3 mt-4 sm:mt-6 z-20">
-        <button
-          type="button"
-          onClick={() => goToSlide(activeIndex - 1 < 0 ? total - 1 : activeIndex - 1)}
-          className="p-2.5 rounded-full border border-[#E8E6DF] bg-white hover:bg-stone-100 text-[#0A0A0A] shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-[#0A0A0A] active:scale-95"
-          aria-label="Proyek sebelumnya"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 border border-[#E8E6DF] shadow-xs">
-          {slides.map((_, i) => (
-            <button
+          {slides.map((slide, i) => (
+            <Card
               key={i}
-              type="button"
-              onClick={() => goToSlide(i)}
-              className={cn(
-                "h-1.5 rounded-full transition-all duration-300",
-                i === activeIndex
-                  ? "w-6 bg-[#0A0A0A]"
-                  : "w-1.5 bg-stone-300 hover:bg-stone-500",
-              )}
-              aria-label={`Buka slide proyek ${i + 1}`}
+              slide={slide}
+              index={i}
+              total={total}
+              progress={scrollProgress}
+              config={config}
             />
           ))}
         </div>
 
-        <button
-          type="button"
-          onClick={() => goToSlide((activeIndex + 1) % total)}
-          className="p-2.5 rounded-full border border-[#E8E6DF] bg-white hover:bg-stone-100 text-[#0A0A0A] shadow-sm transition-colors focus-visible:ring-2 focus-visible:ring-[#0A0A0A] active:scale-95"
-          aria-label="Proyek berikutnya"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+        {/* Kontrol Navigasi & Indikator Titik */}
+        <div className="flex items-center justify-center gap-3 mt-4 sm:mt-6 z-20">
+          <button
+            type="button"
+            onClick={() => goToSlide(activeIndex - 1 < 0 ? total - 1 : activeIndex - 1)}
+            className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full border border-[#838775] bg-white hover:bg-[#d4ec8c] text-[#545c2c] hover:text-[#1f2410] transition-colors active:scale-95"
+            aria-label="Proyek sebelumnya"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-[#c0c0b9]">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => goToSlide(i)}
+                className="p-1.5 flex items-center justify-center"
+                aria-label={`Buka slide proyek ${i + 1}`}
+                aria-current={i === activeIndex ? "true" : undefined}
+              >
+                <span
+                  className={cn(
+                    "h-2 rounded-full transition-all duration-300 block",
+                    i === activeIndex
+                      ? "w-6 bg-[#545c2c]"
+                      : "w-2 bg-[#c0c0b9] hover:bg-[#838775]",
+                  )}
+                />
+              </button>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => goToSlide((activeIndex + 1) % total)}
+            className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full border border-[#838775] bg-white hover:bg-[#d4ec8c] text-[#545c2c] hover:text-[#1f2410] transition-colors active:scale-95"
+            aria-label="Proyek berikutnya"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
+    </MotionConfig>
   );
 };
 
@@ -361,20 +369,23 @@ const Card = ({ slide, index, total, progress, config }: CardProps) => {
         backfaceVisibility: "hidden",
       }}
       className={cn(
-        "absolute rounded-3xl overflow-hidden bg-stone-900 border border-stone-800 shadow-xl group pointer-events-none transform-gpu will-change-transform",
+        "absolute rounded-2xl overflow-hidden bg-[#1f2410] border border-[#545c2c]/60 shadow-lg group pointer-events-none transform-gpu will-change-transform",
         "w-52 h-72 sm:w-64 sm:h-96 lg:w-72 lg:h-[26rem]",
       )}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={slide.image}
-        alt={slide.title}
-        loading="lazy"
+        alt={`Contoh proyek desain ${slide.title}`}
+        width={600}
+        height={800}
+        loading={index === 0 ? "eager" : "lazy"}
+        fetchPriority={index === 0 ? "high" : "auto"}
         decoding="async"
         className="absolute inset-0 w-full h-full object-cover pointer-events-none"
       />
 
-      {/* Dimmer overlay dinamis */}
+      {/* Dimmer overlay dinamis untuk kartu samping */}
       <motion.div
         style={{
           opacity: useTransform(
@@ -383,21 +394,21 @@ const Card = ({ slide, index, total, progress, config }: CardProps) => {
             [0.55, 0.25, 0, 0.25, 0.55],
           ),
         }}
-        className="absolute inset-0 bg-black pointer-events-none"
+        className="absolute inset-0 bg-[#1f2410] pointer-events-none"
       />
 
-      {/* Gradien kontras teks */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent pointer-events-none" />
+      {/* Gradien scrim kontras AA untuk keterbacaan teks */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1f2410]/95 via-[#1f2410]/45 to-transparent pointer-events-none" />
 
-      <Badge className="absolute top-4 right-4 sm:top-5 sm:right-5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-[#0A0A0A] border-none shadow-xs">
+      <Badge className="absolute top-4 right-4 sm:top-5 sm:right-5 px-3 py-1 rounded-full bg-[#d4ec8c] text-xs font-semibold text-[#1f2410] border border-[#545c2c]/20">
         {slide.badge}
       </Badge>
 
-      <div className="absolute bottom-5 left-4 right-4 sm:bottom-6 sm:left-5 sm:right-5 text-white">
-        <p className="text-base sm:text-xl font-heading font-medium leading-snug mb-1 drop-shadow-md text-white">
+      <div className="absolute bottom-5 left-4 right-4 sm:bottom-6 sm:left-5 sm:right-5 text-[#fafaf7]">
+        <p className="text-base sm:text-xl font-heading font-normal tracking-[-0.015em] leading-snug mb-1 text-[#fafaf7]">
           {slide.title}
         </p>
-        <p className="text-xs text-stone-200 line-clamp-2 leading-relaxed">
+        <p className="text-xs text-[#e2e6d8] line-clamp-2 leading-relaxed">
           {slide.description}
         </p>
       </div>

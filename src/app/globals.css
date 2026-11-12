@@ -4,26 +4,31 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 0 0% 4%;
-    --muted: 40 14% 93%;
-    --muted-foreground: 0 0% 40%;
-    --primary: 0 0% 4%;
-    --primary-foreground: 40 33% 98%;
-    --secondary: 40 14% 93%;
-    --secondary-foreground: 0 0% 4%;
-    --destructive: 0 84% 60%;
+    --background: 60 33% 98%;
+    --foreground: 74 38% 10%;
+    --muted: 60 8% 92%;
+    --muted-foreground: 72 9% 34%;
+    --primary: 70 35% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 74 71% 74%;
+    --secondary-foreground: 74 38% 10%;
+    --destructive: 0 72% 45%;
     --destructive-foreground: 0 0% 98%;
-    --border: 40 14% 89%;
-    --ring: 0 0% 4%;
+    --border: 60 6% 74%;
+    --ring: 70 35% 27%;
     --radius: 1rem;
 
-    --color-bg: #FAF9F5;
-    --color-surface: #FFFFFF;
-    --color-text: #0A0A0A;
-    --color-text-muted: #666666;
-    --color-border: #E8E6DF;
-    --color-accent: #0D547D;
+    --color-bg: #fafaf7;
+    --color-surface: #ffffff;
+    --color-text: #1f2410;
+    --color-text-muted: #5b5e4e;
+    --color-accent: #545c2c;
+    --color-support: #9cbc64;
+    --color-support-2: #8fa65b;
+    --color-surface-raised: #d4ec8c;
+    --color-muted: #c0c0b9;
+    --color-border: #c0c0b9;
+    --color-control-border: #838775;
   }
 
   html {
@@ -34,17 +39,18 @@
   }
 
   body {
-    font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+    font-family: var(--font-body), "Inter", system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    letter-spacing: -0.01em;
+    line-height: 1.5;
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-heading), Georgia, serif;
-    letter-spacing: -0.02em;
+    font-family: "Recoleta", var(--font-heading), Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.015em;
   }
 
   /* R-39: Accessible Semantics & Interaction Affordances */
@@ -67,13 +73,13 @@
     opacity: 0.6;
   }
 
-  /* R-32: Focus visibility */
+  /* R-32: Focus visibility (Forest Olive 6.82:1 contrast) */
   a:focus-visible,
   button:focus-visible,
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible {
-    outline: 2px solid #0A0A0A;
+    outline: 2px solid #545c2c;
     outline-offset: 2px;
   }
 
@@ -90,21 +96,20 @@
   }
 }
 
-/* Custom scrollbar subtle styling */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #F2F0E8;
+  background: #fafaf7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4D1C7;
-  border-radius: 4px;
+  background: #c0c0b9;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A8A59C;
+  background: #838775;
 }

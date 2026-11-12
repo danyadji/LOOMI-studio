@@ -14,7 +14,7 @@ export default function FloatingWhatsApp() {
         rel="noopener noreferrer"
         onClick={() => trackFloatingWhatsAppClick()}
         aria-label="Konsultasi langsung via WhatsApp"
-        className="group flex items-center gap-2.5 px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl transition-all focus-visible:ring-2 focus-visible:ring-emerald-500 min-h-[48px] min-w-[48px]"
+        className="group flex items-center gap-2.5 px-5 py-3 bg-[#545c2c] hover:bg-[#8fa65b] text-white hover:text-[#1f2410] font-medium text-sm rounded-full shadow-md border border-[#3f4620]/20 transition-colors min-h-[48px] min-w-[48px]"
       >
         <svg
           className="w-5 h-5 fill-current shrink-0"
@@ -28,4 +28,3 @@ export default function FloatingWhatsApp() {
     </aside>
   );
 }
-
