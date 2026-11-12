@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUpRight, Mail, MapPin, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getBreadcrumbJsonLd } from "@/lib/seo";
@@ -20,7 +21,7 @@ export default function KontakPage() {
         }}
       />
 
-      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] overflow-hidden bg-[#1f2410] text-[#fafaf7] pt-32 pb-20 lg:pt-40 lg:pb-28">
+      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] min-h-[100dvh] flex flex-col justify-center overflow-hidden bg-[#1f2410] text-[#fafaf7] pt-32 pb-16 sm:pt-36 sm:pb-20">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80"
@@ -29,127 +30,166 @@ export default function KontakPage() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-[#1f2410]/90 via-[#1f2410]/75 to-[#1f2410]/45"
+          className="absolute inset-0 bg-gradient-to-br from-[#1f2410]/92 via-[#1f2410]/82 to-[#1f2410]/70"
         />
 
-        <div className="relative z-10 max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center space-x-2 text-xs text-[#e4e9d6]">
-              <li>
-                <Link href="/" className="hover:text-[#d4ec8c] transition-colors">
-                  Beranda
-                </Link>
-              </li>
-              <li>/</li>
-              <li className="font-semibold text-[#d4ec8c]" aria-current="page">
-                Kontak
-              </li>
-            </ol>
-          </nav>
+        <div className="relative z-10 max-w-[1224px] w-full mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            {/* Kolom Kiri: Headline & Aksi Utama */}
+            <div className="lg:col-span-6 space-y-6">
+              <nav aria-label="Breadcrumb">
+                <ol className="flex items-center space-x-2 text-xs text-[#e4e9d6]">
+                  <li>
+                    <Link href="/" className="hover:text-[#d4ec8c] transition-colors py-1 inline-block">
+                      Beranda
+                    </Link>
+                  </li>
+                  <li>/</li>
+                  <li className="font-semibold text-[#d4ec8c]" aria-current="page">
+                    Kontak
+                  </li>
+                </ol>
+              </nav>
 
-          <div className="max-w-3xl">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.02em] text-[#ffffff] leading-[1.15]">
-              Hubungi Loomi Studio.
-            </h1>
-            <p className="mt-6 text-base sm:text-lg text-[#e4e9d6] font-light leading-relaxed">
-              Kami siap membantu mewujudkan website yang fungsional untuk bisnis Anda. Hubungi kami melalui kanal komunikasi resmi di bawah ini.
-            </p>
-          </div>
-        </div>
-      </section>
+              <h1 className="text-[36px] sm:text-5xl lg:text-[56px] font-heading font-medium tracking-[-0.02em] text-[#ffffff] leading-[1.12]">
+                Hubungi Loomi Studio.
+              </h1>
 
-      <div className="py-16 lg:py-24 bg-white">
-        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {/* WhatsApp Card (Sorotan #d4ec8c lembut) */}
-            <div className="p-6 sm:p-8 rounded-2xl border border-[#545c2c] bg-[#d4ec8c]/40 flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-semibold text-[#3d431e] block mb-4">
-                  Kanal Utama &bull; Respon Cepat
-                </span>
-                <h2 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-                  WhatsApp resmi.
-                </h2>
-                <p className="text-sm text-[#1f2410] mt-2 leading-relaxed">
-                  Kanal utama untuk konsultasi cepat, pengiriman materi brief, dan konfirmasi pemesanan paket.
-                </p>
-                <div className="mt-6 pt-6 border-t border-[#545c2c]/25">
-                  <div className="text-xl font-heading font-medium text-[#1f2410]">
-                    +{siteConfig.whatsappNumber}
-                  </div>
-                  <div className="text-xs text-[#3d431e] mt-1">
-                    Jam Respon: {siteConfig.replyHours}
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8 pt-6 border-t border-[#545c2c]/25">
+              <p className="text-base sm:text-lg text-[#e4e9d6] font-light leading-relaxed max-w-xl">
+                Kami siap membantu mewujudkan website yang fungsional untuk bisnis Anda. Mulai obrolan langsung lewat WhatsApp atau kirim detail kebutuhan melalui surel resmi kami.
+              </p>
+
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
                 <a
                   href={waContactUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3.5 px-6 rounded-full text-sm font-medium bg-[#545c2c] hover:bg-[#8fa65b] text-white hover:text-[#1f2410] transition-colors min-h-[48px] flex items-center justify-center"
+                  className="px-7 py-3.5 text-sm font-medium text-[#1f2410] bg-[#ddf327] hover:bg-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center gap-2"
                 >
-                  Chat WhatsApp Sekarang
+                  <span>Chat WhatsApp Sekarang</span>
+                  <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
                 </a>
+                <Link
+                  href="/paket"
+                  className="px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-transparent hover:bg-[#1f2410]/60 border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
+                >
+                  Lihat Paket &amp; Harga
+                </Link>
               </div>
             </div>
 
-            {/* Lokasi & Area Layanan */}
-            <div className="p-6 sm:p-8 rounded-2xl border border-[#c0c0b9] bg-[#fafaf7] flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-semibold text-[#545c2c] block mb-4">
-                  Lokasi Operasional
-                </span>
-                <h2 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-                  Area layanan kami.
-                </h2>
-                <p className="text-sm text-[#5b5e4e] mt-2 leading-relaxed">
-                  Berbasis di Jepara, Jawa Tengah. Kami melayani diskusi langsung di area lokal maupun pengerjaan daring untuk klien di seluruh Indonesia.
-                </p>
-                <div className="mt-6 pt-6 border-t border-[#c0c0b9] text-sm text-[#1f2410] space-y-2">
-                  <p><strong className="font-semibold">Domisili:</strong> {siteConfig.address}</p>
-                  <p><strong className="font-semibold">Cakupan:</strong> {siteConfig.serviceArea}</p>
+            {/* Kolom Kanan: Satu Panel Informasi Kontak Terpadu */}
+            <div className="lg:col-span-6">
+              <div className="bg-[#fafaf7] text-[#1f2410] border border-[#c0c0b9] rounded-[2px] p-6 sm:p-9 shadow-2xl">
+                <div className="inline-flex items-center gap-2 bg-[#f5f4f0] px-2.5 py-1 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e]">
+                  <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                  <span>Kanal Komunikasi Resmi</span>
                 </div>
-              </div>
-              <div className="mt-8 pt-6 border-t border-[#c0c0b9] text-xs text-[#5b5e4e]">
-                Konsultasi daring via WhatsApp atau Google Meet fleksibel sesuai jadwal Anda.
-              </div>
-            </div>
 
-            {/* Media Sosial & Email */}
-            <div className="p-6 sm:p-8 rounded-2xl border border-[#c0c0b9] bg-[#fafaf7] flex flex-col justify-between">
-              <div>
-                <span className="text-xs font-semibold text-[#545c2c] block mb-4">
-                  Surel &amp; Portofolio
-                </span>
-                <h2 className="text-[22px] sm:text-[28px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-                  Email &amp; Instagram.
-                </h2>
-                <p className="text-sm text-[#5b5e4e] mt-2 leading-relaxed">
-                  Ikuti pembaruan konsep desain kami atau kirimkan surat resmi penawaran kerja sama proyek.
-                </p>
-                <div className="mt-6 pt-6 border-t border-[#c0c0b9] text-sm text-[#1f2410] space-y-3">
-                  <div>
-                    <span className="block text-xs font-semibold text-[#5b5e4e]">Email Penawaran:</span>
-                    <a href={`mailto:${siteConfig.email}`} className="text-[#545c2c] hover:text-[#1f2410] underline underline-offset-2 font-medium">
-                      {siteConfig.email}
-                    </a>
-                  </div>
-                  <div>
-                    <span className="block text-xs font-semibold text-[#5b5e4e]">Instagram Resmi:</span>
-                    <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" className="text-[#545c2c] hover:text-[#1f2410] underline underline-offset-2 font-medium">
-                      @loomi.studio
-                    </a>
+                <div className="mt-5 divide-y divide-[#e6e4dc]">
+                  {/* WhatsApp */}
+                  <a
+                    href={waContactUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group py-4 flex items-start justify-between gap-4 min-h-[48px]"
+                  >
+                    <div className="flex items-start gap-3.5">
+                      <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-[2px] bg-[#d4ec8c] text-[#1f2410]">
+                        <MessageCircle className="size-4" aria-hidden="true" />
+                      </span>
+                      <div>
+                        <span className="block text-xs font-medium text-[#5b5e4e]">
+                          WhatsApp Resmi ({siteConfig.replyHours})
+                        </span>
+                        <span className="mt-0.5 block font-heading text-lg font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
+                          +{siteConfig.whatsappNumber}
+                        </span>
+                      </div>
+                    </div>
+                    <ArrowUpRight
+                      className="mt-1 size-4 shrink-0 text-[#5b5e4e] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#3f5b1e]"
+                      aria-hidden="true"
+                    />
+                  </a>
+
+                  {/* Email */}
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="group py-4 flex items-start justify-between gap-4 min-h-[48px]"
+                  >
+                    <div className="flex items-start gap-3.5 min-w-0">
+                      <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-[2px] bg-[#f5f4f0] text-[#3f5b1e]">
+                        <Mail className="size-4" aria-hidden="true" />
+                      </span>
+                      <div className="min-w-0">
+                        <span className="block text-xs font-medium text-[#5b5e4e]">
+                          Email Penawaran &amp; Kerja Sama
+                        </span>
+                        <span className="mt-0.5 block font-heading text-base sm:text-lg font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors break-all">
+                          {siteConfig.email}
+                        </span>
+                      </div>
+                    </div>
+                    <ArrowUpRight
+                      className="mt-1 size-4 shrink-0 text-[#5b5e4e] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#3f5b1e]"
+                      aria-hidden="true"
+                    />
+                  </a>
+
+                  {/* Instagram */}
+                  <a
+                    href={siteConfig.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group py-4 flex items-start justify-between gap-4 min-h-[48px]"
+                  >
+                    <div className="flex items-start gap-3.5">
+                      <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-[2px] bg-[#f5f4f0] text-[#3f5b1e] text-xs font-semibold">
+                        IG
+                      </span>
+                      <div>
+                        <span className="block text-xs font-medium text-[#5b5e4e]">
+                          Instagram Resmi
+                        </span>
+                        <span className="mt-0.5 block font-heading text-base sm:text-lg font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
+                          @loomi.studio
+                        </span>
+                      </div>
+                    </div>
+                    <ArrowUpRight
+                      className="mt-1 size-4 shrink-0 text-[#5b5e4e] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#3f5b1e]"
+                      aria-hidden="true"
+                    />
+                  </a>
+
+                  {/* Lokasi & Cakupan */}
+                  <div className="py-4 flex items-start gap-3.5">
+                    <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-[2px] bg-[#f5f4f0] text-[#3f5b1e]">
+                      <MapPin className="size-4" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <span className="block text-xs font-medium text-[#5b5e4e]">
+                        Domisili &amp; Area Layanan
+                      </span>
+                      <span className="mt-0.5 block text-sm font-medium text-[#1f2410]">
+                        {siteConfig.address}
+                      </span>
+                      <span className="mt-0.5 block text-xs font-light text-[#5b5e4e] leading-relaxed">
+                        {siteConfig.serviceArea}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="mt-8 pt-6 border-t border-[#c0c0b9] text-xs text-[#5b5e4e]">
-                Pesan WhatsApp tetap merupakan kanal tercepat kami dalam membalas pertanyaan.
+
+                <p className="mt-4 pt-4 border-t border-dashed border-[#c0c0b9] text-xs text-[#5b5e4e] font-light leading-relaxed">
+                  Konsultasi daring via WhatsApp atau Google Meet fleksibel sesuai jadwal Anda, tanpa komitmen di muka.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }
