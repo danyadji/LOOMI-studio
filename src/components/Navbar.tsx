@@ -34,40 +34,63 @@ export default function Navbar() {
   const waUrl = buildGeneralWhatsAppUrl("Navigasi Header");
 
   return (
-    <header className="sticky top-0 z-40 bg-[#fafaf7]/90 backdrop-blur-md border-b border-[#c0c0b9] transition-colors">
-      <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-        <div className="flex items-center justify-between h-[68px]">
-          {/* Wordmark LOOMI Studio */}
+    <header className="sticky top-0 z-40 w-full pt-3 sm:pt-4 px-4 sm:px-6 lg:px-8 pointer-events-none">
+      <div className="max-w-[1224px] mx-auto pointer-events-auto">
+        {/* Floating White Rectangular Bar ala referensi Forest Admin */}
+        <div className="bg-white border border-[#c0c0b9] rounded-[3px] shadow-[0_2px_10px_rgba(31,36,16,0.05)] px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
+          {/* Logo Kiri: Kotak Zaitun Geometris Placeholder (R-23) + Wordmark LOOMI */}
           <Link
             href="/"
-            className="flex items-baseline gap-2 group rounded-sm py-1"
+            aria-label="LOOMI Studio Beranda"
+            className="flex items-center gap-3 group shrink-0 py-1 rounded-sm"
           >
-            <span className="font-heading font-normal text-2xl sm:text-[28px] tracking-[-0.015em] text-[#1f2410] group-hover:text-[#545c2c] transition-colors">
-              Loomi
+            <span
+              className="w-8 h-8 rounded-[2px] bg-[#545c2c] group-hover:bg-[#3f4620] transition-colors flex items-center justify-center shrink-0"
+              aria-hidden="true"
+            >
+              {/* Simbol monogram geometris placeholder sebelum aset logo final */}
+              <svg
+                className="w-4 h-4 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+              >
+                <path d="M12 4L5 11" />
+                <path d="M12 4L19 11" />
+                <path d="M12 10L6 16" />
+                <path d="M12 10L18 16" />
+                <path d="M12 5V20" />
+              </svg>
             </span>
-            <span className="text-xs font-sans font-medium tracking-wide text-[#545c2c]">
-              Studio
+            <span className="font-sans font-semibold tracking-[0.14em] text-[16px] sm:text-[17px] text-[#1f2410] uppercase">
+              Loomi
             </span>
           </Link>
 
-          {/* Navigasi Desktop (4 Menu Utama) */}
-          <nav className="hidden md:flex items-center gap-8" aria-label="Navigasi Utama">
+          {/* Navigasi Desktop Tengah (4 Menu) */}
+          <nav
+            className="hidden md:flex items-center gap-6 lg:gap-8"
+            aria-label="Navigasi Utama"
+          >
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-[15px] transition-colors py-1.5 relative ${
+                  className={`text-[14px] transition-colors py-2 relative min-h-[44px] inline-flex items-center whitespace-nowrap ${
                     isActive
                       ? "text-[#545c2c] font-semibold"
-                      : "text-[#5b5e4e] font-medium hover:text-[#1f2410]"
+                      : "text-[#1f2410] font-normal hover:text-[#545c2c]"
                   }`}
                 >
                   {link.name}
                   {isActive && (
                     <span
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#545c2c] rounded-full"
+                      className="absolute bottom-1.5 left-0 right-0 h-[2px] bg-[#545c2c]"
                       aria-hidden="true"
                     />
                   )}
@@ -76,25 +99,38 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* CTA Header (Primary Olive -> Hover Leaf Soft + Dark Ink) */}
-          <div className="hidden md:flex items-center">
+          {/* CTA Kanan: Kotak Zaitun + Panah Eksternal WhatsApp (R-08: penanda tab eksternal) */}
+          <div className="hidden md:flex items-center shrink-0">
             <a
               href={waUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => trackFloatingWhatsAppClick()}
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[44px]"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[44px] whitespace-nowrap"
             >
-              Konsultasi WhatsApp
+              <span>Konsultasi WhatsApp</span>
+              <svg
+                className="w-3.5 h-3.5 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17L17 7" />
+                <path d="M8 7h9v9" />
+              </svg>
             </a>
           </div>
 
-          {/* Mobile Menu Button (Berlabel eksplisit sesuai antislop-layoutmobile) */}
+          {/* Mobile Menu Toggle Button */}
           <div className="flex md:hidden items-center">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="px-3 py-2 rounded-full border border-[#838775] text-[#1f2410] hover:bg-[#d4ec8c] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center gap-2"
+              className="px-3 py-2 rounded-[2px] border border-[#838775] bg-white text-[#1f2410] hover:bg-[#d4ec8c] transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center gap-2"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
               aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
@@ -114,46 +150,62 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div id="mobile-menu" className="md:hidden border-b border-[#c0c0b9] bg-[#fafaf7] px-6 pt-4 pb-8">
-          <nav className="flex flex-col space-y-2" aria-label="Menu Mobile">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-xl text-base min-h-[44px] flex items-center transition-colors ${
-                    isActive
-                      ? "bg-[#d4ec8c] text-[#1f2410] font-semibold"
-                      : "text-[#1f2410] font-medium hover:bg-[#ffffff]"
-                  }`}
+        {/* Mobile Floating Drawer */}
+        {mobileMenuOpen && (
+          <div
+            id="mobile-menu"
+            className="md:hidden mt-2 bg-white border border-[#c0c0b9] rounded-[3px] shadow-[0_8px_24px_rgba(31,36,16,0.08)] p-4"
+          >
+            <nav className="flex flex-col space-y-1" aria-label="Menu Mobile">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`px-4 py-3 rounded-[2px] text-sm min-h-[44px] flex items-center transition-colors ${
+                      isActive
+                        ? "bg-[#d4ec8c] text-[#1f2410] font-semibold"
+                        : "text-[#1f2410] font-normal hover:bg-[#fafaf7]"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
+            <div className="mt-4 pt-4 border-t border-[#c0c0b9]">
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackFloatingWhatsAppClick();
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-sm font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-[2px] transition-colors min-h-[48px]"
+              >
+                <span>Konsultasi WhatsApp</span>
+                <svg
+                  className="w-3.5 h-3.5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
                 >
-                  {link.name}
-                </Link>
-              );
-            })}
-          </nav>
-          <div className="mt-6 pt-4 border-t border-[#c0c0b9]">
-            <a
-              href={waUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                trackFloatingWhatsAppClick();
-                setMobileMenuOpen(false);
-              }}
-              className="w-full inline-flex items-center justify-center px-6 py-3.5 text-base font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[48px]"
-            >
-              Konsultasi WhatsApp
-            </a>
+                  <path d="M7 17L17 7" />
+                  <path d="M8 7h9v9" />
+                </svg>
+              </a>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 }
