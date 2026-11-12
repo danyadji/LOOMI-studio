@@ -29,13 +29,10 @@ export default function HomePage() {
             </div>
 
             <h1 className="text-[36px] sm:text-5xl lg:text-[58px] font-heading font-medium tracking-[-0.02em] text-[#ffffff] leading-[1.16]">
-              Anda bawa{" "}
-              <span className="bg-[#d4ec8c] text-[#1f2410] px-2.5 py-0.5 inline-block">
-                ide usaha.
-              </span>
+              Anda bawa ide usaha.
               <br className="hidden sm:inline" />{" "}
               Kami bangun{" "}
-              <span className="bg-[#d4ec8c] text-[#1f2410] px-2.5 py-0.5 inline-block mt-1.5 sm:mt-2">
+              <span className="bg-[#ddf327] text-[#1f2410] px-2.5 py-0.5 inline-block mt-1.5 sm:mt-2">
                 websitenya.
               </span>
             </h1>
