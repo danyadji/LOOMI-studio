@@ -17,33 +17,44 @@ export default function LayananPage() {
         }}
       />
 
-      {/* Header Halaman */}
-      <div className="bg-[#fafaf7] border-b border-[#c0c0b9] py-16 lg:py-24">
-        <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+      {/* Header Halaman (Hero Foto Monitor Komputer AHPjJe1a3CA) */}
+      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] overflow-hidden bg-[#1f2410] text-[#fafaf7] pt-32 pb-20 lg:pt-40 lg:pb-28">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1681583484651-281ae2defb17?auto=format&fit=crop&w=1600&q=80"
+          alt="Monitor komputer di atas meja kerja perancangan website LOOMI Studio"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[#1f2410]/35 bg-gradient-to-r from-[#1f2410]/95 via-[#1f2410]/85 to-[#1f2410]/55"
+        />
+
+        <div className="relative z-10 max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center space-x-2 text-xs text-[#5b5e4e]">
+            <ol className="flex items-center space-x-2 text-xs text-[#e4e9d6]">
               <li>
-                <Link href="/" className="hover:text-[#1f2410]">
+                <Link href="/" className="hover:text-[#d4ec8c] transition-colors py-1 inline-block">
                   Beranda
                 </Link>
               </li>
               <li>/</li>
-              <li className="font-semibold text-[#545c2c]" aria-current="page">
+              <li className="font-semibold text-[#d4ec8c]" aria-current="page">
                 Layanan
               </li>
             </ol>
           </nav>
 
           <div className="max-w-3xl">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
+            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-medium tracking-[-0.02em] text-[#ffffff] leading-[1.15]">
               Layanan pembuatan website kami.
             </h1>
-            <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
+            <p className="mt-6 text-base sm:text-lg text-[#e4e9d6] font-light leading-relaxed">
               Setiap jenis usaha memiliki kebutuhan yang berbeda. Kami menyediakan tiga layanan terarah agar Anda mendapatkan struktur website yang tepat guna tanpa biaya berlebihan.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       <div className="py-16 lg:py-24 bg-white">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 space-y-12 lg:space-y-16">
