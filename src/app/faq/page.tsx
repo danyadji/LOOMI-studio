@@ -5,20 +5,10 @@ import Link from "next/link";
 import { faqItems } from "@/content/faq";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getFaqJsonLd, getBreadcrumbJsonLd } from "@/lib/seo";
+import FaqAccordion from "@/components/FaqAccordion";
 
 export default function FaqPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("semua");
-  const [openIds, setOpenIds] = useState<Record<string, boolean>>({
-    "hosting-domain": true,
-    "source-code": true,
-  });
-
-  const toggleFaq = (id: string) => {
-    setOpenIds((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }));
-  };
 
   const filteredFaqs =
     selectedCategory === "semua"
@@ -103,43 +93,10 @@ export default function FaqPage() {
           </div>
 
           {/* FAQ Accordion List */}
-          <div className="divide-y divide-[#c0c0b9] border-t border-b border-[#c0c0b9]">
-            {filteredFaqs.map((faq) => {
-              const isOpen = !!openIds[faq.id];
-              return (
-                <div key={faq.id} className="py-6 sm:py-7">
-                  <button
-                    type="button"
-                    onClick={() => toggleFaq(faq.id)}
-                    className="w-full text-left flex items-start justify-between gap-6 rounded-lg min-h-[48px] py-1"
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-answer-${faq.id}`}
-                  >
-                    <span className="font-heading font-medium text-lg sm:text-[22px] text-[#1f2410] leading-[1.25] tracking-[-0.015em]">
-                      {faq.question}
-                    </span>
-                    <span
-                      className={`text-[#545c2c] transform transition-transform duration-200 text-2xl font-light shrink-0 leading-none mt-1 ${
-                        isOpen ? "rotate-45" : ""
-                      }`}
-                      aria-hidden="true"
-                    >
-                      +
-                    </span>
-                  </button>
-
-                  {isOpen && (
-                    <div
-                      id={`faq-answer-${faq.id}`}
-                      className="pt-3 text-base text-[#5b5e4e] leading-relaxed pr-8"
-                    >
-                      <p>{faq.answer}</p>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
+          <FaqAccordion
+            items={filteredFaqs}
+            defaultOpenIds={["hosting-domain", "source-code"]}
+          />
 
           {/* Bantuan Langsung */}
           <div className="mt-16 p-8 sm:p-12 rounded-2xl bg-[#fafaf7] border border-[#c0c0b9] text-center">

@@ -6,6 +6,7 @@ import { faqItems } from "@/content/faq";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getOrganizationJsonLd } from "@/lib/seo";
 import PackageCard from "@/components/PackageCard";
+import FaqAccordion from "@/components/FaqAccordion";
 import { NotchedProjectCard } from "@/components/ui/notched-project-card";
 
 const mainServices = [
@@ -382,41 +383,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. FAQ Ringkas (Editorial List Terbagi Garis Tipis untuk Variasi RHYTHM 2) */}
+      {/* 6. FAQ Ringkas (Accordion Interaktif) */}
       <section className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
             <div className="lg:col-span-4 space-y-4">
-              <span className="text-xs font-semibold text-[#545c2c] block font-sans">
-                Pertanyaan Umum
-              </span>
-              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+              <div className="inline-flex items-center gap-2 bg-[#f5f4f0] px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e]">
+                <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                <span>Pertanyaan Umum</span>
+              </div>
+              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.02em] text-[#1f2410] leading-[1.2]">
                 Jawaban lugas untuk keraguan Anda.
               </h2>
-              <p className="text-sm text-[#5b5e4e] leading-relaxed">
+              <p className="text-sm text-[#5b5e4e] font-light leading-relaxed">
                 Pertanyaan seputar hosting, kepemilikan kode, revisi, dan cara pemesanan yang paling sering ditanyakan klien UMKM.
               </p>
               <div className="pt-2">
                 <Link
                   href="/faq"
-                  className="text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-1 inline-block"
+                  className="text-sm font-semibold text-[#3f5b1e] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px] inline-flex items-center"
                 >
-                  Buka seluruh halaman FAQ
+                  Buka seluruh halaman FAQ &rarr;
                 </Link>
               </div>
             </div>
 
-            <div className="lg:col-span-8 divide-y divide-[#c0c0b9] border-t border-b border-[#c0c0b9]">
-              {faqItems.slice(0, 4).map((faq) => (
-                <div key={faq.id} className="py-6 sm:py-7">
-                  <h3 className="text-lg sm:text-[22px] font-heading font-medium text-[#1f2410] leading-[1.25] tracking-[-0.015em]">
-                    {faq.question}
-                  </h3>
-                  <p className="text-sm sm:text-base text-[#5b5e4e] mt-2.5 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              ))}
+            <div className="lg:col-span-8">
+              <FaqAccordion
+                items={faqItems.slice(0, 4)}
+                defaultOpenIds={[faqItems[0].id]}
+              />
             </div>
           </div>
         </div>
