@@ -21,7 +21,7 @@ export default function HomePage() {
       />
 
       {/* 1. Hero Section Full 1 Layar (Hijau #3f5b1e di belakang Floating Navbar) */}
-      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] min-h-[100dvh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#3f5b1e] text-[#fafaf7] border-b border-[#2f4516] overflow-hidden">
+      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] min-h-[100dvh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#3f5b1e] text-[#fafaf7] overflow-hidden">
         <div className="max-w-[1224px] w-full mx-auto px-6 sm:px-8 lg:px-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="flex items-center justify-center gap-2.5 text-xs font-medium tracking-[0.06em] uppercase text-[#d4ec8c]">
@@ -63,7 +63,7 @@ export default function HomePage() {
       </section>
 
       {/* 1B. Showcase Proyek Konsep (3 Kartu NotchedProjectCard di bawah Hero) */}
-      <section className="py-16 lg:py-24 bg-[#f5f4f0] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#f5f4f0]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div className="max-w-2xl">
@@ -103,7 +103,7 @@ export default function HomePage() {
       </section>
 
       {/* 2. Pendekatan Kami (Referensi Desain Kartu Pertama Forest Manifesto) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="max-w-2xl mb-12">
             <div className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-[2px] text-[11px] font-medium tracking-[0.06em] uppercase text-[#5b5e4e] mb-5">
@@ -193,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* 3. Feature Stack Zig-Zag (Tiga Solusi Layanan dengan Pratinjau Struktur Asli) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 space-y-20 lg:space-y-28">
           <div className="max-w-2xl">
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
@@ -401,7 +401,7 @@ export default function HomePage() {
       </section>
 
       {/* 4. Paket & Harga (Mengarah ke Halaman Paket) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="text-center max-w-2xl mx-auto mb-14 lg:mb-16">
             <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-sans">
@@ -434,7 +434,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. Alur Kerja 4 Langkah */}
-      <section className="py-16 lg:py-24 bg-[#f5f4f0] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#f5f4f0]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 lg:mb-16">
             <div className="max-w-xl">
@@ -482,7 +482,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. FAQ Ringkas (Editorial List Terbagi Garis Tipis untuk Variasi RHYTHM 2) */}
-      <section className="py-16 lg:py-24 bg-[#fafaf7] border-b border-[#c0c0b9]">
+      <section className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4 space-y-4">
