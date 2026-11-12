@@ -6,7 +6,7 @@ export default function Footer() {
   const waUrl = buildGeneralWhatsAppUrl("Footer Website");
 
   return (
-    <footer className="bg-[#1f2410] text-[#fafaf7] mt-auto border-t border-[#3f4620]">
+    <footer className="bg-[#1f2410] text-[#fafaf7] mt-auto">
       <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10 py-16 sm:py-24">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16">
           {/* Brand & Informasi Operasional */}

@@ -30,7 +30,11 @@ export default function KontakPage() {
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-br from-[#1f2410]/92 via-[#1f2410]/82 to-[#1f2410]/70"
+          className="absolute inset-0 bg-[#1f2410]/35 bg-gradient-to-r from-[#1f2410]/95 via-[#1f2410]/85 to-[#1f2410]/65"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#1f2410] to-transparent"
         />
 
         <div className="relative z-10 max-w-[1224px] w-full mx-auto px-6 sm:px-8 lg:px-10">
@@ -71,7 +75,7 @@ export default function KontakPage() {
                 </a>
                 <Link
                   href="/paket"
-                  className="px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-transparent hover:bg-[#1f2410]/60 border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
+                  className="px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-[#1f2410]/50 hover:bg-[#1f2410]/80 border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
                 >
                   Lihat Paket &amp; Harga
                 </Link>
@@ -163,20 +167,17 @@ export default function KontakPage() {
                     />
                   </a>
 
-                  {/* Lokasi & Cakupan */}
+                  {/* Lokasi */}
                   <div className="py-4 flex items-start gap-3.5">
                     <span className="mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-[2px] bg-[#f5f4f0] text-[#3f5b1e]">
                       <MapPin className="size-4" aria-hidden="true" />
                     </span>
                     <div>
                       <span className="block text-xs font-medium text-[#5b5e4e]">
-                        Domisili &amp; Area Layanan
+                        Lokasi
                       </span>
-                      <span className="mt-0.5 block text-sm font-medium text-[#1f2410]">
+                      <span className="mt-0.5 block font-heading text-base sm:text-lg font-medium text-[#1f2410]">
                         {siteConfig.address}
-                      </span>
-                      <span className="mt-0.5 block text-xs font-light text-[#5b5e4e] leading-relaxed">
-                        {siteConfig.serviceArea}
                       </span>
                     </div>
                   </div>
