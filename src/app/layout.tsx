@@ -9,7 +9,7 @@ import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-jakarta",
   display: "swap",
 });
@@ -75,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`scroll-smooth ${plusJakartaSans.variable}`}>
+    <html lang="id" className={`scroll-smooth ${plusJakartaSans.variable} ${plusJakartaSans.className}`}>
       <body className="min-h-screen flex flex-col bg-[#fafaf7] text-[#1f2410] font-sans font-light antialiased selection:bg-[#d4ec8c] selection:text-[#1f2410]">
         <Navbar />
         <main className="flex-1">{children}</main>

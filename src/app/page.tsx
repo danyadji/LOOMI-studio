@@ -386,7 +386,7 @@ export default function HomePage() {
                     Siap Dikirim Pembeli
                   </span>
                 </div>
-                <div className="p-4 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] font-mono text-xs text-[#1f2410] space-y-1.5 leading-relaxed">
+                <div className="p-4 rounded-xl bg-[#fafaf7] border border-[#c0c0b9] font-sans text-xs text-[#1f2410] space-y-1.5 leading-relaxed">
                   <p>Halo Admin, saya ingin memesan dari website:</p>
                   <p>* Produk: Kursi Teras Jati Natural</p>
                   <p>* Varian: Finishing Doff (2 Unit)</p>

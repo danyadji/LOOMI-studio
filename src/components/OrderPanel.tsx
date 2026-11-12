@@ -366,7 +366,7 @@ export default function OrderPanel({
               <span className="text-xs font-medium text-[#5b5e4e] block mb-1.5">
                 Pratinjau Pesan WhatsApp Otomatis:
               </span>
-              <pre className="text-xs bg-white p-3.5 rounded-xl border border-[#c0c0b9] text-[#1f2410] font-mono whitespace-pre-wrap leading-relaxed max-h-32 overflow-y-auto">
+              <pre className="text-xs bg-white p-3.5 rounded-xl border border-[#c0c0b9] text-[#1f2410] font-sans whitespace-pre-wrap leading-relaxed max-h-32 overflow-y-auto">
                 {orderMessage}
               </pre>
             </div>
