@@ -19,39 +19,93 @@ export default function HomePage() {
         }}
       />
 
-      {/* 1. Hero Section + Interactive Showcase Carousel */}
-      <section className="relative pt-14 sm:pt-20 pb-16 lg:pb-24 border-b border-[#c0c0b9] bg-[#fafaf7] overflow-hidden">
+      {/* 1. Hero Section ala Referensi Forest Admin (Zaitun Gelap di belakang Floating Navbar) */}
+      <section className="relative z-0 -mt-[78px] sm:-mt-[82px] pt-28 sm:pt-36 lg:pt-40 pb-16 lg:pb-24 bg-[#434e1d] text-[#fafaf7] border-b border-[#353f16] overflow-hidden">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-[38px] sm:text-5xl lg:text-[60px] font-heading font-normal tracking-[-0.015em] text-[#1f2410] leading-[1.15]">
-              Anda bawa ide dan usaha. Kami bangun websitenya.
-            </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Kolom Kiri: Kicker, Headline Highlighter, Deskripsi & 2 Tombol Persegi */}
+            <div className="lg:col-span-6 space-y-6">
+              <div className="flex items-center gap-2.5 text-xs font-medium tracking-[0.06em] uppercase text-[#d4ec8c]">
+                <span className="w-2 h-2 bg-[#d4ec8c] inline-block shrink-0" aria-hidden="true" />
+                <span>Website Praktis UMKM Indonesia</span>
+              </div>
 
-            <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed max-w-2xl mx-auto">
-              Website cepat, berkarakter, dan langsung terhubung ke obrolan WhatsApp bisnis Anda. Tanpa kerumitan koding, tanpa database server, dan tanpa biaya langganan bulanan.
-            </p>
+              <h1 className="text-[36px] sm:text-5xl lg:text-[56px] font-heading font-normal tracking-[-0.015em] text-[#ffffff] leading-[1.15]">
+                Anda bawa{" "}
+                <span className="bg-[#d4ec8c] text-[#1f2410] px-2.5 py-0.5 inline-block">
+                  ide usaha
+                </span>
+                .{" "}
+                <br className="hidden sm:inline" />
+                Kami bangun{" "}
+                <span className="bg-[#d4ec8c] text-[#1f2410] px-2.5 py-0.5 inline-block mt-1.5 sm:mt-2">
+                  websitenya.
+                </span>
+              </h1>
 
-            {/* Primary & Secondary CTA sesuai aturan kontras DESIGN.md */}
-            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/paket"
-                className="w-full sm:w-auto px-7 py-3.5 text-sm sm:text-base font-medium text-white bg-[#545c2c] hover:bg-[#8fa65b] hover:text-[#1f2410] rounded-full transition-colors min-h-[48px] inline-flex items-center justify-center"
-              >
-                Pilih Paket Pembuatan
-              </Link>
+              <p className="text-base sm:text-lg text-[#e4e9d6] leading-relaxed max-w-lg">
+                Website cepat, berkarakter, dan langsung terhubung ke obrolan WhatsApp bisnis Anda. Tanpa kerumitan koding, tanpa database server, dan tanpa biaya langganan bulanan.
+              </p>
 
-              <Link
-                href="/portofolio"
-                className="w-full sm:w-auto px-7 py-3.5 text-sm sm:text-base font-medium text-[#545c2c] bg-transparent hover:bg-[#d4ec8c] hover:text-[#1f2410] border border-[#545c2c] rounded-full transition-colors min-h-[48px] inline-flex items-center justify-center"
-              >
-                Lihat Portofolio
-              </Link>
+              {/* CTA Persegi ala Referensi Screenshot */}
+              <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+                <Link
+                  href="/paket"
+                  className="px-7 py-3.5 text-sm font-medium text-[#1f2410] bg-[#ffffff] hover:bg-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
+                >
+                  Pilih Paket Pembuatan
+                </Link>
+
+                <Link
+                  href="/portofolio"
+                  className="px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-transparent hover:bg-[#545c2c] border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
+                >
+                  Lihat Portofolio
+                </Link>
+              </div>
+            </div>
+
+            {/* Kolom Kanan: Slot Aset Visual (R-23 Placeholder sampai gambar final diupload) */}
+            {/* TODO (R-23): Ganti blok placeholder ini dengan komponen <Image /> dari aset yang diupload user */}
+            <div className="lg:col-span-6 w-full max-w-md mx-auto lg:max-w-none">
+              <div className="relative aspect-[5/4] w-full rounded-[4px] bg-[#353f16] border border-[#545c2c] p-3 sm:p-4 overflow-hidden">
+                {/* Komposisi Mosaik Geometris Limau & Zaitun mengikuti siluet referensi */}
+                <div className="grid grid-cols-4 grid-rows-4 w-full h-full gap-1.5" aria-hidden="true">
+                  <div className="col-span-3 row-span-1 bg-[#d4ec8c]" />
+                  <div className="col-span-1 row-span-1 bg-[#9cbc64]" />
+
+                  <div className="col-span-1 row-span-1 bg-[#d4ec8c]" />
+                  <div className="col-span-1 row-span-1 bg-[#434e1d]" />
+                  <div className="col-span-2 row-span-1 bg-[#d4ec8c]" />
+
+                  <div className="col-span-1 row-span-1 bg-[#8fa65b]" />
+                  <div className="col-span-1 row-span-1 bg-[#d4ec8c]" />
+                  <div className="col-span-1 row-span-1 bg-[#434e1d]" />
+                  <div className="col-span-1 row-span-1 bg-[#d4ec8c]" />
+
+                  <div className="col-span-2 row-span-1 bg-[#d4ec8c]" />
+                  <div className="col-span-1 row-span-1 bg-[#434e1d]" />
+                  <div className="col-span-1 row-span-1 bg-[#9cbc64]" />
+                </div>
+
+                {/* Label Placeholder Jujur (R-23 & R-38) */}
+                <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between gap-2 bg-white/95 border border-[#c0c0b9] px-3.5 py-2 rounded-[2px]">
+                  <span className="text-xs font-medium text-[#1f2410]">
+                    [Slot Aset Visual Hero]
+                  </span>
+                  <span className="text-[11px] font-medium text-[#545c2c]">
+                    Siap diganti gambar Anda
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Showcase Interaktif Stacked Carousel (Menggantikan Logo Cloud sesuai R-37) */}
-        <div className="mt-12 sm:mt-16 w-full overflow-hidden">
+      {/* 1B. Showcase Interaktif Stacked Carousel (Edge-to-Edge di bawah Hero) */}
+      <section className="py-14 lg:py-20 bg-[#fafaf7] border-b border-[#c0c0b9] overflow-hidden">
+        <div className="w-full overflow-hidden">
           <div className="text-center mb-2 px-6">
             <span className="text-xs text-[#5b5e4e] font-sans font-medium">
               Contoh konsep desain per sektor UMKM (geser ke kiri atau kanan)
