@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Check, ArrowUpRight, Sparkles, Clock } from "lucide-react";
-import { formatRupiah, buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
+import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getBreadcrumbJsonLd } from "@/lib/seo";
 
 export default function LayananPage() {
@@ -119,22 +119,46 @@ export default function LayananPage() {
               </div>
 
               <div className="lg:col-span-5 rounded-[2px] border border-[#c0c0b9] bg-[#fafaf7] p-6 sm:p-8 flex flex-col justify-between h-full space-y-6">
-                <div>
-                  <span className="text-xs text-[#5b5e4e] font-medium block">Investasi mulai dari</span>
-                  <div className="text-3xl sm:text-4xl font-heading font-medium text-[#1f2410] mt-1 tracking-[-0.015em]">
-                    {formatRupiah(750000)}
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-xs font-semibold text-[#545c2c] uppercase tracking-wider block font-sans">
+                      Spesifikasi &amp; Garansi
+                    </span>
+                    <h3 className="text-lg sm:text-xl font-heading font-medium text-[#1f2410] mt-1">
+                      Informasi Paket Pembuatan
+                    </h3>
                   </div>
-                  <p className="text-xs text-[#5b5e4e] mt-2 font-light leading-relaxed">
-                    Biaya satu kali bayar. Termasuk 2 sesi revisi, domain &amp; hosting tahun pertama, serta tanpa biaya sewa server bulanan.
+
+                  <ul className="space-y-2 text-xs sm:text-sm text-[#5b5e4e]">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>1 halaman fokus konversi cepat</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Termasuk 2 kali sesi revisi desain</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Domain &amp; hosting tahun pertama aktif</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Tanpa biaya langganan server bulanan</span>
+                    </li>
+                  </ul>
+
+                  <p className="text-xs text-[#5b5e4e] font-light leading-relaxed pt-2 border-t border-[#c0c0b9]/60">
+                    Rincian biaya lengkap, fitur inklusif, dan formulir pemesanan tersedia di menu Paket &amp; Harga.
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#c0c0b9] flex flex-col gap-2.5">
+                <div className="pt-2 flex flex-col gap-2.5">
                   <Link
                     href="/paket"
                     className="w-full py-3.5 px-6 rounded-[2px] text-sm font-medium bg-[#3f5b1e] hover:bg-[#d4ec8c] hover:text-[#1f2410] text-white transition-colors min-h-[48px] inline-flex items-center justify-center gap-2 shadow-sm font-semibold"
                   >
-                    <span>Pilih Paket Landing Page</span>
+                    <span>Lihat Harga di Menu Paket</span>
                     <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
                   </Link>
                   <a
@@ -213,24 +237,46 @@ export default function LayananPage() {
               </div>
 
               <div className="lg:col-span-5 rounded-[2px] border-2 border-[#3f5b1e] bg-[#f5f4f0] p-6 sm:p-8 flex flex-col justify-between h-full space-y-6">
-                <div>
-                  <span className="text-xs text-[#545c2c] font-semibold block uppercase tracking-wider">
-                    Pilihan Favorit Klien
-                  </span>
-                  <div className="text-3xl sm:text-4xl font-heading font-medium text-[#1f2410] mt-1 tracking-[-0.015em]">
-                    {formatRupiah(1500000)}
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-xs font-semibold text-[#545c2c] uppercase tracking-wider block font-sans">
+                      Pilihan Favorit Klien
+                    </span>
+                    <h3 className="text-lg sm:text-xl font-heading font-medium text-[#1f2410] mt-1">
+                      Informasi Paket Pembuatan
+                    </h3>
                   </div>
-                  <p className="text-xs text-[#5b5e4e] mt-2 font-light leading-relaxed">
-                    Biaya satu kali bayar. Termasuk 3 sesi revisi, optimasi Google, domain kustom, serta panduan pengelolaan mandiri.
+
+                  <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Hingga 5 halaman profil bisnis resmi</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Termasuk 3 kali sesi revisi desain</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Optimasi Google SEO &amp; Maps terpadu</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Hak milik kode sumber penuh tanpa biaya bulanan</span>
+                    </li>
+                  </ul>
+
+                  <p className="text-xs text-[#5b5e4e] font-light leading-relaxed pt-2 border-t border-[#c0c0b9]/60">
+                    Rincian biaya lengkap, fitur inklusif, dan formulir pemesanan tersedia di menu Paket &amp; Harga.
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#c0c0b9] flex flex-col gap-2.5">
+                <div className="pt-2 flex flex-col gap-2.5">
                   <Link
                     href="/paket"
                     className="w-full py-3.5 px-6 rounded-[2px] text-sm font-medium bg-[#3f5b1e] hover:bg-[#d4ec8c] hover:text-[#1f2410] text-white transition-colors min-h-[48px] inline-flex items-center justify-center gap-2 shadow-sm font-semibold"
                   >
-                    <span>Pilih Company Profile</span>
+                    <span>Lihat Harga di Menu Paket</span>
                     <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
                   </Link>
                   <a
@@ -305,22 +351,46 @@ export default function LayananPage() {
               </div>
 
               <div className="lg:col-span-5 rounded-[2px] border border-[#c0c0b9] bg-[#fafaf7] p-6 sm:p-8 flex flex-col justify-between h-full space-y-6">
-                <div>
-                  <span className="text-xs text-[#5b5e4e] font-medium block">Investasi mulai dari</span>
-                  <div className="text-3xl sm:text-4xl font-heading font-medium text-[#1f2410] mt-1 tracking-[-0.015em]">
-                    {formatRupiah(2250000)}
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-xs font-semibold text-[#545c2c] uppercase tracking-wider block font-sans">
+                      Spesifikasi &amp; Garansi
+                    </span>
+                    <h3 className="text-lg sm:text-xl font-heading font-medium text-[#1f2410] mt-1">
+                      Informasi Paket Pembuatan
+                    </h3>
                   </div>
-                  <p className="text-xs text-[#5b5e4e] mt-2 font-light leading-relaxed">
-                    Biaya satu kali bayar. Termasuk input 20 produk awal, bebas biaya komisi per penjualan, dan panduan upload mandiri.
+
+                  <ul className="space-y-2 text-xs sm:text-sm text-[#5b5e4e]">
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Input 20 produk awal langsung siap jual</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Termasuk 2 kali sesi revisi tata letak</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Bebas biaya komisi per transaksi penjualan</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#3f5b1e] inline-block shrink-0" aria-hidden="true" />
+                      <span>Panduan pembaruan produk mandiri</span>
+                    </li>
+                  </ul>
+
+                  <p className="text-xs text-[#5b5e4e] font-light leading-relaxed pt-2 border-t border-[#c0c0b9]/60">
+                    Rincian biaya lengkap, fitur inklusif, dan formulir pemesanan tersedia di menu Paket &amp; Harga.
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#c0c0b9] flex flex-col gap-2.5">
+                <div className="pt-2 flex flex-col gap-2.5">
                   <Link
                     href="/paket"
                     className="w-full py-3.5 px-6 rounded-[2px] text-sm font-medium bg-[#3f5b1e] hover:bg-[#d4ec8c] hover:text-[#1f2410] text-white transition-colors min-h-[48px] inline-flex items-center justify-center gap-2 shadow-sm font-semibold"
                   >
-                    <span>Pilih Katalog WhatsApp</span>
+                    <span>Lihat Harga di Menu Paket</span>
                     <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
                   </Link>
                   <a
