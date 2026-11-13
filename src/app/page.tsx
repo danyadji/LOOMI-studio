@@ -54,9 +54,20 @@ export default function HomePage() {
         }}
       />
 
-      {/* 1. Hero Section Full 1 Layar (Hijau #3f5b1e di belakang Floating Navbar) */}
-      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] min-h-[100dvh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#3f5b1e] text-[#fafaf7] overflow-hidden">
-        <div className="max-w-[1224px] w-full mx-auto px-6 sm:px-8 lg:px-10">
+      {/* 1. Hero Section Full 1 Layar (Hero Foto Kolaborasi Meja Laptop SYTO3xs06fU) */}
+      <section className="relative z-0 -mt-[76px] sm:-mt-[80px] min-h-[100dvh] flex flex-col justify-center pt-28 pb-16 sm:pt-32 sm:pb-20 bg-[#1f2410] text-[#fafaf7] overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80"
+          alt="Kolaborasi tim di dekat meja dengan laptop dalam perancangan website LOOMI Studio"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-[#1f2410]/75 bg-gradient-to-b from-[#1f2410]/85 via-[#1f2410]/75 to-[#1f2410]/90"
+        />
+
+        <div className="relative z-10 max-w-[1224px] w-full mx-auto px-6 sm:px-8 lg:px-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="flex items-center justify-center gap-2.5 text-xs font-medium tracking-[0.06em] uppercase text-[#d4ec8c]">
               <span className="w-2 h-2 bg-[#d4ec8c] inline-block shrink-0" aria-hidden="true" />
@@ -87,7 +98,7 @@ export default function HomePage() {
 
               <Link
                 href="/portofolio"
-                className="w-full sm:w-auto px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-transparent hover:bg-[#2f4516] border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
+                className="w-full sm:w-auto px-7 py-3.5 text-sm font-medium text-[#fafaf7] bg-transparent hover:bg-white/10 border border-[#c7ccb8] hover:border-[#d4ec8c] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
               >
                 Lihat Portofolio
               </Link>
