@@ -32,14 +32,21 @@ export function getStoredUtmSource(): string {
     const utmCampaign = params.get("utm_campaign");
 
     if (utmSource) {
-      const fullSource = [utmSource, utmMedium, utmCampaign].filter(Boolean).join(" / ");
+      // Sanitasi dan batasi panjang input untuk mencegah parameter berlebih
+      const cleanSource = utmSource.trim().slice(0, 50);
+      const cleanMedium = utmMedium ? utmMedium.trim().slice(0, 50) : "";
+      const cleanCampaign = utmCampaign ? utmCampaign.trim().slice(0, 50) : "";
+      const fullSource = [cleanSource, cleanMedium, cleanCampaign]
+        .filter(Boolean)
+        .join(" / ")
+        .slice(0, 120);
       sessionStorage.setItem("loomi_utm_source", fullSource);
       return fullSource;
     }
 
     // Cek sessionStorage dari kunjungan sebelumnya di sesi ini
     const stored = sessionStorage.getItem("loomi_utm_source");
-    if (stored) return stored;
+    if (stored) return stored.slice(0, 120);
 
     // Cek referrer
     if (document.referrer) {
