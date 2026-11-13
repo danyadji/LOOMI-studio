@@ -73,7 +73,6 @@ export default function PortofolioPage() {
             items={portfolioItems}
             surface="#ffffff"
             descriptionMode="businessType"
-            sampleBadge="Proyek Konsep Desain LOOMI"
             priorityFirst
           />
         </div>

@@ -10,6 +10,7 @@ interface PortfolioShowcaseGridProps {
   surface?: string;
   descriptionMode?: "highlight" | "businessType";
   sampleBadge?: string;
+  showBadge?: boolean;
   priorityFirst?: boolean;
 }
 
@@ -21,7 +22,8 @@ export default function PortfolioShowcaseGrid({
   items,
   surface = "#f5f4f0",
   descriptionMode = "highlight",
-  sampleBadge = "Proyek Konsep",
+  sampleBadge,
+  showBadge = false,
   priorityFirst = false,
 }: PortfolioShowcaseGridProps) {
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
@@ -41,7 +43,7 @@ export default function PortfolioShowcaseGrid({
             }
             image={item.image}
             imageAlt={`Contoh desain website ${item.title} (${item.businessType})`}
-            badge={item.isSample ? sampleBadge : item.businessType}
+            badge={showBadge ? (item.isSample ? sampleBadge : item.businessType) : undefined}
             tags={item.scope}
             surface={surface}
             accent="#3f5b1e"
