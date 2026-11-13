@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { portfolioItems } from "@/content/portfolio";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getBreadcrumbJsonLd } from "@/lib/seo";
@@ -78,24 +79,78 @@ export default function PortofolioPage() {
         </div>
       </section>
 
-      {/* Ajakan Konsultasi Referensi */}
-      <section className="py-16 lg:py-20 bg-[#fafaf7]">
+      {/* Ajakan Konsultasi Referensi (Card Interaktif Bernuansa Hidup & Arsitektural) */}
+      <section className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="text-center max-w-xl mx-auto p-8 sm:p-10 rounded-2xl bg-white border border-[#c0c0b9]">
-            <h3 className="text-[22px] font-heading font-medium text-[#1f2410] tracking-[-0.015em]">
-              Punya contoh tampilan yang Anda sukai?
-            </h3>
-            <p className="mt-2 text-sm text-[#5b5e4e]">
-              Kirimkan tautan referensi atau tangkapan layar tampilan yang Anda inginkan ke WhatsApp kami untuk kami pelajari.
-            </p>
-            <a
-              href={buildGeneralWhatsAppUrl("Kirim Referensi Desain")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[48px]"
-            >
-              Kirim Referensi ke WhatsApp
-            </a>
+          <div className="relative overflow-hidden rounded-[2px] border border-[#3f4620]/30 bg-[#1f2410] text-[#fafaf7] p-8 sm:p-12 lg:p-14">
+            {/* Latar Aksen Geometris Halus */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#d4ec8c]/10 blur-3xl"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-[#3f5b1e]/20 blur-3xl"
+            />
+
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <div className="inline-flex items-center gap-2 bg-[#d4ec8c]/15 border border-[#d4ec8c]/30 px-3 py-1 rounded-[2px] text-xs font-medium tracking-[0.04em] uppercase text-[#d4ec8c]">
+                  <span className="w-1.5 h-1.5 bg-[#ddf327] inline-block shrink-0" aria-hidden="true" />
+                  <span>Konsultasi Referensi Bebas</span>
+                </div>
+
+                <h3 className="text-[26px] sm:text-3xl lg:text-[36px] font-heading font-medium tracking-[-0.02em] text-[#ffffff] leading-[1.2]">
+                  Punya contoh tampilan yang Anda sukai?
+                </h3>
+
+                <p className="text-base sm:text-lg text-[#e4e9d6] font-light leading-relaxed max-w-xl">
+                  Kirimkan tautan website, postingan media sosial, atau tangkapan layar tampilan yang Anda inginkan. Kami pelajari alur rancangannya dan hitungkan estimasi biayanya secara transparan.
+                </p>
+
+                <div className="pt-2 flex flex-wrap gap-2 text-xs font-medium text-[#fafaf7]">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[2px] bg-white/10 border border-white/15">
+                    <span className="text-[#ddf327] font-bold" aria-hidden="true">&#10003;</span>
+                    Screenshot HP atau Medsos
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[2px] bg-white/10 border border-white/15">
+                    <span className="text-[#ddf327] font-bold" aria-hidden="true">&#10003;</span>
+                    Tautan Website Inspirasi
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[2px] bg-white/10 border border-white/15">
+                    <span className="text-[#ddf327] font-bold" aria-hidden="true">&#10003;</span>
+                    Gratis Diskusi &amp; Tanpa Komitmen
+                  </span>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 flex flex-col justify-center lg:items-end">
+                <div className="w-full max-w-sm rounded-[2px] border border-white/15 bg-white/5 p-6 backdrop-blur-sm space-y-4">
+                  <div className="space-y-1">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#d4ec8c]">
+                      Obrolan Langsung
+                    </span>
+                    <p className="text-sm text-[#e4e9d6] font-light">
+                      Ceritakan kebutuhan bisnis Anda langsung ke desainer LOOMI Studio.
+                    </p>
+                  </div>
+
+                  <a
+                    href={buildGeneralWhatsAppUrl("Kirim Referensi Desain")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-sm font-medium text-[#1f2410] bg-[#d4ec8c] hover:bg-[#ddf327] rounded-[2px] transition-colors min-h-[48px] shadow-sm font-sans"
+                  >
+                    <span>Kirim Referensi ke WhatsApp</span>
+                    <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
+                  </a>
+
+                  <p className="text-[11px] text-[#c7ccb8] text-center">
+                    Biasanya dibalas dalam hitungan menit pada jam kerja.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
