@@ -114,7 +114,7 @@ export function NotchedProjectCard({
           )}
           {badge && (
             <div className="pointer-events-none absolute inset-x-0 top-0 flex justify-center pt-4 px-4">
-              <span className="rounded-full border border-[#d4ec8c]/50 bg-[#1f2410]/90 px-3 py-1 text-xs font-medium text-[#fafaf7]">
+              <span className="rounded-[2px] border border-[#d4ec8c]/40 bg-[#1f2410]/90 px-2.5 py-1 text-xs font-medium text-[#fafaf7] backdrop-blur-sm">
                 {badge}
               </span>
             </div>
@@ -180,11 +180,11 @@ export function NotchedProjectCard({
         </p>
       )}
       {tags.length > 0 && (
-        <ul className="mt-4 flex flex-wrap gap-2">
+        <ul className="mt-4 flex flex-wrap gap-1.5">
           {tags.map((t, i) => (
             <li
               key={`${t}-${i}`}
-              className="rounded-md bg-[#eef2e2] border border-[#c0c0b9] px-2.5 py-1 text-xs font-medium text-[#1f2410]"
+              className="rounded-[2px] border border-[#c0c0b9] bg-white px-2.5 py-1 text-xs font-medium text-[#1f2410] tracking-[0.01em] transition-colors group-hover:border-[#545c2c]/70"
             >
               {t}
             </li>
