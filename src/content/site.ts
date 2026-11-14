@@ -12,7 +12,7 @@ export const siteConfig: SiteConfig = {
   replyHours: "Senin - Sabtu: 08.30 - 17.00 WIB",
   instagram: "https://instagram.com/loomi.studio",
   serviceArea: "Jepara, Kudus, Pati, dan melayani klien di seluruh Indonesia",
-  email: "hallo@loomistudio.tech",
+  email: "halo@loomistudio.tech",
   address: "Jepara, Jawa Tengah, Indonesia",
 };
 
