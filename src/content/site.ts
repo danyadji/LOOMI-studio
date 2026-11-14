@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   domain: "loomi.studio",
   url: "https://loomi.studio",
   // Nomor WhatsApp utama (format internasional tanpa tanda + atau 0 di depan)
-  whatsappNumber: "6281234567890",
+  whatsappNumber: "6289611117761",
   replyHours: "Senin - Sabtu: 08.30 - 17.00 WIB",
   instagram: "https://instagram.com/loomi.studio",
   serviceArea: "Jepara, Kudus, Pati, dan melayani klien di seluruh Indonesia",
