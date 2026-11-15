@@ -66,7 +66,7 @@ export default function PortofolioPage() {
               Ringkasan Sektor
             </span>
             <h2 className="text-[28px] lg:text-[36px] font-heading font-medium text-[#1f2410] leading-[1.2] tracking-[-0.015em]">
-              Pilih contoh konsep untuk melihat galeri detailnya.
+              Pilih proyek untuk melihat galeri detail dan studi kasusnya.
             </h2>
           </div>
 

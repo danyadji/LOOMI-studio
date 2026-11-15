@@ -2,38 +2,52 @@ import { PortfolioItem } from "./types";
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    slug: "kayu-ukir-lestari",
-    title: "Kayu Ukir Lestari",
-    businessType: "Produsen Mebel & Kerajinan Kayu, Jepara",
+    slug: "inspiring-furni",
+    title: "Inspiring Furni",
+    businessType: "Furniture Manufacture, Jepara",
     packageType: "Katalog Toko WhatsApp",
     summary:
-      "Konsep etalase mebel jati Jepara dengan tampilan bersih agar pembeli luar kota bisa memilih model kursi atau meja lalu menanyakan stok langsung lewat WhatsApp.",
-    scope: ["Katalog Produk WhatsApp", "Optimasi Gambar WebP", "SEO Lokal Jepara"],
-    image:
-      "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=900&q=80",
+      "Website etalase dan katalog furnitur kayu jati solid Jepara dengan sistem pemesanan langsung ke WhatsApp workshop serta pilihan variasi ukuran produk yang fleksibel.",
+    scope: ["Katalog Toko WhatsApp", "Pilihan Varian Ukuran", "Mobile Checkout Cepat"],
+    image: "/images/portfolio/inspiring-furni/1.png",
     gallery: [
       {
-        src: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=900&q=80",
-        alt: "Interior ruang tamu dengan furnitur kayu jati Kayu Ukir Lestari",
-        caption: "Suasana produk dan karakter visual brand",
+        src: "/images/portfolio/inspiring-furni/1.png",
+        alt: "Halaman beranda website Inspiring Furni pada layar desktop",
+        caption: "Halaman beranda dengan identitas furnitur jati solid dan tombol WhatsApp",
       },
       {
-        src: "/images/portfolio/kayu-ukir-desktop.jpg",
-        alt: "Tampilan konsep katalog mebel Kayu Ukir Lestari pada layar laptop",
-        caption: "Tampilan katalog grid pada layar desktop",
+        src: "/images/portfolio/inspiring-furni/2.png",
+        alt: "Katalog produk furnitur jati solid Inspiring Furni",
+        caption: "Katalog etalase produk dengan filter pencarian dan label harga",
       },
       {
-        src: "/images/portfolio/kayu-ukir-mobile.jpg",
-        alt: "Pratinjau halaman detail produk kursi jati di layar ponsel",
-        caption: "Tampilan detail produk dan tombol pesan di HP",
+        src: "/images/portfolio/inspiring-furni/3.png",
+        alt: "Halaman detail produk jendela kusen bulat dengan pemilih ukuran dan kaca",
+        caption: "Halaman detail produk dengan pilihan diameter dan jenis kaca",
+      },
+      {
+        src: "/images/portfolio/inspiring-furni/7.png",
+        alt: "Tampilan responsif website Inspiring Furni pada tiga layar ponsel",
+        caption: "Tampilan mobile responsif untuk pengunjung iklan Instagram dan TikTok",
+      },
+      {
+        src: "/images/portfolio/inspiring-furni/6.png",
+        alt: "Alur pemesanan dan checkout langsung ke WhatsApp workshop",
+        caption: "Formulir ringkasan pesanan dan pengiriman langsung tersambung ke WhatsApp",
+      },
+      {
+        src: "/images/portfolio/inspiring-furni/8.png",
+        alt: "Alur keranjang belanja dan formulir pengiriman di layar ponsel",
+        caption: "Alur pemesanan mobile yang ringkas tanpa login",
       },
     ],
-    isSample: true,
-    sampleNote: "Proyek Konsep Desain LOOMI Studio",
+    url: "https://www.inspiringfurni.web.id",
+    isSample: false,
     highlights: [
-      "Katalog galeri produk ukir jati dengan tombol langsung tanya stok ke WhatsApp",
-      "Ringan dibuka pada koneksi 4G ponsel pelanggan luar kota",
-      "Struktur SEO lokal untuk kata kunci pengrajin mebel Jepara",
+      "Katalog galeri produk mebel jati dengan tombol langsung tanya stok dan custom ke WhatsApp",
+      "Pilihan spesifikasi variasi ukuran diameter dan jenis kaca yang otomatis terangkum dalam pesanan",
+      "Desain responsif yang sangat ringan dibuka dari koneksi ponsel calon pembeli luar kota",
     ],
   },
   {

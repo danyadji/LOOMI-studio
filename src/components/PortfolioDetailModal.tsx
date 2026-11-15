@@ -231,7 +231,18 @@ export default function PortfolioDetailModal({
               </div>
             </div>
 
-            <div className="flex flex-col gap-3 border-t border-[#c0c0b9] pt-5 sm:flex-row lg:flex-col">
+            <div className="flex flex-col gap-2.5 border-t border-[#c0c0b9] pt-5 sm:flex-row lg:flex-col">
+              {item.url && (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[2px] border border-[#1f2410] bg-[#fafaf7] px-5 py-3 text-sm font-semibold text-[#1f2410] transition-colors hover:bg-[#d4ec8c]"
+                >
+                  <span>Kunjungi Website Resmi</span>
+                  <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
+                </a>
+              )}
               <a
                 href={waUrl}
                 target="_blank"
