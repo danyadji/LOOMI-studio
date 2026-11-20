@@ -33,9 +33,9 @@ const mainServices = [
   {
     code: "03",
     audience: "Etalase Produk",
-    title: "Katalog toko WhatsApp.",
+    title: "Website toko online.",
     summary:
-      "Katalog belanja ringan di layar HP agar pembeli bisa pilih varian barang lalu kirim rincian pesanan otomatis ke WhatsApp.",
+      "Toko online produk mebel, fashion, atau kuliner di HP dengan alur order praktis serta opsi upgrade pembayaran otomatis.",
     specs: ["Hingga 20 produk awal", "Format pesan order", "7-14 hari kerja"],
     href: "/layanan#toko-whatsapp",
     featured: false,
@@ -324,14 +324,25 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              href="/paket"
-              className="inline-flex items-center text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px]"
-            >
-              <span>Lihat tabel perbandingan fitur lengkap dan daftar add-on</span>
-              <span className="ml-1.5" aria-hidden="true">&rarr;</span>
-            </Link>
+          <div className="mt-12 text-center space-y-3">
+            <div>
+              <Link
+                href="/paket"
+                className="inline-flex items-center text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px]"
+              >
+                <span>Lihat tabel perbandingan fitur lengkap dan daftar add-on</span>
+                <span className="ml-1.5" aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
+            <p className="text-xs text-[#5b5e4e]">
+              Butuh alur sistem kustom, membership, atau database khusus?{" "}
+              <Link
+                href="/paket#paket-kustom"
+                className="text-[#3f5b1e] hover:text-[#1f2410] font-semibold underline underline-offset-2"
+              >
+                Lihat Paket Kustom &amp; Sistem Khusus &rarr;
+              </Link>
+            </p>
           </div>
         </div>
       </section>

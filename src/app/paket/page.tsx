@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Check, ArrowUpRight, Sparkles } from "lucide-react";
 import { packages, addOns } from "@/content/packages";
 import { PackageSlug } from "@/content/types";
 import { formatRupiah, buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
@@ -90,7 +91,7 @@ export default function PaketPage() {
         </div>
       </section>
 
-      {/* 3 Kartu Paket */}
+      {/* 3 Kartu Paket & Kartu Kustom */}
       <div className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch max-w-lg mx-auto lg:max-w-none">
@@ -101,6 +102,107 @@ export default function PaketPage() {
                 onSelect={(slug) => handleSelectPackage(slug)}
               />
             ))}
+          </div>
+
+          {/* Kartu Khusus: Paket Kustom & Sistem Khusus */}
+          <div
+            id="paket-kustom"
+            className="mt-12 scroll-mt-24 rounded-2xl border-2 border-[#545c2c]/40 bg-white p-7 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-[#d4ec8c]/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+              <div className="lg:col-span-7 space-y-5">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#f5f4f0] border border-[#c0c0b9] rounded-[2px] text-xs font-semibold uppercase tracking-wider text-[#545c2c] font-sans">
+                  <Sparkles className="size-3.5 text-[#545c2c]" aria-hidden="true" />
+                  <span>Solusi Bisnis Berkembang &amp; Web App</span>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-heading font-medium text-[#1f2410] tracking-[-0.015em] leading-[1.2]">
+                    Paket Kustom &amp; Sistem Khusus
+                  </h3>
+                  <p className="mt-3 text-sm sm:text-base text-[#5b5e4e] font-light leading-relaxed">
+                    Dirancang untuk usaha yang membutuhkan arsitektur sistem khusus di luar paket standar, seperti sistem akun membership pengguna, ulasan produk dinamis, database cloud mandiri, atau integrasi alur transaksi bisnis multi-API.
+                  </p>
+                </div>
+
+                <div className="pt-2">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#545c2c] block mb-3 font-sans">
+                    Cakupan &amp; Kemampuan Sistem Kustom:
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-[#1f2410]">
+                    <div className="flex items-start gap-2.5">
+                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                      <span>Arsitektur database cloud khusus (Supabase / PostgreSQL)</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                      <span>Sistem login akun pengguna / membership pembeli</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                      <span>Integrasi API pihak ketiga (Payment Gateway, Webhook, Cek Ongkir)</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                      <span>Penyerahan kode sumber utuh &amp; dokumentasi teknis (SPK resmi)</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                      <span>Konsultasi wireframe dan alur sistem sebelum koding dimulai</span>
+                    </div>
+                    <div className="flex items-start gap-2.5">
+                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                      <span>Garansi pemeliharaan teknis prioritas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 bg-[#fafaf7] border border-[#c0c0b9] rounded-xl p-6 sm:p-8 flex flex-col justify-between">
+                <div>
+                  <span className="text-xs font-semibold text-[#545c2c] uppercase tracking-wider block font-sans">
+                    Skema Biaya &amp; Waktu
+                  </span>
+                  <div className="mt-3">
+                    <span className="text-xs text-[#5b5e4e] block mb-1">Investasi Proyek:</span>
+                    <span className="text-2xl sm:text-3xl font-heading font-medium text-[#1f2410] tracking-[-0.015em] leading-tight block">
+                      Berdasarkan Kebutuhan
+                    </span>
+                    <p className="mt-2 text-xs text-[#5b5e4e] leading-relaxed">
+                      Estimasi biaya dan jadwal disusun transparan setelah diskusi alur sistem.
+                    </p>
+                  </div>
+
+                  <div className="mt-5 pt-4 border-t border-[#c0c0b9]/70 space-y-2 text-xs text-[#5b5e4e]">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[#545c2c] font-medium">Estimasi Waktu:</span>
+                      <span className="font-semibold text-[#1f2410]">14 - 30 hari kerja</span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-[#545c2c] font-medium">Dasar Kontrak:</span>
+                      <span className="font-semibold text-[#1f2410]">Surat Perjanjian Kerja (SPK)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-5 border-t border-[#c0c0b9]">
+                  <a
+                    href={buildGeneralWhatsAppUrl("Konsultasi Proyek Kustom")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full px-6 py-3.5 rounded-full text-sm font-semibold bg-[#3f5b1e] hover:bg-[#2f4516] text-white transition-colors min-h-[48px] flex items-center justify-center gap-2 shadow-sm"
+                  >
+                    <span>Konsultasi Proyek Kustom via WhatsApp</span>
+                    <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
+                  </a>
+                  <p className="text-[11px] text-center text-[#5b5e4e] mt-2.5">
+                    Konsultasi awal gratis untuk memetakan alur dan kebutuhan usaha Anda.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -230,6 +332,18 @@ export default function PaketPage() {
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#5b5e4e] bg-[#fafaf7] p-4 rounded-xl border border-[#c0c0b9]">
+            <span>
+              <strong>Butuh fitur di luar tabel ini?</strong> Seperti sistem login akun pembeli, ulasan produk dinamis, atau database kustom.
+            </span>
+            <a
+              href="#paket-kustom"
+              className="text-[#3f5b1e] hover:text-[#1f2410] font-semibold underline underline-offset-4 shrink-0"
+            >
+              Lihat Paket Kustom &amp; Sistem Khusus &uarr;
+            </a>
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ export default function LayananPage() {
               Layanan pembuatan website kami.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-[#e4e9d6] font-light leading-relaxed">
-              Setiap jenis usaha memiliki kebutuhan yang berbeda. Kami menyediakan tiga pilihan terarah agar Anda mendapatkan struktur website yang tepat guna tanpa membayar fitur yang belum dibutuhkan.
+              Setiap jenis usaha memiliki kebutuhan yang berbeda. Kami menyediakan pilihan terarah dan opsi kustom agar Anda mendapatkan struktur website yang tepat guna tanpa membayar fitur yang belum dibutuhkan.
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@ export default function LayananPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {/* Quick Card 01 */}
             <a
               href="#landing-page"
@@ -136,6 +136,29 @@ export default function LayananPage() {
                 </h3>
                 <p className="text-xs sm:text-sm text-[#5b5e4e] mt-2 font-light leading-relaxed">
                   Toko online produk mebel, fashion, atau kuliner di HP dengan alur order praktis serta opsi pembayaran otomatis.
+                </p>
+              </div>
+              <div className="mt-5 pt-3 border-t border-[#c0c0b9]/50 flex items-center gap-1.5 text-xs font-semibold text-[#3f5b1e] group-hover:text-[#1f2410]">
+                <span>Pelajari detail</span>
+                <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              </div>
+            </a>
+
+            {/* Quick Card 04 (Kustom & Sistem Khusus) */}
+            <a
+              href="#sistem-kustom"
+              className="p-6 rounded-[2px] border border-[#c0c0b9] bg-[#fafaf7] hover:bg-white hover:border-[#1f2410] transition-all group flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between text-xs text-[#545c2c] mb-3">
+                  <span className="font-semibold uppercase tracking-wider">04 &bull; Kustom &amp; Web App</span>
+                  <span className="text-[#5b5e4e]">14-30 Hari</span>
+                </div>
+                <h3 className="text-xl font-heading font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
+                  Sistem Kustom
+                </h3>
+                <p className="text-xs sm:text-sm text-[#5b5e4e] mt-2 font-light leading-relaxed">
+                  Arsitektur database cloud, akun login membership, ulasan dinamis, dan integrasi API bisnis khusus.
                 </p>
               </div>
               <div className="mt-5 pt-3 border-t border-[#c0c0b9]/50 flex items-center gap-1.5 text-xs font-semibold text-[#3f5b1e] group-hover:text-[#1f2410]">
@@ -528,6 +551,132 @@ export default function LayananPage() {
                 </Link>
                 <a
                   href={buildGeneralWhatsAppUrl("Tanya Layanan Toko Online")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 text-sm font-medium text-[#1f2410] bg-white border border-[#838775] hover:border-[#1f2410] hover:bg-[#fafaf7] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
+                >
+                  Konsultasi via WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Layanan 04: Sistem Kustom & Web App Khusus */}
+        <section id="sistem-kustom" className="scroll-mt-24 py-16 lg:py-20 border-b border-[#c0c0b9] bg-white">
+          <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
+            <div className="max-w-3xl mb-10">
+              <div className="flex flex-wrap items-center gap-2 text-xs mb-3">
+                <span className="font-semibold uppercase tracking-wider text-[#545c2c] bg-[#eef2e2] px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/60">
+                  Layanan 04 &bull; Kustom &amp; Database Khusus
+                </span>
+                <span className="inline-flex items-center gap-1.5 text-[#5b5e4e] bg-[#f5f4f0] px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/40 font-medium">
+                  <Clock className="size-3 text-[#545c2c]" aria-hidden="true" />
+                  <span>Estimasi 14 sampai 30 hari kerja</span>
+                </span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-medium tracking-[-0.02em] text-[#1f2410] leading-[1.18]">
+                Sistem kustom &amp; web app khusus.
+              </h2>
+              <p className="mt-4 text-base sm:text-lg text-[#5b5e4e] font-light leading-relaxed">
+                Solusi pembuatan website dan aplikasi berbasis web dengan arsitektur khusus untuk alur operasional bisnis yang unik, kebutuhan database relasional, sistem autentikasi akun pengguna, hingga integrasi berbagai API pihak ketiga.
+              </p>
+            </div>
+
+            {/* 3 Kolom Penjelasan Lugas */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-y border-[#c0c0b9]/70">
+              {/* Kolom 1: Cocok Untuk */}
+              <div className="space-y-3">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#545c2c] block font-sans">
+                  Cocok untuk Anda jika:
+                </span>
+                <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Memerlukan akun login pengguna atau sistem membership</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Memerlukan sistem ulasan atau review produk dinamis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Memiliki alur kalkulasi bisnis yang tidak tercakup paket standar</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Membutuhkan penyerahan kode sumber utuh dan repositori teknis</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Kolom 2: Yang Dikerjakan */}
+              <div className="space-y-3">
+                <span className="text-xs font-semibold text-[#545c2c] uppercase tracking-wider block font-sans">
+                  Yang kami kerjakan:
+                </span>
+                <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Arsitektur database cloud khusus (Supabase / PostgreSQL)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Sistem autentikasi dan otorisasi login pengguna yang aman</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Integrasi API pihak ketiga (Payment Gateway, Webhook, Ekspedisi)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Wireframe, skema data, dan dokumentasi alur logika sistem</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Kolom 3: Ketentuan & Garansi */}
+              <div className="space-y-3">
+                <span className="text-xs font-semibold text-[#545c2c] uppercase tracking-wider block font-sans">
+                  Ketentuan &amp; Garansi:
+                </span>
+                <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Estimasi 14 sampai 30 hari kerja (fleksibel sesuai ruang lingkup)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Kontrak resmi Surat Perjanjian Kerja (SPK) transparan</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Penyerahan 100% kode sumber (source code) dan repositori</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Garansi pemeliharaan teknis dan perbaikan bug prioritas</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Aksi & Tautan Menu Paket */}
+            <div className="pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <p className="text-xs sm:text-sm text-[#5b5e4e] font-light">
+                Biaya proyek kustom disusun berdasarkan kebutuhan setelah alur sistem dan spesifikasi fitur disepakati bersama.
+              </p>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
+                <Link
+                  href="/paket#paket-kustom"
+                  className="px-6 py-3 text-sm font-medium bg-[#3f5b1e] hover:bg-[#d4ec8c] hover:text-[#1f2410] text-white rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center gap-2"
+                >
+                  <span>Lihat di Menu Paket</span>
+                  <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
+                </Link>
+                <a
+                  href={buildGeneralWhatsAppUrl("Konsultasi Proyek Kustom")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-3 text-sm font-medium text-[#1f2410] bg-white border border-[#838775] hover:border-[#1f2410] hover:bg-[#fafaf7] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"
