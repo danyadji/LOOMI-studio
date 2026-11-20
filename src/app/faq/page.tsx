@@ -24,7 +24,7 @@ export default function FaqPage() {
     { id: "semua", name: "Semua Kategori" },
     { id: "umum", name: "Umum & Pemesanan" },
     { id: "paket", name: "Paket & Revisi" },
-    { id: "teknis", name: "Hosting & Kode Sumber" },
+    { id: "teknis", name: "Hosting & Kepemilikan" },
     { id: "pembayaran", name: "Skema Pembayaran" },
   ];
 
@@ -64,7 +64,7 @@ export default function FaqPage() {
               Pertanyaan yang sering diajukan.
             </h1>
             <p className="mt-6 text-base sm:text-lg text-[#5b5e4e] leading-relaxed">
-              Kami menyusun jawaban transparan untuk pertanyaan penting seputar kepemilikan kode sumber, domain, hosting, mekanisme revisi, dan sistem pembayaran.
+              Kami menyusun jawaban transparan untuk pertanyaan penting seputar kepemilikan website, domain, hosting, mekanisme revisi, dan sistem pembayaran.
             </p>
           </div>
         </div>

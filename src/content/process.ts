@@ -45,7 +45,7 @@ export const processSteps: ProcessStep[] = [
       "Setelah pratinjau disetujui dan sisa pembayaran diselesaikan, website diarahkan ke domain resmi Anda dan didaftarkan ke Google Search Console.",
     deliverables: [
       "Website resmi aktif dan terindeks di mesin pencari",
-      "Penyerahan kepemilikan kode sumber secara utuh",
+      "Serah terima akses domain dan kepemilikan aset bisnis penuh",
       "Panduan praktis memperbarui harga atau teks secara mandiri",
     ],
   },
