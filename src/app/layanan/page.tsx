@@ -132,10 +132,10 @@ export default function LayananPage() {
                   <span className="text-[#5b5e4e]">7-14 Hari</span>
                 </div>
                 <h3 className="text-xl font-heading font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
-                  Katalog Toko WhatsApp
+                  Website Toko Online
                 </h3>
                 <p className="text-xs sm:text-sm text-[#5b5e4e] mt-2 font-light leading-relaxed">
-                  Etalase 20 produk mebel, kerajinan, atau kuliner di HP dengan tombol rangkum order otomatis ke WhatsApp.
+                  Toko online produk mebel, fashion, atau kuliner di HP dengan alur order praktis serta opsi pembayaran otomatis.
                 </p>
               </div>
               <div className="mt-5 pt-3 border-t border-[#c0c0b9]/50 flex items-center gap-1.5 text-xs font-semibold text-[#3f5b1e] group-hover:text-[#1f2410]">
@@ -405,13 +405,13 @@ export default function LayananPage() {
           </div>
         </section>
 
-        {/* Layanan 03: Katalog Toko WhatsApp */}
+        {/* Layanan 03: Website Toko Online */}
         <section id="toko-whatsapp" className="scroll-mt-24 py-16 lg:py-20 border-b border-[#c0c0b9] bg-white">
           <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
             <div className="max-w-3xl mb-10">
               <div className="flex flex-wrap items-center gap-2 text-xs mb-3">
                 <span className="font-semibold uppercase tracking-wider text-[#545c2c] bg-[#eef2e2] px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/60">
-                  Layanan 03 &bull; Etalase Produk
+                  Layanan 03 &bull; Toko Online &amp; E-Commerce
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-[#5b5e4e] bg-[#f5f4f0] px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/40 font-medium">
                   <Clock className="size-3 text-[#545c2c]" aria-hidden="true" />
@@ -420,10 +420,10 @@ export default function LayananPage() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-heading font-medium tracking-[-0.02em] text-[#1f2410] leading-[1.18]">
-                Katalog toko WhatsApp.
+                Website toko online.
               </h2>
               <p className="mt-4 text-base sm:text-lg text-[#5b5e4e] font-light leading-relaxed">
-                Etalase katalog produk online yang sangat ringan di ponsel. Pengunjung dapat memilih barang, melihat varian dan foto, lalu tombol pesan langsung merangkum daftar belanja otomatis ke nomor WhatsApp admin Anda.
+                Toko online modern lengkap dengan katalog produk, galeri foto, keranjang belanja, dan pemilih varian spesifikasi. Hadir dengan alur checkout WhatsApp hemat biaya, serta opsi integrasi pembayaran dan cek ongkir otomatis.
               </p>
             </div>
 
@@ -519,7 +519,7 @@ export default function LayananPage() {
                   <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
                 </Link>
                 <a
-                  href={buildGeneralWhatsAppUrl("Tanya Layanan Toko WhatsApp")}
+                  href={buildGeneralWhatsAppUrl("Tanya Layanan Toko Online")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-3 text-sm font-medium text-[#1f2410] bg-white border border-[#838775] hover:border-[#1f2410] hover:bg-[#fafaf7] rounded-[2px] transition-colors min-h-[48px] inline-flex items-center justify-center"

@@ -2,6 +2,20 @@ import { AddOn, Package } from "./types";
 
 export const addOns: AddOn[] = [
   {
+    id: "payment-gateway",
+    name: "Integrasi Payment Gateway Otomatis",
+    description: "Pembeli dapat membayar otomatis di website via QRIS, Virtual Account bank, dan e-wallet (Midtrans / Xendit / Tripay)",
+    priceFrom: 750000,
+    allowQuantity: false,
+  },
+  {
+    id: "shipping-api",
+    name: "Integrasi Cek Ongkir Otomatis Ekspedisi",
+    description: "Kalkulasi otomatis tarif kurir reguler (JNE, J&T, SiCepat) berdasarkan alamat kecamatan tujuan pembeli",
+    priceFrom: 500000,
+    allowQuantity: false,
+  },
+  {
     id: "extra-page",
     name: "Halaman Tambahan",
     description: "Penambahan satu halaman konten terpisah (misal: halaman FAQ terpisah, tim, atau cabang)",
@@ -95,31 +109,39 @@ export const packages: Package[] = [
   },
   {
     slug: "toko-whatsapp",
-    name: "Katalog Toko WhatsApp",
-    badge: "Solusi Praktis Penjualan",
+    name: "Website Toko Online",
+    badge: "Solusi Praktis E-Commerce",
     summary:
-      "Website etalase produk dengan tombol pesan cepat yang merangkum pilihan barang langsung ke chat WhatsApp penjual.",
+      "Website toko online profesional lengkap dengan etalase produk, varian ukuran/warna, keranjang belanja, dan checkout pesanan WhatsApp bebas komisi.",
     targetAudience:
-      "Toko ritel, produsen mebel/kerajinan, kuliner, dan UMKM yang transaksi akhirnya ditutup lewat obrolan WhatsApp.",
+      "Toko ritel, produsen mebel, fashion, kuliner, dan UMKM yang ingin toko online praktis dengan opsi upgrade ke pembayaran otomatis.",
     priceFrom: 2250000,
     duration: "7 - 14 hari kerja",
     revisions: 3,
     popular: false,
     includes: [
-      "Etalase katalog produk rapi dengan filter kategori",
+      "Website toko online modern lengkap dengan keranjang belanja",
+      "Katalog etalase produk rapi dengan filter kategori",
+      "Pilihan variasi spesifikasi (ukuran, warna, bahan)",
+      "Alur checkout langsung ke WhatsApp (bebas potongan biaya transaksi)",
       "Hingga 20 produk awal dimasukkan oleh tim kami",
-      "Tombol pesan per produk otomatis menyusun format chat WhatsApp",
-      "Format gambar WebP kompresi tinggi agar hemat kuota",
-      "Halaman panduan mudah untuk mengganti harga dan foto produk",
-      "Integrasi pelacakan konversi klik WhatsApp (GA4 & Meta)",
+      "Format gambar WebP kompresi tinggi agar hemat kuota ponsel",
+      "Panduan mudah memperbarui stok, harga, dan foto produk",
       "3 kali sesi revisi",
     ],
     excludes: [
-      "Payment gateway bank otomatis dan kartu kredit",
-      "Kalkulasi ongkos kirim kurir otomatis di web (dihitung manual di chat)",
-      "Akun login member pembeli",
+      "Integrasi payment gateway otomatis (tersedia sebagai add-on)",
+      "Kalkulasi ongkir ekspedisi otomatis di web (tersedia sebagai add-on)",
+      "Sistem multi-gudang rumit / ERP enterprise",
     ],
-    addOnIds: ["extra-page", "extra-products", "full-copywriting", "domain-hosting"],
+    addOnIds: [
+      "payment-gateway",
+      "shipping-api",
+      "extra-products",
+      "extra-page",
+      "full-copywriting",
+      "domain-hosting",
+    ],
   },
 ];
 

@@ -5,10 +5,10 @@ export const portfolioItems: PortfolioItem[] = [
     slug: "inspiring-furni",
     title: "Inspiring Furni",
     businessType: "Furniture Manufacture, Jepara",
-    packageType: "Katalog Toko WhatsApp",
+    packageType: "Website Toko Online",
     summary:
-      "Website etalase dan katalog furnitur kayu jati solid Jepara dengan sistem pemesanan langsung ke WhatsApp workshop serta pilihan variasi ukuran produk yang fleksibel.",
-    scope: ["Katalog Toko WhatsApp", "Pilihan Varian Ukuran", "Mobile Checkout Cepat"],
+      "Website etalase dan toko online furnitur kayu jati solid Jepara dengan sistem pemesanan langsung ke WhatsApp workshop serta pilihan variasi ukuran produk yang fleksibel.",
+    scope: ["Website Toko Online", "Pilihan Varian Ukuran", "Mobile Checkout Cepat"],
     image: "/images/portfolio/inspiring-furni/1.png",
     gallery: [
       {

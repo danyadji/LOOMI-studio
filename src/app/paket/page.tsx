@@ -131,7 +131,7 @@ export default function PaketPage() {
                     Company Profile
                   </th>
                   <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] text-center w-1/5">
-                    Toko WhatsApp
+                    Toko Online
                   </th>
                 </tr>
               </thead>

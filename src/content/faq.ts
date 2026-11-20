@@ -13,7 +13,7 @@ export const faqItems: FaqItem[] = [
     category: "teknis",
     question: "Apakah kode sumber website diserahkan kepada saya?",
     answer:
-      "Tergantung pada jenis layanan. Untuk paket website publik dan UMKM (Landing Page, Profil Bisnis, dan Toko WhatsApp), kami menerapkan model terima beres: seluruh nama domain dan materi konten bisnis sepenuhnya menjadi milik Anda, sementara fondasi template dikelola aman oleh studio kami tanpa biaya sewa sistem bulanan. Untuk proyek sistem kustom skala besar (seperti web aplikasi internal, ERP, atau dashboard khusus), seluruh kode sumber, repositori, dan dokumentasi teknis diserahkan utuh kepada klien setelah pelunasan sesuai kesepakatan kontrak kerja (SPK).",
+      "Tergantung pada jenis layanan. Untuk paket website publik dan UMKM (Landing Page, Profil Bisnis, dan Website Toko Online), kami menerapkan model terima beres: seluruh nama domain dan materi konten bisnis sepenuhnya menjadi milik Anda, sementara fondasi template dikelola aman oleh studio kami tanpa biaya sewa sistem bulanan. Untuk proyek sistem kustom skala besar (seperti web aplikasi internal, ERP, atau dashboard khusus), seluruh kode sumber, repositori, dan dokumentasi teknis diserahkan utuh kepada klien setelah pelunasan sesuai kesepakatan kontrak kerja (SPK).",
   },
   {
     id: "proses-revisi",
