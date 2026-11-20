@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, ArrowUpRight, Sparkles } from "lucide-react";
 import { packages, addOns } from "@/content/packages";
 import { PackageSlug } from "@/content/types";
 import { formatRupiah, buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
@@ -16,6 +15,10 @@ export default function PaketPage() {
   const [selectedSlug, setSelectedSlug] = useState<PackageSlug>("company-profile");
 
   const handleSelectPackage = (slug: PackageSlug) => {
+    if (slug === "sistem-kustom") {
+      window.open(buildGeneralWhatsAppUrl("Konsultasi Proyek Kustom"), "_blank");
+      return;
+    }
     setSelectedSlug(slug);
     const pkg = packages.find((p) => p.slug === slug);
     if (pkg) {
@@ -91,10 +94,10 @@ export default function PaketPage() {
         </div>
       </section>
 
-      {/* 3 Kartu Paket & Kartu Kustom */}
+      {/* 4 Kartu Paket */}
       <div className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch max-w-lg mx-auto lg:max-w-none">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch max-w-lg mx-auto md:max-w-none">
             {packages.map((pkg) => (
               <PackageCard
                 key={pkg.slug}
@@ -102,107 +105,6 @@ export default function PaketPage() {
                 onSelect={(slug) => handleSelectPackage(slug)}
               />
             ))}
-          </div>
-
-          {/* Kartu Khusus: Paket Kustom & Sistem Khusus */}
-          <div
-            id="paket-kustom"
-            className="mt-12 scroll-mt-24 rounded-2xl border-2 border-[#545c2c]/40 bg-white p-7 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden"
-          >
-            <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 bg-[#d4ec8c]/20 rounded-full blur-3xl pointer-events-none" />
-
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-              <div className="lg:col-span-7 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#f5f4f0] border border-[#c0c0b9] rounded-[2px] text-xs font-semibold uppercase tracking-wider text-[#545c2c] font-sans">
-                  <Sparkles className="size-3.5 text-[#545c2c]" aria-hidden="true" />
-                  <span>Solusi Bisnis Berkembang &amp; Web App</span>
-                </div>
-
-                <div>
-                  <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-heading font-medium text-[#1f2410] tracking-[-0.015em] leading-[1.2]">
-                    Paket Kustom &amp; Sistem Khusus
-                  </h3>
-                  <p className="mt-3 text-sm sm:text-base text-[#5b5e4e] font-light leading-relaxed">
-                    Dirancang untuk usaha yang membutuhkan arsitektur sistem khusus di luar paket standar, seperti sistem akun membership pengguna, ulasan produk dinamis, database cloud mandiri, atau integrasi alur transaksi bisnis multi-API.
-                  </p>
-                </div>
-
-                <div className="pt-2">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#545c2c] block mb-3 font-sans">
-                    Cakupan &amp; Kemampuan Sistem Kustom:
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-[#1f2410]">
-                    <div className="flex items-start gap-2.5">
-                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                      <span>Arsitektur database cloud khusus (Supabase / PostgreSQL)</span>
-                    </div>
-                    <div className="flex items-start gap-2.5">
-                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                      <span>Sistem login akun pengguna / membership pembeli</span>
-                    </div>
-                    <div className="flex items-start gap-2.5">
-                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                      <span>Integrasi API pihak ketiga (Payment Gateway, Webhook, Cek Ongkir)</span>
-                    </div>
-                    <div className="flex items-start gap-2.5">
-                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                      <span>Penyerahan kode sumber utuh &amp; dokumentasi teknis (SPK resmi)</span>
-                    </div>
-                    <div className="flex items-start gap-2.5">
-                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                      <span>Konsultasi wireframe dan alur sistem sebelum koding dimulai</span>
-                    </div>
-                    <div className="flex items-start gap-2.5">
-                      <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                      <span>Garansi pemeliharaan teknis prioritas</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="lg:col-span-5 bg-[#fafaf7] border border-[#c0c0b9] rounded-xl p-6 sm:p-8 flex flex-col justify-between">
-                <div>
-                  <span className="text-xs font-semibold text-[#545c2c] uppercase tracking-wider block font-sans">
-                    Skema Biaya &amp; Waktu
-                  </span>
-                  <div className="mt-3">
-                    <span className="text-xs text-[#5b5e4e] block mb-1">Investasi Proyek:</span>
-                    <span className="text-2xl sm:text-3xl font-heading font-medium text-[#1f2410] tracking-[-0.015em] leading-tight block">
-                      Berdasarkan Kebutuhan
-                    </span>
-                    <p className="mt-2 text-xs text-[#5b5e4e] leading-relaxed">
-                      Estimasi biaya dan jadwal disusun transparan setelah diskusi alur sistem.
-                    </p>
-                  </div>
-
-                  <div className="mt-5 pt-4 border-t border-[#c0c0b9]/70 space-y-2 text-xs text-[#5b5e4e]">
-                    <div className="flex items-center justify-between">
-                      <span className="text-[#545c2c] font-medium">Estimasi Waktu:</span>
-                      <span className="font-semibold text-[#1f2410]">14 - 30 hari kerja</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-[#545c2c] font-medium">Dasar Kontrak:</span>
-                      <span className="font-semibold text-[#1f2410]">Surat Perjanjian Kerja (SPK)</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-6 pt-5 border-t border-[#c0c0b9]">
-                  <a
-                    href={buildGeneralWhatsAppUrl("Konsultasi Proyek Kustom")}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full px-6 py-3.5 rounded-full text-sm font-semibold bg-[#3f5b1e] hover:bg-[#2f4516] text-white transition-colors min-h-[48px] flex items-center justify-center gap-2 shadow-sm"
-                  >
-                    <span>Konsultasi Proyek Kustom via WhatsApp</span>
-                    <ArrowUpRight className="size-4 shrink-0" aria-hidden="true" />
-                  </a>
-                  <p className="text-[11px] text-center text-[#5b5e4e] mt-2.5">
-                    Konsultasi awal gratis untuk memetakan alur dan kebutuhan usaha Anda.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -223,127 +125,157 @@ export default function PaketPage() {
             <table className="w-full text-left border-collapse text-sm">
               <thead>
                 <tr className="border-b border-[#c0c0b9] bg-[#fafaf7]">
-                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] w-2/5">
+                  <th className="p-4 sm:p-5 font-heading font-medium text-sm sm:text-base text-[#1f2410] w-[28%]">
                     Fitur &amp; Kemampuan
                   </th>
-                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] text-center w-1/5">
+                  <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[18%]">
                     Landing Page
                   </th>
-                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] text-center w-1/5 bg-[#d4ec8c]/45">
+                  <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[18%] bg-[#d4ec8c]/45">
                     Company Profile
                   </th>
-                  <th className="p-5 sm:p-6 font-heading font-medium text-base text-[#1f2410] text-center w-1/5">
+                  <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[18%]">
                     Toko Online
+                  </th>
+                  <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[18%]">
+                    Sistem Kustom
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#c0c0b9] text-[#5b5e4e]">
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Jumlah Halaman</td>
-                  <td className="p-5 sm:p-6 text-center">1 Halaman</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Jumlah Halaman</td>
+                  <td className="p-4 sm:p-5 text-center">1 Halaman</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
                     Hingga 5 Halaman
                   </td>
-                  <td className="p-5 sm:p-6 text-center">Etalase Katalog</td>
+                  <td className="p-4 sm:p-5 text-center">Etalase Katalog</td>
+                  <td className="p-4 sm:p-5 text-center font-medium text-[#1f2410]">Sesuai Kebutuhan</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Waktu Pengerjaan</td>
-                  <td className="p-5 sm:p-6 text-center">3 - 5 hari kerja</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
-                    5 - 10 hari kerja
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Waktu Pengerjaan</td>
+                  <td className="p-4 sm:p-5 text-center">5 - 7 hari kerja</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
+                    10 - 14 hari kerja
                   </td>
-                  <td className="p-5 sm:p-6 text-center">7 - 14 hari kerja</td>
+                  <td className="p-4 sm:p-5 text-center">14 - 21 hari kerja</td>
+                  <td className="p-4 sm:p-5 text-center font-semibold text-[#1f2410]">20 - 45 hari kerja</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Sesi Revisi</td>
-                  <td className="p-5 sm:p-6 text-center">2 kali</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Sesi Revisi</td>
+                  <td className="p-4 sm:p-5 text-center">2 kali</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
                     3 kali
                   </td>
-                  <td className="p-5 sm:p-6 text-center">3 kali</td>
+                  <td className="p-4 sm:p-5 text-center">3 kali</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-semibold">Pendampingan SPK</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Format Pesan Otomatis WhatsApp</td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Format Pesan Otomatis WhatsApp</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
                     &#10003;
                   </td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">SEO Teknis (Sitemap, Robots, JSON-LD)</td>
-                  <td className="p-5 sm:p-6 text-center text-[#5b5e4e]">Dasar</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 text-[#1f2410] font-semibold">
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">SEO Teknis (Sitemap, Robots, JSON-LD)</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">Dasar</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#1f2410] font-semibold">
                     Lengkap
                   </td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-semibold">Lengkap</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-semibold">Lengkap</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-semibold">Kustom Lengkap</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Katalog Produk &amp; Filter Kategori</td>
-                  <td className="p-5 sm:p-6 text-center text-[#5b5e4e]">&ndash;</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 text-[#5b5e4e]">&ndash;</td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-semibold">Hingga 20 Produk</td>
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Katalog Produk &amp; Filter Kategori</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">&ndash;</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#5b5e4e]">&ndash;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-semibold">Hingga 20 Produk</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-semibold">Database Kustom</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Domain .com Resmi &amp; Hosting CDN 1 Tahun</td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Akun Membership &amp; Database Cloud</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">&ndash;</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#5b5e4e]">&ndash;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">&ndash;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                </tr>
+                <tr>
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Integrasi Payment Gateway / Multi-API</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">Add-on</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#5b5e4e]">Add-on</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">Add-on</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                </tr>
+                <tr>
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Domain .com Resmi &amp; Hosting CDN 1 Tahun</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
                     &#10003;
                   </td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Hak Milik Website Penuh Tanpa Sewa Bulanan</td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Penyerahan 100% Kode Sumber &amp; Repositori</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">Managed Studio</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#5b5e4e]">Managed Studio</td>
+                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">Managed Studio</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-semibold">&#10003; (SPK Resmi)</td>
+                </tr>
+                <tr>
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Hak Milik Website Penuh Tanpa Sewa Bulanan</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
                     &#10003;
                   </td>
-                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">&#10003;</td>
                 </tr>
                 <tr>
-                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Aksi Pemesanan</td>
-                  <td className="p-5 sm:p-6 text-center">
+                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">Aksi Pemesanan</td>
+                  <td className="p-4 sm:p-5 text-center">
                     <button
                       type="button"
                       onClick={() => handleSelectPackage("landing-page")}
-                      className="px-5 py-2.5 text-xs font-medium rounded-full border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[44px]"
+                      className="px-4 py-2.5 text-xs font-medium rounded-full border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[44px]"
                     >
                       Pilih
                     </button>
                   </td>
-                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20">
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20">
                     <button
                       type="button"
                       onClick={() => handleSelectPackage("company-profile")}
-                      className="px-5 py-2.5 text-xs font-medium rounded-full bg-[#545c2c] text-white hover:bg-[#8fa65b] hover:text-[#1f2410] transition-colors min-h-[44px]"
+                      className="px-4 py-2.5 text-xs font-medium rounded-full bg-[#545c2c] text-white hover:bg-[#8fa65b] hover:text-[#1f2410] transition-colors min-h-[44px]"
                     >
                       Pilih
                     </button>
                   </td>
-                  <td className="p-5 sm:p-6 text-center">
+                  <td className="p-4 sm:p-5 text-center">
                     <button
                       type="button"
                       onClick={() => handleSelectPackage("toko-whatsapp")}
-                      className="px-5 py-2.5 text-xs font-medium rounded-full border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[44px]"
+                      className="px-4 py-2.5 text-xs font-medium rounded-full border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[44px]"
                     >
                       Pilih
                     </button>
+                  </td>
+                  <td className="p-4 sm:p-5 text-center">
+                    <a
+                      href={buildGeneralWhatsAppUrl("Konsultasi Proyek Kustom")}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2.5 text-xs font-semibold rounded-full bg-[#3f5b1e] text-white hover:bg-[#2f4516] transition-colors min-h-[44px] inline-flex items-center justify-center shadow-sm"
+                    >
+                      Konsultasi
+                    </a>
                   </td>
                 </tr>
               </tbody>
             </table>
-          </div>
-
-          <div className="mt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-[#5b5e4e] bg-[#fafaf7] p-4 rounded-xl border border-[#c0c0b9]">
-            <span>
-              <strong>Butuh fitur di luar tabel ini?</strong> Seperti sistem login akun pembeli, ulasan produk dinamis, atau database kustom.
-            </span>
-            <a
-              href="#paket-kustom"
-              className="text-[#3f5b1e] hover:text-[#1f2410] font-semibold underline underline-offset-4 shrink-0"
-            >
-              Lihat Paket Kustom &amp; Sistem Khusus &uarr;
-            </a>
           </div>
         </div>
       </div>

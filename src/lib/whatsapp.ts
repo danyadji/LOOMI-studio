@@ -55,12 +55,17 @@ export function buildOrderMessage(details: OrderDetails): string {
       .join(", ");
   }
 
+  const estimateText =
+    packageItem.priceFrom > 0
+      ? `Estimasi mulai dari: ${formatRupiah(totalEstimate)}`
+      : `Investasi: ${packageItem.customPriceLabel || "Berdasarkan Kebutuhan"}`;
+
   const lines: string[] = [
     `Halo ${siteConfig.name}, saya mau pesan paket ${packageItem.name}.`,
     "",
     `Paket: ${packageItem.name}`,
     `Add-on: ${addOnText}`,
-    `Estimasi mulai dari: ${formatRupiah(totalEstimate)}`,
+    estimateText,
   ];
 
   // Kolom opsional yang kosong tidak dimunculkan di pesan (AC-02)

@@ -54,7 +54,7 @@ export const packages: Package[] = [
       "Satu halaman fokus konversi tinggi untuk promosi produk unggulan, kampanye iklan Instagram/TikTok, atau peluncuran layanan baru.",
     targetAudience: "UMKM yang sedang beriklan atau membutuhkan satu halaman penawaran lugas.",
     priceFrom: 750000,
-    duration: "3 - 5 hari kerja",
+    duration: "5 - 7 hari kerja",
     revisions: 2,
     popular: false,
     includes: [
@@ -82,7 +82,7 @@ export const packages: Package[] = [
     targetAudience:
       "Bisnis jasa, kontraktor, klinik, bengkel, kantor konsultan, dan UMKM berkembang yang butuh identitas terpercaya.",
     priceFrom: 1500000,
-    duration: "5 - 10 hari kerja",
+    duration: "10 - 14 hari kerja",
     revisions: 3,
     popular: true,
     includes: [
@@ -111,7 +111,7 @@ export const packages: Package[] = [
     targetAudience:
       "Toko ritel, produsen mebel, fashion, kuliner, dan UMKM yang ingin toko online praktis dengan opsi upgrade ke pembayaran otomatis.",
     priceFrom: 2250000,
-    duration: "7 - 14 hari kerja",
+    duration: "14 - 21 hari kerja",
     revisions: 3,
     popular: false,
     includes: [
@@ -137,6 +137,34 @@ export const packages: Package[] = [
       "extra-page",
       "full-copywriting",
     ],
+  },
+  {
+    slug: "sistem-kustom",
+    name: "Paket Kustom & Sistem Khusus",
+    badge: "Solusi Bisnis Berkembang",
+    summary:
+      "Arsitektur website dan sistem kustom untuk kebutuhan alur bisnis spesifik, sistem membership pengguna, ulasan dinamis, dan integrasi multi-API.",
+    targetAudience:
+      "Bisnis dengan alur transaksi khusus, portal membership pembeli, web app internal, atau kebutuhan database cloud mandiri.",
+    priceFrom: 0,
+    customPriceLabel: "Berdasarkan Kebutuhan",
+    duration: "20 - 45 hari kerja",
+    revisions: 0,
+    popular: false,
+    includes: [
+      "Arsitektur database cloud khusus (Supabase / PostgreSQL)",
+      "Sistem login akun pengguna / membership pembeli",
+      "Integrasi API pihak ketiga (Payment Gateway, Webhook, Ekspedisi)",
+      "Penyerahan 100% kode sumber utuh & repositori teknis (SPK resmi)",
+      "Konsultasi wireframe dan alur sistem sebelum koding dimulai",
+      "Termasuk Domain .com resmi & hosting CDN cepat 1 tahun",
+      "Garansi pemeliharaan teknis & perbaikan bug prioritas",
+    ],
+    excludes: [
+      "Server dedicated enterprise ekstrem (disesuaikan kebutuhan)",
+      "Pengelolaan operasional data harian pasca serah terima",
+    ],
+    addOnIds: [],
   },
 ];
 

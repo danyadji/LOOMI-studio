@@ -57,7 +57,8 @@ export function getPackagesJsonLd() {
         offers: {
           "@type": "Offer",
           priceCurrency: "IDR",
-          price: pkg.priceFrom,
+          price: pkg.priceFrom > 0 ? pkg.priceFrom : undefined,
+          description: pkg.customPriceLabel || undefined,
           availability: "https://schema.org/InStock",
         },
       },

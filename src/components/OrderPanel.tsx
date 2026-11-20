@@ -208,7 +208,7 @@ export default function OrderPanel({
             <span className="block text-xs font-semibold uppercase tracking-wider text-[#545c2c] mb-2.5">
               1. Pilih Paket Website
             </span>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
               {packages.map((pkg) => {
                 const isSelected = pkg.slug === selectedSlug;
                 return (
@@ -227,7 +227,9 @@ export default function OrderPanel({
                       {pkg.name}
                     </div>
                     <div className="text-xs font-semibold text-[#545c2c] mt-1">
-                      Mulai {formatRupiah(pkg.priceFrom)}
+                      {pkg.priceFrom > 0
+                        ? `Mulai ${formatRupiah(pkg.priceFrom)}`
+                        : (pkg.customPriceLabel || "Kustom")}
                     </div>
                   </button>
                 );
@@ -374,7 +376,9 @@ export default function OrderPanel({
                   Total Estimasi Awal
                 </span>
                 <span className="text-lg sm:text-xl font-heading font-medium text-[#1f2410]">
-                  Mulai {formatRupiah(totalEstimate)}
+                  {currentPackage.priceFrom > 0
+                    ? `Mulai ${formatRupiah(totalEstimate)}`
+                    : (currentPackage.customPriceLabel || "Berdasarkan Kebutuhan")}
                 </span>
               </div>
             </div>

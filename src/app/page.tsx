@@ -16,7 +16,7 @@ const mainServices = [
     title: "Landing page promosi.",
     summary:
       "Satu halaman fokus untuk mengubah klik iklan Instagram, TikTok, atau Google menjadi obrolan WhatsApp tanpa menu bercabang.",
-    specs: ["1 halaman fokus", "Meta Pixel & GA4", "3-5 hari kerja"],
+    specs: ["1 halaman fokus", "Meta Pixel & GA4", "5-7 hari kerja"],
     href: "/layanan#landing-page",
     featured: false,
   },
@@ -26,7 +26,7 @@ const mainServices = [
     title: "Company profile bisnis.",
     summary:
       "Website resmi hingga 5 halaman berisi profil usaha, daftar layanan, galeri proyek, SEO Google, dan pin lokasi usaha.",
-    specs: ["Hingga 5 halaman", "SEO & Google Maps", "5-10 hari kerja"],
+    specs: ["Hingga 5 halaman", "SEO & Google Maps", "10-14 hari kerja"],
     href: "/layanan#company-profile",
     featured: true,
   },
@@ -36,8 +36,18 @@ const mainServices = [
     title: "Website toko online.",
     summary:
       "Toko online produk mebel, fashion, atau kuliner di HP dengan alur order praktis serta opsi upgrade pembayaran otomatis.",
-    specs: ["Hingga 20 produk awal", "Format pesan order", "7-14 hari kerja"],
+    specs: ["Hingga 20 produk awal", "Format pesan order", "14-21 hari kerja"],
     href: "/layanan#toko-whatsapp",
+    featured: false,
+  },
+  {
+    code: "04",
+    audience: "Kustom & Web App",
+    title: "Sistem kustom & web app.",
+    summary:
+      "Solusi arsitektur database cloud khusus, sistem login membership pengguna, ulasan dinamis, dan integrasi API pihak ketiga.",
+    specs: ["Database Supabase/SQL", "Source Code & SPK", "20-45 hari kerja"],
+    href: "/layanan#sistem-kustom",
     featured: false,
   },
 ];
@@ -318,31 +328,20 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch max-w-lg mx-auto lg:max-w-none">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch max-w-lg mx-auto md:max-w-none">
             {packages.map((pkg) => (
               <PackageCard key={pkg.slug} pkg={pkg} href="/paket" />
             ))}
           </div>
 
-          <div className="mt-12 text-center space-y-3">
-            <div>
-              <Link
-                href="/paket"
-                className="inline-flex items-center text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px]"
-              >
-                <span>Lihat tabel perbandingan fitur lengkap dan daftar add-on</span>
-                <span className="ml-1.5" aria-hidden="true">&rarr;</span>
-              </Link>
-            </div>
-            <p className="text-xs text-[#5b5e4e]">
-              Butuh alur sistem kustom, membership, atau database khusus?{" "}
-              <Link
-                href="/paket#paket-kustom"
-                className="text-[#3f5b1e] hover:text-[#1f2410] font-semibold underline underline-offset-2"
-              >
-                Lihat Paket Kustom &amp; Sistem Khusus &rarr;
-              </Link>
-            </p>
+          <div className="mt-12 text-center">
+            <Link
+              href="/paket"
+              className="inline-flex items-center text-sm font-semibold text-[#545c2c] hover:text-[#1f2410] underline underline-offset-4 py-2 min-h-[44px]"
+            >
+              <span>Bandingkan tabel fitur lengkap 4 paket dan daftar add-on</span>
+              <span className="ml-1.5" aria-hidden="true">&rarr;</span>
+            </Link>
           </div>
         </div>
       </section>

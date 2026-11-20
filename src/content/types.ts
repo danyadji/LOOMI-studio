@@ -6,7 +6,11 @@ export type AddOn = {
   allowQuantity: boolean;
 };
 
-export type PackageSlug = "landing-page" | "company-profile" | "toko-whatsapp";
+export type PackageSlug =
+  | "landing-page"
+  | "company-profile"
+  | "toko-whatsapp"
+  | "sistem-kustom";
 
 export type Package = {
   slug: PackageSlug;
@@ -14,8 +18,9 @@ export type Package = {
   badge?: string;
   summary: string;
   targetAudience: string;
-  priceFrom: number; // Rupiah, ditampilkan sebagai "Mulai dari"
-  duration: string; // Contoh: "3-5 hari kerja"
+  priceFrom: number; // Rupiah, ditampilkan sebagai "Mulai dari", atau 0 untuk kustom
+  customPriceLabel?: string; // Contoh: "Berdasarkan Kebutuhan"
+  duration: string; // Contoh: "5 - 7 hari kerja"
   revisions: number;
   includes: string[];
   excludes: string[];

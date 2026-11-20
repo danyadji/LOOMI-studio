@@ -4,7 +4,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: 1,
     title: "Konsultasi & Pemilihan Paket",
-    duration: "Hari 1",
+    duration: "Hari 1 - 2",
     description:
       "Anda memilih paket yang sesuai dari website atau mendiskusikan kebutuhan khusus via WhatsApp. Kami membantu memastikan paket yang Anda pilih tepat guna tanpa biaya tak terduga.",
     deliverables: [
@@ -16,7 +16,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: 2,
     title: "Pengumpulan Konten & Struktur",
-    duration: "Hari 2 - 3",
+    duration: "Hari 3 - 5",
     description:
       "Anda mengirimkan foto produk, profil usaha, dan kontak melalui WhatsApp atau Google Drive. Jika Anda belum memiliki teks yang pas, kami bantu rapikan susunan kata-katanya.",
     deliverables: [
@@ -28,7 +28,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: 3,
     title: "Pengerjaan Kode & Sesi Revisi",
-    duration: "Hari 4 - 8",
+    duration: "Hari 6 - 12",
     description:
       "Website dirakit dengan Next.js dan Tailwind CSS berstandar tinggi. Kami berikan tautan pratinjau langsung yang dapat Anda buka di HP untuk ditinjau bersama.",
     deliverables: [
@@ -40,7 +40,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: 4,
     title: "Peluncuran & Serah Terima",
-    duration: "Hari 9 - 10",
+    duration: "Hari 13 - 14",
     description:
       "Setelah pratinjau disetujui dan sisa pembayaran diselesaikan, website diarahkan ke domain resmi Anda dan didaftarkan ke Google Search Console.",
     deliverables: [

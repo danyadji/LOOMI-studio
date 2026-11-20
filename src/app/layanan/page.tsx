@@ -81,7 +81,7 @@ export default function LayananPage() {
               <div>
                 <div className="flex items-center justify-between text-xs text-[#545c2c] mb-3">
                   <span className="font-semibold uppercase tracking-wider">01 &bull; Iklan &amp; Promo</span>
-                  <span className="text-[#5b5e4e]">3-5 Hari</span>
+                  <span className="text-[#5b5e4e]">5-7 Hari</span>
                 </div>
                 <h3 className="text-xl font-heading font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
                   Landing Page
@@ -106,7 +106,7 @@ export default function LayananPage() {
                   <span className="font-semibold text-[#1f2410] bg-[#d4ec8c] px-2 py-0.5 rounded-[2px]">
                     02 &bull; Paling Banyak Dipilih
                   </span>
-                  <span className="text-[#5b5e4e]">5-10 Hari</span>
+                  <span className="text-[#5b5e4e]">10-14 Hari</span>
                 </div>
                 <h3 className="text-xl font-heading font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
                   Company Profile
@@ -129,7 +129,7 @@ export default function LayananPage() {
               <div>
                 <div className="flex items-center justify-between text-xs text-[#545c2c] mb-3">
                   <span className="font-semibold uppercase tracking-wider">03 &bull; Etalase Produk</span>
-                  <span className="text-[#5b5e4e]">7-14 Hari</span>
+                  <span className="text-[#5b5e4e]">14-21 Hari</span>
                 </div>
                 <h3 className="text-xl font-heading font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
                   Website Toko Online
@@ -152,7 +152,7 @@ export default function LayananPage() {
               <div>
                 <div className="flex items-center justify-between text-xs text-[#545c2c] mb-3">
                   <span className="font-semibold uppercase tracking-wider">04 &bull; Kustom &amp; Web App</span>
-                  <span className="text-[#5b5e4e]">14-30 Hari</span>
+                  <span className="text-[#5b5e4e]">20-45 Hari</span>
                 </div>
                 <h3 className="text-xl font-heading font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
                   Sistem Kustom
@@ -182,7 +182,7 @@ export default function LayananPage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-[#5b5e4e] bg-[#f5f4f0] px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/40 font-medium">
                   <Clock className="size-3 text-[#545c2c]" aria-hidden="true" />
-                  <span>Estimasi 3 sampai 5 hari kerja</span>
+                  <span>Estimasi 5 sampai 7 hari kerja</span>
                 </span>
               </div>
 
@@ -254,7 +254,7 @@ export default function LayananPage() {
                 <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                    <span>Waktu pengerjaan 3 sampai 5 hari kerja</span>
+                    <span>Waktu pengerjaan 5 sampai 7 hari kerja</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
@@ -312,7 +312,7 @@ export default function LayananPage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-[#5b5e4e] bg-white px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/40 font-medium">
                   <Clock className="size-3 text-[#545c2c]" aria-hidden="true" />
-                  <span>Estimasi 5 sampai 10 hari kerja</span>
+                  <span>Estimasi 10 sampai 14 hari kerja</span>
                 </span>
               </div>
 
@@ -384,7 +384,7 @@ export default function LayananPage() {
                 <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                    <span>Waktu pengerjaan 5 sampai 10 hari kerja</span>
+                    <span>Waktu pengerjaan 10 sampai 14 hari kerja</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
@@ -442,7 +442,7 @@ export default function LayananPage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-[#5b5e4e] bg-[#f5f4f0] px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/40 font-medium">
                   <Clock className="size-3 text-[#545c2c]" aria-hidden="true" />
-                  <span>Estimasi 7 sampai 14 hari kerja</span>
+                  <span>Estimasi 14 sampai 21 hari kerja</span>
                 </span>
               </div>
 
@@ -514,7 +514,7 @@ export default function LayananPage() {
                 <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                    <span>Waktu pengerjaan 7 sampai 14 hari kerja</span>
+                    <span>Waktu pengerjaan 14 sampai 21 hari kerja</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
@@ -572,7 +572,7 @@ export default function LayananPage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5 text-[#5b5e4e] bg-[#f5f4f0] px-2.5 py-1 rounded-[2px] border border-[#c0c0b9]/40 font-medium">
                   <Clock className="size-3 text-[#545c2c]" aria-hidden="true" />
-                  <span>Estimasi 14 sampai 30 hari kerja</span>
+                  <span>Estimasi 20 sampai 45 hari kerja</span>
                 </span>
               </div>
 
@@ -644,7 +644,7 @@ export default function LayananPage() {
                 <ul className="space-y-2 text-xs sm:text-sm text-[#1f2410]">
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                    <span>Estimasi 14 sampai 30 hari kerja (fleksibel sesuai ruang lingkup)</span>
+                    <span>Estimasi 20 sampai 45 hari kerja (fleksibel sesuai ruang lingkup)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />

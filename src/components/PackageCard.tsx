@@ -10,20 +10,26 @@ interface PackageCardProps {
 
 /** Adapts domain package data to the architectural PricingOrbitCard layout. */
 export default function PackageCard({ pkg, onSelect, href }: PackageCardProps) {
+  const isCustom = pkg.slug === "sistem-kustom" || pkg.priceFrom === 0;
+
   return (
     <PricingOrbitCard
       title={`${pkg.name}.`}
       badge={pkg.badge || "Paket Pilihan"}
       description={pkg.summary}
-      priceLabel="Investasi mulai dari"
-      price={formatRupiah(pkg.priceFrom)}
-      priceUnit="/ proyek"
-      metaText={`Waktu: ${pkg.duration} \u2022 ${pkg.revisions}x sesi revisi`}
+      priceLabel={isCustom ? "Investasi proyek:" : "Investasi mulai dari"}
+      price={pkg.customPriceLabel || formatRupiah(pkg.priceFrom)}
+      priceUnit={isCustom ? "" : "/ proyek"}
+      metaText={
+        isCustom
+          ? `Waktu: ${pkg.duration} \u2022 Pendampingan SPK`
+          : `Waktu: ${pkg.duration} \u2022 ${pkg.revisions}x sesi revisi`
+      }
       includesTitle="Sudah termasuk:"
       features={pkg.includes}
-      excludesTitle="Belum termasuk:"
+      excludesTitle="Ketentuan & batasan:"
       excludes={pkg.excludes}
-      ctaLabel="Pilih Paket Ini"
+      ctaLabel={isCustom ? "Konsultasi Kustom" : "Pilih Paket Ini"}
       href={href}
       onSelect={onSelect ? () => onSelect(pkg.slug) : undefined}
       featured={pkg.popular}

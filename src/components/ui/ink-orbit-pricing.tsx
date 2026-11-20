@@ -146,13 +146,16 @@ export function PricingOrbitCard({
             <div className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-1">
               <span
                 className={cn(
-                  "text-[32px] sm:text-[36px] xl:text-[40px] font-heading font-medium leading-none tracking-[-0.03em] tabular-nums",
+                  price.length > 15
+                    ? "text-[22px] sm:text-[24px] xl:text-[26px]"
+                    : "text-[32px] sm:text-[36px] xl:text-[40px]",
+                  "font-heading font-medium leading-none tracking-[-0.03em] tabular-nums",
                   featured ? "text-[#fafaf7]" : "text-[#1f2410]",
                 )}
               >
                 {price}
               </span>
-              {priceUnit && (
+              {priceUnit ? (
                 <span
                   className={cn(
                     "text-xs font-normal",
@@ -161,7 +164,7 @@ export function PricingOrbitCard({
                 >
                   {priceUnit}
                 </span>
-              )}
+              ) : null}
             </div>
             {metaText && (
               <div
