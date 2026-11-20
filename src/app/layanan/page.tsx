@@ -239,7 +239,7 @@ export default function LayananPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
-                    <span>Domain dan hosting tahun pertama aktif</span>
+                    <span>Termasuk domain .com resmi &amp; hosting CDN 1 tahun</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
@@ -369,6 +369,10 @@ export default function LayananPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Termasuk domain .com resmi &amp; hosting CDN 1 tahun</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
                     <span>Hak milik website penuh tanpa sistem sewa bulanan</span>
                   </li>
                   <li className="flex items-start gap-2">
@@ -492,6 +496,10 @@ export default function LayananPage() {
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
                     <span>Termasuk 2 kali sesi revisi tata letak</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />
+                    <span>Termasuk domain .com resmi &amp; hosting CDN 1 tahun</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Check className="size-4 shrink-0 text-[#3f5b1e] mt-0.5" aria-hidden="true" />

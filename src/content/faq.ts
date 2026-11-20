@@ -6,7 +6,7 @@ export const faqItems: FaqItem[] = [
     category: "teknis",
     question: "Apakah biaya paket sudah termasuk domain dan hosting?",
     answer:
-      "Biaya paket pembuatan mencakup desain, penyusunan kode sumber, dan deploy ke CDN hosting berkinerja tinggi. Untuk nama domain (seperti .com atau .id) dan hosting tahunan, Anda dapat menggunakan domain milik Anda sendiri atau memilih add-on Domain & Hosting yang kami sediakan untuk pengurusan terima beres.",
+      "Ya, sudah terima beres! Semua paket pembuatan website di LOOMI Studio sudah termasuk pendaftaran nama domain .com resmi pilihan Anda dan hosting CDN berkecepatan tinggi selama 1 tahun penuh. Anda tidak perlu membayar biaya sewa terpisah lagi di awal. Untuk tahun kedua dan seterusnya, perpanjangan domain dan hosting hanya dikenakan biaya pemeliharaan tahunan standar.",
   },
   {
     id: "source-code",

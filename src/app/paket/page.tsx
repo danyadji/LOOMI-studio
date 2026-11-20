@@ -183,6 +183,14 @@ export default function PaketPage() {
                   <td className="p-5 sm:p-6 text-center text-[#545c2c] font-semibold">Hingga 20 Produk</td>
                 </tr>
                 <tr>
+                  <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Domain .com Resmi &amp; Hosting CDN 1 Tahun</td>
+                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
+                  <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
+                    &#10003;
+                  </td>
+                  <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
+                </tr>
+                <tr>
                   <td className="p-5 sm:p-6 font-medium text-[#1f2410]">Hak Milik Website Penuh Tanpa Sewa Bulanan</td>
                   <td className="p-5 sm:p-6 text-center text-[#545c2c] font-bold">&#10003;</td>
                   <td className="p-5 sm:p-6 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">

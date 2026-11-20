@@ -37,13 +37,6 @@ export const addOns: AddOn[] = [
     allowQuantity: false,
   },
   {
-    id: "domain-hosting",
-    name: "Domain .com & Hosting Cepat 1 Tahun",
-    description: "Registrasi domain nama usaha Anda dan hosting CDN berkecepatan tinggi selama 1 tahun penuh",
-    priceFrom: 350000,
-    allowQuantity: false,
-  },
-  {
     id: "extra-products",
     name: "Input Tambahan 10 Produk Katalog",
     description: "Bantuan input data foto, deskripsi, varian, dan harga untuk 10 produk toko",
@@ -66,6 +59,7 @@ export const packages: Package[] = [
     popular: false,
     includes: [
       "1 halaman terstruktur fokus konversi",
+      "Termasuk Domain .com resmi & hosting CDN cepat 1 tahun",
       "Desain responsif mobile-first",
       "Tombol pesanan langsung ke WhatsApp",
       "Integrasi Google Analytics 4 & Meta Pixel",
@@ -77,7 +71,7 @@ export const packages: Package[] = [
       "Sistem login atau database server",
       "Payment gateway otomatis",
     ],
-    addOnIds: ["extra-page", "full-copywriting", "domain-hosting", "gmb-setup"],
+    addOnIds: ["extra-page", "full-copywriting", "gmb-setup"],
   },
   {
     slug: "company-profile",
@@ -93,6 +87,7 @@ export const packages: Package[] = [
     popular: true,
     includes: [
       "Hingga 5 halaman (Beranda, Profil, Layanan, Portofolio, Kontak)",
+      "Termasuk Domain .com resmi & hosting CDN cepat 1 tahun",
       "Desain kustom sesuai identitas dan warna brand Anda",
       "Panel pemesanan paket terhubung langsung ke WhatsApp",
       "Sitemap XML, robots.txt, dan data terstruktur JSON-LD",
@@ -105,7 +100,7 @@ export const packages: Package[] = [
       "Dashboard admin dengan database dinamis",
       "Penulisan artikel blog berkala",
     ],
-    addOnIds: ["extra-page", "full-copywriting", "domain-hosting", "gmb-setup"],
+    addOnIds: ["extra-page", "full-copywriting", "gmb-setup"],
   },
   {
     slug: "toko-whatsapp",
@@ -121,6 +116,7 @@ export const packages: Package[] = [
     popular: false,
     includes: [
       "Website toko online modern lengkap dengan keranjang belanja",
+      "Termasuk Domain .com resmi & hosting CDN cepat 1 tahun",
       "Katalog etalase produk rapi dengan filter kategori",
       "Pilihan variasi spesifikasi (ukuran, warna, bahan)",
       "Alur checkout langsung ke WhatsApp (bebas potongan biaya transaksi)",
@@ -140,7 +136,6 @@ export const packages: Package[] = [
       "extra-products",
       "extra-page",
       "full-copywriting",
-      "domain-hosting",
     ],
   },
 ];
