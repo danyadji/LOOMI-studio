@@ -8,6 +8,7 @@ import { formatRupiah, buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { trackSelectItem } from "@/lib/analytics";
 import { getPackagesJsonLd, getBreadcrumbJsonLd } from "@/lib/seo";
 import PackageCard from "@/components/PackageCard";
+import CustomPackageCard from "@/components/CustomPackageCard";
 import OrderPanel from "@/components/OrderPanel";
 
 export default function PaketPage() {
@@ -94,18 +95,30 @@ export default function PaketPage() {
         </div>
       </section>
 
-      {/* 4 Kartu Paket */}
+      {/* 3 Kartu Paket Utama + 1 Kartu Kustom di Bawah */}
       <div className="py-16 lg:py-24 bg-[#fafaf7]">
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch max-w-lg mx-auto md:max-w-none">
-            {packages.map((pkg) => (
-              <PackageCard
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch max-w-lg mx-auto lg:max-w-none">
+            {packages
+              .filter((p) => p.slug !== "sistem-kustom")
+              .map((pkg) => (
+                <PackageCard
+                  key={pkg.slug}
+                  pkg={pkg}
+                  onSelect={(slug) => handleSelectPackage(slug)}
+                />
+              ))}
+          </div>
+
+          {packages
+            .filter((p) => p.slug === "sistem-kustom")
+            .map((pkg) => (
+              <CustomPackageCard
                 key={pkg.slug}
                 pkg={pkg}
-                onSelect={(slug) => handleSelectPackage(slug)}
+                onSelect={() => handleSelectPackage("sistem-kustom")}
               />
             ))}
-          </div>
         </div>
       </div>
 

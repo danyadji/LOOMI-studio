@@ -6,6 +6,7 @@ import { faqItems } from "@/content/faq";
 import { buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getOrganizationJsonLd } from "@/lib/seo";
 import PackageCard from "@/components/PackageCard";
+import CustomPackageCard from "@/components/CustomPackageCard";
 import FaqAccordion from "@/components/FaqAccordion";
 import PortfolioShowcaseGrid from "@/components/PortfolioShowcaseGrid";
 
@@ -328,11 +329,19 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch max-w-lg mx-auto md:max-w-none">
-            {packages.map((pkg) => (
-              <PackageCard key={pkg.slug} pkg={pkg} href="/paket" />
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch max-w-lg mx-auto lg:max-w-none">
+            {packages
+              .filter((p) => p.slug !== "sistem-kustom")
+              .map((pkg) => (
+                <PackageCard key={pkg.slug} pkg={pkg} href="/paket" />
+              ))}
           </div>
+
+          {packages
+            .filter((p) => p.slug === "sistem-kustom")
+            .map((pkg) => (
+              <CustomPackageCard key={pkg.slug} pkg={pkg} href="/paket" />
+            ))}
 
           <div className="mt-12 text-center">
             <Link
