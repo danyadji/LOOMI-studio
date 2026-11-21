@@ -16,11 +16,11 @@ export default function NotchedProjectCardDemo() {
       />
       <NotchedProjectCard
         href="/portofolio"
-        title="Klinik Pratama Sehati"
-        description="Company profile terstruktur 5 halaman dilengkapi jadwal praktik dokter, Maps, dan tombol janji temu."
-        image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80"
-        badge="Proyek Konsep • Medis"
-        tags={["Company Profile", "Janji Temu"]}
+        title="Flowrys Florist"
+        description="Company profile toko florist bunga modern dengan katalog buket dan formulir order WhatsApp."
+        image="/images/portfolio/flowrist/1.png"
+        badge="Proyek Desain • Florist"
+        tags={["Company Profile", "Katalog Buket"]}
         surface="#fafaf7"
         accent="#3f5b1e"
         accentForeground="#ffffff"

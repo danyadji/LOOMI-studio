@@ -31,11 +31,10 @@ const defaultSlides: Slide[] = [
     href: "/portofolio",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=75",
-    title: "Klinik Pratama Sehati",
-    description: "Company profile terstruktur dengan integrasi jadwal dokter dan janji temu pasien.",
-    badge: "Kesehatan",
+    image: "/images/portfolio/flowrist/1.png",
+    title: "Flowrys Florist",
+    description: "Company profile toko florist bunga modern dengan katalog buket dan alur order WhatsApp.",
+    badge: "Florist & Bunga",
     href: "/portofolio",
   },
   {
