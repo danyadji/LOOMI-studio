@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { pricingCategories, PricingCategory } from "@/content/pricingCategories";
+import {
+  pricingCategories,
+  categoryComparisons,
+  PricingCategory,
+} from "@/content/pricingCategories";
 import { addOns } from "@/content/packages";
+import { siteConfig } from "@/content/site";
 import { formatRupiah, buildGeneralWhatsAppUrl } from "@/lib/whatsapp";
 import { getBreadcrumbJsonLd, getPackagesJsonLd } from "@/lib/seo";
 import PricingCategoryCard from "@/components/PricingCategoryCard";
@@ -17,10 +22,17 @@ export default function PaketPage() {
     pricingCategories.find((cat) => cat.id === activeCategoryId) ||
     pricingCategories[0];
 
+  const currentComparison = categoryComparisons[activeCategoryId];
+
   const breadcrumbs = [
     { name: "Beranda", url: "/" },
     { name: "Paket & Harga", url: "/paket" },
   ];
+
+  const getWaConsultUrl = (tierName: string, tech: string, price: string) => {
+    const text = `Halo ${siteConfig.name}, saya tertarik konsultasi paket ${tierName} : ${tech} (${price}) untuk ${currentCategory.title}.`;
+    return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(text)}`;
+  };
 
   return (
     <>
@@ -160,19 +172,47 @@ export default function PaketPage() {
         </div>
       </section>
 
-      {/* Tabel Perbandingan Paket */}
+      {/* Tabel Perbandingan Paket Dinamis */}
       <section
         id="comparePlansSection"
         className="py-16 lg:py-24 bg-white border-t border-[#c0c0b9]"
       >
         <div className="max-w-[1224px] mx-auto px-6 sm:px-8 lg:px-10">
-          <div className="max-w-2xl mb-12">
-            <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-mono uppercase tracking-wider">
-              Perbandingan Detail
-            </span>
-            <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
-              Tabel perbandingan fitur paket.
-            </h2>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+            <div className="max-w-2xl">
+              <span className="text-xs font-semibold text-[#545c2c] block mb-2 font-mono uppercase tracking-wider">
+                Perbandingan Detail
+              </span>
+              <h2 className="text-[28px] lg:text-[36px] font-heading font-medium tracking-[-0.015em] text-[#1f2410] leading-[1.2]">
+                Tabel perbandingan fitur paket.
+              </h2>
+              <p className="mt-2 text-sm sm:text-base text-[#5b5e4e] font-light">
+                Perbandingan spesifikasi teknis tier untuk kategori{" "}
+                <span className="font-semibold text-[#1f2410]">
+                  {currentCategory.title}
+                </span>
+                .
+              </p>
+            </div>
+
+            {/* Tab Selector di Area Tabel */}
+            <div className="flex flex-wrap gap-1.5 p-1 bg-[#edebe4] border border-[#c0c0b9] rounded-[4px] self-start md:self-auto">
+              {pricingCategories.map((cat) => (
+                <button
+                  key={cat.id}
+                  type="button"
+                  onClick={() => setActiveCategoryId(cat.id)}
+                  className={cn(
+                    "px-3 py-1.5 text-xs font-medium rounded-[2px] transition-all min-h-[38px]",
+                    activeCategoryId === cat.id
+                      ? "bg-[#1f2410] text-[#fafaf7] shadow-sm font-semibold"
+                      : "text-[#545c2c] hover:text-[#1f2410] hover:bg-black/5"
+                  )}
+                >
+                  {cat.title}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="overflow-x-auto rounded-[2px] border border-[#c0c0b9] bg-white">
@@ -180,134 +220,112 @@ export default function PaketPage() {
               <thead>
                 <tr className="border-b border-[#c0c0b9] bg-[#fafaf7]">
                   <th className="p-4 sm:p-5 font-heading font-medium text-sm sm:text-base text-[#1f2410] w-[28%]">
-                    Fitur &amp; Kemampuan
+                    {currentComparison.columnHeaders.feature}
                   </th>
                   <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[24%]">
-                    Landing Page
+                    <div className="font-bold text-sm sm:text-base text-[#1f2410]">
+                      {currentComparison.columnHeaders.starter.name}
+                    </div>
+                    <div className="text-[11px] font-mono text-[#545c2c] mt-0.5">
+                      {currentComparison.columnHeaders.starter.tech}
+                    </div>
+                    <div className="text-xs font-semibold text-[#1f2410] mt-1">
+                      {currentComparison.columnHeaders.starter.price}
+                    </div>
                   </th>
-                  <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[24%] bg-[#d4ec8c]/45">
-                    Company Profile
+                  <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[24%] bg-[#d4ec8c]/35 border-x border-[#c0c0b9]">
+                    <div className="inline-block rounded-[2px] bg-[#1f2410] text-[#fafaf7] text-[10px] uppercase font-mono px-2 py-0.5 mb-1 tracking-wider">
+                      Paling Banyak Dipilih
+                    </div>
+                    <div className="font-bold text-sm sm:text-base text-[#1f2410]">
+                      {currentComparison.columnHeaders.professional.name}
+                    </div>
+                    <div className="text-[11px] font-mono text-[#545c2c] mt-0.5">
+                      {currentComparison.columnHeaders.professional.tech}
+                    </div>
+                    <div className="text-xs font-semibold text-[#1f2410] mt-1">
+                      {currentComparison.columnHeaders.professional.price}
+                    </div>
                   </th>
                   <th className="p-4 sm:p-5 font-heading font-medium text-xs sm:text-sm text-[#1f2410] text-center w-[24%]">
-                    Website Toko Online
+                    <div className="font-bold text-sm sm:text-base text-[#1f2410]">
+                      {currentComparison.columnHeaders.advanced.name}
+                    </div>
+                    <div className="text-[11px] font-mono text-[#545c2c] mt-0.5">
+                      {currentComparison.columnHeaders.advanced.tech}
+                    </div>
+                    <div className="text-xs font-semibold text-[#1f2410] mt-1">
+                      {currentComparison.columnHeaders.advanced.price}
+                    </div>
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#c0c0b9] text-[#5b5e4e]">
-                <tr>
+                {currentComparison.rows.map((row, idx) => (
+                  <tr
+                    key={idx}
+                    className="hover:bg-[#fafaf7]/50 transition-colors"
+                  >
+                    <td className="p-4 sm:p-5 font-medium text-[#1f2410] leading-snug">
+                      {row.feature}
+                    </td>
+                    <td className="p-4 sm:p-5 text-center text-xs sm:text-sm font-light leading-snug">
+                      {row.starter}
+                    </td>
+                    <td className="p-4 sm:p-5 text-center text-xs sm:text-sm font-medium text-[#1f2410] bg-[#d4ec8c]/15 border-x border-[#c0c0b9] leading-snug">
+                      {row.professional}
+                    </td>
+                    <td className="p-4 sm:p-5 text-center text-xs sm:text-sm font-light leading-snug">
+                      {row.advanced}
+                    </td>
+                  </tr>
+                ))}
+                {/* Baris Tombol Aksi Konsultasi WhatsApp */}
+                <tr className="bg-[#fafaf7]/80">
                   <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    Pilihan Teknologi
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">WordPress / Next.js</td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
-                    WordPress / Next.js Headless
+                    Aksi Konsultasi
                   </td>
                   <td className="p-4 sm:p-5 text-center">
-                    WooCommerce / Next.js Headless
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    Jumlah Halaman
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">1 Halaman Terstruktur</td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
-                    Hingga 5 Halaman Penuh
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">
-                    Katalog &amp; Detail Produk
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    Waktu Pengerjaan
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">5 - 7 hari kerja</td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
-                    10 - 14 hari kerja
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">14 - 21 hari kerja</td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    Sesi Revisi
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">2 kali</td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 font-semibold text-[#1f2410]">
-                    3 kali
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">3 kali</td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    Integrasi WhatsApp Otomatis
-                  </td>
-                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">
-                    &#10003;
-                  </td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
-                    &#10003;
-                  </td>
-                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">
-                    &#10003;
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    SEO Teknis &amp; Metadata
-                  </td>
-                  <td className="p-4 sm:p-5 text-center text-[#5b5e4e]">Dasar</td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#1f2410] font-semibold">
-                    Lengkap (Sitemap, JSON-LD)
-                  </td>
-                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-semibold">
-                    Lengkap &amp; Schema Produk
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    Domain &amp; Hosting Tahun Pertama
-                  </td>
-                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">
-                    &#10003;
-                  </td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20 text-[#545c2c] font-bold">
-                    &#10003;
-                  </td>
-                  <td className="p-4 sm:p-5 text-center text-[#545c2c] font-bold">
-                    &#10003;
-                  </td>
-                </tr>
-                <tr>
-                  <td className="p-4 sm:p-5 font-medium text-[#1f2410]">
-                    Konsultasi Paket
-                  </td>
-                  <td className="p-4 sm:p-5 text-center">
-                    <button
-                      type="button"
-                      onClick={() => setActiveCategoryId("landing-page")}
-                      className="px-4 py-2 text-xs font-medium rounded-[2px] border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[44px]"
+                    <a
+                      href={getWaConsultUrl(
+                        currentComparison.columnHeaders.starter.name,
+                        currentComparison.columnHeaders.starter.tech,
+                        currentComparison.columnHeaders.starter.price
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 text-xs font-medium rounded-[2px] border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[40px] w-full max-w-[160px]"
                     >
-                      Lihat Paket
-                    </button>
+                      Pilih Starter
+                    </a>
                   </td>
-                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/20">
-                    <button
-                      type="button"
-                      onClick={() => setActiveCategoryId("company-profile")}
-                      className="px-4 py-2 text-xs font-medium rounded-[2px] bg-[#545c2c] text-white hover:bg-[#3f5b1e] transition-colors min-h-[44px]"
+                  <td className="p-4 sm:p-5 text-center bg-[#d4ec8c]/25 border-x border-[#c0c0b9]">
+                    <a
+                      href={getWaConsultUrl(
+                        currentComparison.columnHeaders.professional.name,
+                        currentComparison.columnHeaders.professional.tech,
+                        currentComparison.columnHeaders.professional.price
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold rounded-[2px] bg-[#1f2410] text-[#fafaf7] hover:bg-[#343b1c] transition-colors min-h-[40px] w-full max-w-[160px] shadow-sm"
                     >
-                      Lihat Paket
-                    </button>
+                      Pilih Professional
+                    </a>
                   </td>
                   <td className="p-4 sm:p-5 text-center">
-                    <button
-                      type="button"
-                      onClick={() => setActiveCategoryId("toko-online")}
-                      className="px-4 py-2 text-xs font-medium rounded-[2px] border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[44px]"
+                    <a
+                      href={getWaConsultUrl(
+                        currentComparison.columnHeaders.advanced.name,
+                        currentComparison.columnHeaders.advanced.tech,
+                        currentComparison.columnHeaders.advanced.price
+                      )}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 text-xs font-medium rounded-[2px] border border-[#545c2c] text-[#545c2c] hover:bg-[#d4ec8c] hover:text-[#1f2410] transition-colors min-h-[40px] w-full max-w-[160px]"
                     >
-                      Lihat Paket
-                    </button>
+                      Pilih Paket
+                    </a>
                   </td>
                 </tr>
               </tbody>

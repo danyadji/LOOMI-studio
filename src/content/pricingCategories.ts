@@ -20,6 +20,29 @@ export interface PricingCategory {
   plans: PricingPlanTier[];
 }
 
+export interface ComparisonRow {
+  feature: string;
+  starter: string;
+  professional: string;
+  advanced: string;
+}
+
+export interface CategoryComparison {
+  categoryId: "landing-page" | "company-profile" | "toko-online";
+  columnHeaders: {
+    feature: string;
+    starter: { name: string; tech: string; price: string };
+    professional: {
+      name: string;
+      tech: string;
+      price: string;
+      isRecommended?: boolean;
+    };
+    advanced: { name: string; tech: string; price: string };
+  };
+  rows: ComparisonRow[];
+}
+
 export const pricingCategories: PricingCategory[] = [
   {
     id: "landing-page",
@@ -306,3 +329,258 @@ export const pricingCategories: PricingCategory[] = [
     ],
   },
 ];
+
+export const categoryComparisons: Record<PricingCategory["id"], CategoryComparison> = {
+  "landing-page": {
+    categoryId: "landing-page",
+    columnHeaders: {
+      feature: "Fitur & Spesifikasi Teknis",
+      starter: {
+        name: "Starter",
+        tech: "WordPress",
+        price: "Rp750.000",
+      },
+      professional: {
+        name: "Professional",
+        tech: "Next.js Static",
+        price: "Rp1.500.000",
+        isRecommended: true,
+      },
+      advanced: {
+        name: "Professional + CMS",
+        tech: "Next.js + Headless WP",
+        price: "Rp2.500.000",
+      },
+    },
+    rows: [
+      {
+        feature: "Investasi Biaya Mulai Dari",
+        starter: "Rp750.000",
+        professional: "Rp1.500.000",
+        advanced: "Rp2.500.000",
+      },
+      {
+        feature: "Teknologi & Arsitektur",
+        starter: "WordPress Standar",
+        professional: "Next.js Static Jamstack",
+        advanced: "Next.js Frontend + WP Headless API",
+      },
+      {
+        feature: "Jumlah & Susunan Konten",
+        starter: "1 Halaman (Hero, Profil, Layanan, Kontak)",
+        professional: "1 Halaman Custom (Hero, Fitur, CTA, Kontak)",
+        advanced: "1 Halaman Custom + Terhubung Dinamis API",
+      },
+      {
+        feature: "Dashboard CMS Mandiri",
+        starter: "WordPress Admin Standar",
+        professional: "Tidak Ada (Static Code Aman)",
+        advanced: "Dashboard WordPress Mandiri",
+      },
+      {
+        feature: "Kecepatan Loading & Core Web Vitals",
+        starter: "Standar Shared Hosting",
+        professional: "Ultra Cepat (Serverless CDN Global)",
+        advanced: "Ultra Cepat (Incremental Static Regeneration)",
+      },
+      {
+        feature: "Desain & Animasi Interaksi",
+        starter: "Responsif Standar Tema",
+        professional: "Animasi & Interaksi Ringan Custom",
+        advanced: "Animasi & Interaksi Ringan Custom",
+      },
+      {
+        feature: "Optimasi SEO & Metadata",
+        starter: "SEO On-Page Dasar",
+        professional: "Metadata Lengkap & Open Graph",
+        advanced: "Metadata Dinamis Terintegrasi API",
+      },
+      {
+        feature: "Tombol WhatsApp & Tautan Medsos",
+        starter: "Termasuk",
+        professional: "Termasuk",
+        advanced: "Termasuk",
+      },
+      {
+        feature: "Domain .com & Hosting Tahun Pertama",
+        starter: "Termasuk (Domain + Shared Hosting)",
+        professional: "Termasuk (Domain + Cloud Hosting)",
+        advanced: "Termasuk (Domain + Cloud & WP Hosting)",
+      },
+      {
+        feature: "Perpanjangan & Maintenance Tahun Berikutnya",
+        starter: "Opsional / Perpanjangan Standar",
+        professional: "Opsional / Biaya Domain Saja",
+        advanced: "Opsional / Perpanjangan Infrastruktur",
+      },
+    ],
+  },
+  "company-profile": {
+    categoryId: "company-profile",
+    columnHeaders: {
+      feature: "Fitur & Spesifikasi Teknis",
+      starter: {
+        name: "Starter",
+        tech: "WordPress",
+        price: "Rp1.750.000",
+      },
+      professional: {
+        name: "Professional",
+        tech: "Next.js Static",
+        price: "Rp3.500.000",
+        isRecommended: true,
+      },
+      advanced: {
+        name: "Professional + CMS",
+        tech: "Next.js + Headless WP",
+        price: "Mulai Rp5.500.000",
+      },
+    },
+    rows: [
+      {
+        feature: "Investasi Biaya Mulai Dari",
+        starter: "Rp1.750.000",
+        professional: "Rp3.500.000",
+        advanced: "Mulai Rp5.500.000",
+      },
+      {
+        feature: "Teknologi & Arsitektur",
+        starter: "WordPress Klasik",
+        professional: "Next.js Static Jamstack",
+        advanced: "Next.js Frontend + WP Headless API",
+      },
+      {
+        feature: "Jumlah Halaman",
+        starter: "Hingga 5 Halaman (Beranda, Profil, Layanan, Portofolio, Kontak)",
+        professional: "Hingga 5 Halaman Desain Custom Penuh",
+        advanced: "Hingga 5 Halaman Custom + Halaman Dinamis",
+      },
+      {
+        feature: "Dashboard CMS Pengelolaan Konten",
+        starter: "Dashboard WordPress Ramah Pengguna",
+        professional: "Tidak Ada (Static Code Bebas Kerentanan)",
+        advanced: "Dashboard WordPress Mandiri (REST API)",
+      },
+      {
+        feature: "Keamanan Arsitektur Website",
+        starter: "Standar (Wajib update plugin berkala)",
+        professional: "Sangat Tinggi (Tanpa celah database publik)",
+        advanced: "Tinggi (Backend decoupled terpisah aman)",
+      },
+      {
+        feature: "Kecepatan Loading & Core Web Vitals",
+        starter: "Standar CMS",
+        professional: "Ultra Cepat (Lighthouse 95+)",
+        advanced: "Ultra Cepat (Serverless CDN + ISR)",
+      },
+      {
+        feature: "Optimasi SEO Teknis & JSON-LD",
+        starter: "SEO Dasar",
+        professional: "Lengkap (Sitemap XML, Robots, JSON-LD)",
+        advanced: "Lengkap & Otomatis Dinamis",
+      },
+      {
+        feature: "Integrasi WhatsApp & Kontak Usaha",
+        starter: "Termasuk",
+        professional: "Termasuk",
+        advanced: "Termasuk",
+      },
+      {
+        feature: "Domain .com & Hosting Tahun Pertama",
+        starter: "Termasuk (Domain + Hosting)",
+        professional: "Termasuk (Domain + Cloud Hosting)",
+        advanced: "Termasuk (Domain + Cloud & CMS Hosting)",
+      },
+      {
+        feature: "Kustomisasi Desain & Identitas Brand",
+        starter: "Berbasis Template Pilihan",
+        professional: "Desain Custom Eksklusif Brand Anda",
+        advanced: "Desain Custom Eksklusif + Fleksibilitas Konten",
+      },
+    ],
+  },
+  "toko-online": {
+    categoryId: "toko-online",
+    columnHeaders: {
+      feature: "Fitur & Spesifikasi Teknis",
+      starter: {
+        name: "Starter",
+        tech: "WordPress + WooCommerce",
+        price: "Rp2.500.000",
+      },
+      professional: {
+        name: "Professional",
+        tech: "Next.js + WooCommerce",
+        price: "Rp4.500.000 - Rp6.000.000",
+        isRecommended: true,
+      },
+      advanced: {
+        name: "Full E-Commerce",
+        tech: "Next.js + WooCommerce",
+        price: "Mulai Rp12.000.000",
+      },
+    },
+    rows: [
+      {
+        feature: "Investasi Biaya Mulai Dari",
+        starter: "Rp2.500.000",
+        professional: "Rp4.500.000 - Rp6.000.000",
+        advanced: "Mulai Rp12.000.000",
+      },
+      {
+        feature: "Teknologi & Arsitektur",
+        starter: "WordPress + WooCommerce",
+        professional: "Next.js Katalog + WooCommerce REST API",
+        advanced: "Next.js E-Commerce Penuh + WooCommerce API",
+      },
+      {
+        feature: "Alur Transaksi & Pesanan",
+        starter: "Pemesanan Langsung ke WhatsApp",
+        professional: "Pemesanan via WhatsApp / Form Inquiry",
+        advanced: "Checkout Transaksi Langsung di Website",
+      },
+      {
+        feature: "Keranjang Belanja (Shopping Cart)",
+        starter: "Tidak Termasuk",
+        professional: "Tidak Termasuk",
+        advanced: "Termasuk (Sistem Keranjang Penuh)",
+      },
+      {
+        feature: "Payment Gateway Otomatis (QRIS, VA, E-Wallet)",
+        starter: "Tersedia sebagai Add-on",
+        professional: "Tidak Termasuk",
+        advanced: "Termasuk (Midtrans / Xendit terintegrasi)",
+      },
+      {
+        feature: "Cek Ongkir Ekspedisi Otomatis (JNE, J&T, SiCepat)",
+        starter: "Tersedia sebagai Add-on",
+        professional: "Tidak Termasuk",
+        advanced: "Termasuk (Kalkulasi tarif otomatis)",
+      },
+      {
+        feature: "Katalog & Batas Input Produk",
+        starter: "Maksimal 10 Produk Awal",
+        professional: "Katalog Dinamis Tanpa Batas Input",
+        advanced: "Katalog, Kategori, Stok & Manajemen Pesanan",
+      },
+      {
+        feature: "Fitur Pencarian & Filter Produk",
+        starter: "Pencarian Standar Tema",
+        professional: "Pencarian Instan Client-Side",
+        advanced: "Pencarian, Filter Kategori & Sortir Harga",
+      },
+      {
+        feature: "Kecepatan Browsing Katalog",
+        starter: "Standar Server CMS",
+        professional: "Instan Tanpa Reload Halaman",
+        advanced: "Instan Tanpa Reload Halaman",
+      },
+      {
+        feature: "Domain .com & Hosting Tahun Pertama",
+        starter: "Termasuk (Domain + Hosting)",
+        professional: "Termasuk (Domain + Cloud Hosting)",
+        advanced: "Termasuk (Domain + Cloud & CMS Hosting)",
+      },
+    ],
+  },
+};
