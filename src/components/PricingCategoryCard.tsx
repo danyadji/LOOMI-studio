@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Check, Minus, MessageCircle, ChevronDown, ChevronUp } from "lucide-react";
+import { Check, Minus, MessageCircle } from "lucide-react";
 import { PricingPlanTier } from "@/content/pricingCategories";
 import { siteConfig } from "@/content/site";
 import { cn } from "@/lib/utils";
@@ -15,10 +14,6 @@ export default function PricingCategoryCard({
   plan,
   categoryTitle,
 }: PricingCategoryCardProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const totalItems = plan.includes.length + plan.excludes.length;
-  const isLongList = totalItems > 9;
-
   const waMessage = `Halo ${siteConfig.name}, saya tertarik konsultasi paket ${plan.name} : ${plan.tech} (${plan.price}) untuk ${categoryTitle}.`;
   const waUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
     waMessage
@@ -160,14 +155,7 @@ export default function PricingCategoryCard({
               plan.featured ? "border-[#fafaf7]/25" : "border-[#c0c0b9]"
             )}
           >
-            <div
-              className={cn(
-                "space-y-6 transition-all duration-200",
-                isLongList && !isExpanded
-                  ? "max-h-[360px] overflow-y-auto pr-1 sm:pr-2"
-                  : "max-h-none"
-              )}
-            >
+            <div className="space-y-6">
               {/* Bagian Sudah Termasuk (Include) */}
               <div>
                 <div
@@ -271,31 +259,6 @@ export default function PricingCategoryCard({
                 </ul>
               </div>
             </div>
-
-            {/* Tombol expand jika daftar panjang */}
-            {isLongList && (
-              <button
-                type="button"
-                onClick={() => setIsExpanded(!isExpanded)}
-                className={cn(
-                  "mt-3 flex items-center gap-1 text-xs font-medium py-1 underline underline-offset-4 transition-colors",
-                  plan.featured
-                    ? "text-[#d4ec8c] hover:text-[#ffffff]"
-                    : "text-[#545c2c] hover:text-[#1f2410]"
-                )}
-              >
-                <span>
-                  {isExpanded
-                    ? "Ringkas rincian"
-                    : `Lihat seluruh rincian (${totalItems} poin)`}
-                </span>
-                {isExpanded ? (
-                  <ChevronUp className="size-3.5" aria-hidden="true" />
-                ) : (
-                  <ChevronDown className="size-3.5" aria-hidden="true" />
-                )}
-              </button>
-            )}
           </div>
         </div>
 
