@@ -96,7 +96,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="hover:text-[#d4ec8c] transition-colors inline-block"
               >
-                Instagram: @loomi.studio
+                Instagram: @loomistudio.tech
               </a>
             </div>
           </div>

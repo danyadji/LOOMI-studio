@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
   // Nomor WhatsApp utama (format internasional tanpa tanda + atau 0 di depan)
   whatsappNumber: "6289611117761",
   replyHours: "Senin - Sabtu: 08.30 - 17.00 WIB",
-  instagram: "https://instagram.com/loomi.studio",
+  instagram: "https://instagram.com/loomistudio.tech",
   serviceArea: "Jepara, Kudus, Pati, dan melayani klien di seluruh Indonesia",
   email: "halo@loomistudio.tech",
   address: "Jepara, Jawa Tengah, Indonesia",

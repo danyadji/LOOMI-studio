@@ -157,7 +157,7 @@ export default function KontakPage() {
                           Instagram Resmi
                         </span>
                         <span className="mt-0.5 block font-heading text-base sm:text-lg font-medium text-[#1f2410] group-hover:text-[#3f5b1e] transition-colors">
-                          @loomi.studio
+                          @loomistudio.tech
                         </span>
                       </div>
                     </div>
